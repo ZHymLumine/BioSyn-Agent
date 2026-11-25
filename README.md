@@ -4,7 +4,7 @@
 
 ### Biological design through language, scientific tools and feedback
 
-[Interactive demo](https://zhymlumine.github.io/biosyn-agent-demo/) · [Quick start](#quick-start) · [MCP tools](docs/tools.md) · [Task guide](docs/tasks.md)
+[Interactive demo](https://zhymlumine.github.io/biosyn-agent-demo/) · [Quick start](#quick-start) · [Design dataset](data/README.md) · [MCP tools](docs/tools.md) · [Task guide](docs/tasks.md)
 
 </div>
 
@@ -135,6 +135,23 @@ See [`examples/run_design.py`](examples/run_design.py) for a command-line versio
 
 The [interactive demo](https://zhymlumine.github.io/biosyn-agent-demo/) presents recorded examples from all four applications. Application evaluators load their scientific resources from a separate resource directory. The [application guide](docs/applications.md) describes the task interface, resource layout and execution entrypoints.
 
+## Design dataset
+
+The [data directory](data/README.md) provides 22 formal design cases: six genetic
+circuits, five bacterial RBS tasks, six human 5′UTR tasks and five metabolic
+pathways. Each case includes its natural-language request, public design
+resources, evaluation profile and reference design. Source accessions, model
+versions, calibration mappings and file hashes accompany the tasks.
+
+```bash
+python scripts/check_data.py
+python scripts/fetch_data.py --group catalog
+python scripts/check_data.py --require-catalog
+```
+
+See the [dataset guide](data/README.md) for loading cases, obtaining scientific
+resources and preparing the dataset for a new evaluation run.
+
 ## Tools and workflows
 
 | Integration | Available operations |
@@ -161,6 +178,7 @@ src/biosyn/
 ├── integrations/   OpenBioMed, protein tools and BioDesignBench
 └── benchmarks/     Benchmark contracts and execution utilities
 configs/            LLM and tool-service configurations
+data/               Formal design tasks, references and source metadata
 examples/           Design requests, Python usage and skills
 scripts/            Dependency setup and repository checks
 patches/            Biomni execution support

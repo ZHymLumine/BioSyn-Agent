@@ -1,0 +1,22 @@
+{
+  "version": "2026-11-25",
+  "datasets": [
+    {
+      "id": "formal_v2_expanded_20261102",
+      "purpose": "formal computational design",
+      "manifest": "formal_v2_expanded_20261102/manifest.json",
+      "case_count": 22,
+      "track_counts": {
+        "bacterial_cds": 5,
+        "genetic_circuit": 6,
+        "mammalian_mrna": 6,
+        "metabolic_pathway": 5
+      }
+    }
+  ],
+  "formal_repeats": [
+    101,
+    202,
+    303
+  ]
+}

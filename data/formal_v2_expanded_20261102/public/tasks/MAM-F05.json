@@ -1,0 +1,47 @@
+{
+  "schema_version": "formal-computational-design-1",
+  "case_id": "MAM-F05",
+  "track": "mammalian_mrna",
+  "evaluation_engine": "optimus_utr",
+  "request": "将给定HEK293T/eGFP、未修饰尿苷RNA的25nt可变5′UTR进行设计，校准后的预测MRL需要至少6.0000。至多替换25个位置，不允许插入删除；保持所给完整reporter CDS、固定leader、3′端与poly(A)不变。输出utr决策，由公共组装器导出完整RNA序列。该任务评价翻译相关MRL预测，不评价半衰期。",
+  "inputs": {
+    "host": "human",
+    "cell_line": "HEK293T",
+    "reporter": "original Sample eGFP construct",
+    "rna_chemistry": "unmodified_uridine",
+    "baseline_utr": "CCTTCAATGATTACCTCTATCCCCA",
+    "variable_utr_length": 25,
+    "substitution_budget": 25,
+    "forbid_upstream_aug": false,
+    "fixed_leader": "GGGACATCGTAGAGAGTCGTACTTA",
+    "fixed_suffix": "ATGGGCGAATTAAGTAAGGGCGAGGAGCTGTTCACCGGGGTGGTGCCCATCCTGGTCGAGCTGGACGGCGACGTAAACGGCCACAAGTTCAGCGTGTCCGGCGAGGGCGAGGGCGATGCCACCTACGGCAAGCTGACCCTGAAGTTCATCTGCACCACCGGCAAGCTGCCCGTGCCCTGGCCCACCCTCGTGACCACCCTGACCTACGGCGTGCAGTGCTTCAGCCGCTACCCCGACCACATGAAGCAGCACGACTTCTTCAAGTCCGCCATGCCCGAAGGCTACGTCCAGGAGCGCACCATCTTCTTCAAGGACGACGGCAACTACAAGACCCGCGCCGAGGTGAAGTTCGAGGGCGACACCCTGGTGAACCGCATCGAGCTGAAGGGCATCGACTTCAAGGAGGACGGCAACATCCTGGGGCACAAGCTGGAGTACAACTACAACAGCCACAACGTCTATATCATGGCCGACAAGCAGAAGAACGGCATCAAGGTGAACTTCAAGATCCGCCACAACATCGAGGACGGCAGCGTGCAGCTCGCCGACCACTACCAGCAGAACACCCCCATCGGCGACGGCCCCGTGCTGCTGCCCGACAACCACTACCTGAGCACCCAGTCCAAGCTGAGCAAAGACCCCAACGAGAAGCGCGATCACATGGTCCTGCTGGAGTTCGTGACCGCCGCCGGGATCACTCTCGGCATGGACGAGCTGTACAAGTTCGAATAAAGCTAGCGCCTCGACTGTGCCTTCTAGTTGCCAGCCATCTGTTGTTTG",
+    "fixed_cds": "ATGGGCGAATTAAGTAAGGGCGAGGAGCTGTTCACCGGGGTGGTGCCCATCCTGGTCGAGCTGGACGGCGACGTAAACGGCCACAAGTTCAGCGTGTCCGGCGAGGGCGAGGGCGATGCCACCTACGGCAAGCTGACCCTGAAGTTCATCTGCACCACCGGCAAGCTGCCCGTGCCCTGGCCCACCCTCGTGACCACCCTGACCTACGGCGTGCAGTGCTTCAGCCGCTACCCCGACCACATGAAGCAGCACGACTTCTTCAAGTCCGCCATGCCCGAAGGCTACGTCCAGGAGCGCACCATCTTCTTCAAGGACGACGGCAACTACAAGACCCGCGCCGAGGTGAAGTTCGAGGGCGACACCCTGGTGAACCGCATCGAGCTGAAGGGCATCGACTTCAAGGAGGACGGCAACATCCTGGGGCACAAGCTGGAGTACAACTACAACAGCCACAACGTCTATATCATGGCCGACAAGCAGAAGAACGGCATCAAGGTGAACTTCAAGATCCGCCACAACATCGAGGACGGCAGCGTGCAGCTCGCCGACCACTACCAGCAGAACACCCCCATCGGCGACGGCCCCGTGCTGCTGCCCGACAACCACTACCTGAGCACCCAGTCCAAGCTGAGCAAAGACCCCAACGAGAAGCGCGATCACATGGTCCTGCTGGAGTTCGTGACCGCCGCCGGGATCACTCTCGGCATGGACGAGCTGTACAAGTTCGAATAA",
+    "polyA_tail_nt": 70,
+    "polyA_and_cap_scope": "70nt poly(A) sequence; IVT cap chemistry is source assay metadata, not encoded as an ordinary base.",
+    "public_resources": []
+  },
+  "expected_output": {
+    "required_fields": [
+      "utr"
+    ],
+    "artifact": "full fixed-context RNA plus UTR decision"
+  },
+  "evaluation_contract": {
+    "evidence_type": "calibrated_model_prediction",
+    "requirements": [
+      {
+        "metric": "calibrated_predicted_mrl",
+        "operator": ">=",
+        "value": 6.0,
+        "absolute_tolerance": 1e-06
+      },
+      {
+        "metric": "utr_substitution_count",
+        "operator": "<=",
+        "value": 25
+      }
+    ],
+    "threshold_basis": "Absolute benchmark MRL target derived from historical anchor +/-0.5 (50nt) or chosen target6 (length cases). Additional predicted change0.5 prevents baseline-already-satisfies tasks. Four substitutions for trajectory tasks and full replacement for length tasks are benchmark choices, fixed before formal LLM outcomes.",
+    "uncertainty": "Calibration residuals are reported separately; satisfying point-prediction goals is not proof of measured MRL."
+  }
+}

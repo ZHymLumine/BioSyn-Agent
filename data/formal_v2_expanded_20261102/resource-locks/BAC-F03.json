@@ -1,0 +1,247 @@
+{
+  "track": "bacterial_cds",
+  "files": [
+    {
+      "path": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/emopec/__init__.py",
+      "sha256": "71dc29836afe320cac08fde95aecc55cd4975b869742dd788b8218bcdc296a0a"
+    },
+    {
+      "path": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/emopec/_emopec.py",
+      "sha256": "9b6567624ba29595c13b7bcc123375f830445a565400c920e086a78ae2fdc9c4"
+    },
+    {
+      "path": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/emopec/_predicted_sequences.py",
+      "sha256": "ade71a1d20050dd5d79eeafae3dd692014a65bc819f57bbe7357bfe3dc86109d"
+    },
+    {
+      "path": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/emopec/_sequences.py",
+      "sha256": "def229e9001dee8e6cb4787cc85cab3a81a25c443266e8db07dbacfd0ca0db6f"
+    },
+    {
+      "path": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/emopec/viennarna.py",
+      "sha256": "d5eef59495427319fac79cc323630714e39337751cb7db751458533de060b11d"
+    },
+    {
+      "path": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/emopec/web.py",
+      "sha256": "181b9a3485265ff80a15ae2af42fc6a651e16a0811b1aa7855fc5fa65f8072b6"
+    },
+    {
+      "path": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/setup.py",
+      "sha256": "7afbe9c2b49bc16289b1027bec62b7d63d1c98bcc9144becfb9ae04ba383d3a1"
+    },
+    {
+      "path": "tasks/application_suite_v3/formal_v2_expanded_20261102/profiles/BAC-F03.json",
+      "sha256": "7cde67ed3be4b4a201b7283dbd7cb7726f9177406d6441f70c43e8a1a835b624"
+    },
+    {
+      "path": "tasks/application_suite_v3/formal_v2_expanded_20261102/public/resources/BAC-F03-catalog.json",
+      "sha256": "7238c41607ecbd029ad95c3701857873e1b9e8955a7ad31e556f824c470da460"
+    },
+    {
+      "path": "tasks/application_suite_v3/formal_v2_expanded_20261102/public/resources/BAC-F03.json",
+      "sha256": "8cb44026488fb8a0fa5556d5e549cf9ed9564f1968b530d8d93f0719af6bea82"
+    },
+    {
+      "path": "tasks/application_suite_v3/formal_v2_expanded_20261102/public/tasks/BAC-F03.json",
+      "sha256": "39cb91e7a9ff5253761b49086537e7bc3b9a949d689f1edbd5e54273eb11f6aa"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/__init__.py",
+      "sha256": "9a305d784eefe519fef5c338d40411692080d8da04d82d313a3cbda333d2c512"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/agent/__init__.py",
+      "sha256": "8a9368820bb91512f171e123592f1e8988dffa442fbb693ccb5630d7c8325cc1"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/agent/evaluator.py",
+      "sha256": "41b835bab3fc76bdd21c62d75c74d88d39aa6767cc51df8cd400d40b85ea4499"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/agent/optimizer.py",
+      "sha256": "a41b93edae3a81c3c1a2794b41e39fd40e6e1d9613912970ab83a7762b523ea6"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/agent/planner.py",
+      "sha256": "4fea52580d58ffd668b51ff0b515cae40896da35772065a30d3c9a5f0c982ff9"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/agent/runtime.py",
+      "sha256": "8d42901c9be99484da2e2ec64e593d4371f17cf20c71bf5da4919afe507e5dc5"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/agent/state.py",
+      "sha256": "3f90a5f42c636762fbbadd795705ce946a597dd4d6a4e9954955b67af7abb0f8"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/__init__.py",
+      "sha256": "23f38a38836fae266250482b21e9e66d1507a27d59df1c45166caa93248d57f8"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/comparison.py",
+      "sha256": "6987ba4a280161bfe2aaaa725af78b7c3e6375b9950b074f22e3ac5c0d918fea"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/comparison_protocol.py",
+      "sha256": "ef3c295cb11c6d78605c4a2b9faa8c76d41b445e469157706e262ef498252748"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/comparison_sandbox.py",
+      "sha256": "90edba3eb38abe74d9843cb925ddc8c0bbc2b02c8566246f03218361cb80f6d3"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/comparison_validation.py",
+      "sha256": "111df4e1a437ec08e10490cd3b7d6a9ad6a7e57cc9947b4c990d452613c6e0ae"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/comparison_worker.py",
+      "sha256": "bb148b677984fa09d4cf41885679515253ec0d50c0a7368c9598eb1083ce4c5a"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/computational_circuit.py",
+      "sha256": "4d1d4d0bc05471ec1826d40520f505ccdd4b4865dacf87756687f4794ed09c50"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/computational_metabolic.py",
+      "sha256": "2b31751a921a87339ff3f7bfe415ce110692c76821b983d15a18969569de224a"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/computational_regulatory.py",
+      "sha256": "82e6f7d65f665b9f0bfd295de60bd05709697af58f79e2cccf19a96d609cef57"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/computational_resources.py",
+      "sha256": "0b1ff8a282c4c83d9b12f04a6d6fa221481ef58d4843a912a7ebe52733f240cc"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/computational_sequence.py",
+      "sha256": "b85da6905539c2214622062c38e62bcd8c03b8cfaf0a4745b996e6e832a4cbcb"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/goal_contract.py",
+      "sha256": "39c2da523c0e71f4b84edf5b3ffa49d29845f85f3c246eb43f310dbb0080ff0e"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/independent_candidates.py",
+      "sha256": "e9d705fcbb49789fd59703c1d184248e5b62c18de5441972a6fd2106430636ee"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/retrospective.py",
+      "sha256": "5269639ede8b05bffd4d3f99d7e17b913b3e9123ee888aab80dc96e787721617"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/retrospective_worker.py",
+      "sha256": "fce3b7f87f9bfd14bc789d28e97c10dcc9aad6d50924d18aab7b14737dbe3d45"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/runner.py",
+      "sha256": "fc87de828acaf33babe6535246168fb6e350ac92cc909e25c5c17df32cd63503"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/science.py",
+      "sha256": "abcf40d01995ddef396f945d470a9de9ac39f76fa8cf396f2358884edeac0589"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/verify.py",
+      "sha256": "4dbb8e9774a87ca8abf9d354c1a52cab2011f7221680563b1ab06f7fc09b05ea"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/applications/worker.py",
+      "sha256": "0b065f9151e9e5b42262a5b4ef56957d09c3f25e0bf87e943dbe0edea1b1183e"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/benchmarks/__init__.py",
+      "sha256": "7480591dc7f0613d3a9a0c4046cfb2b45f3d26a93e00b29929ffc5779f0404b6"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/benchmarks/contracts.py",
+      "sha256": "5a1d23926ab66129a7ebc51dafcf63c2125be36902ddca828bf40be9195680bb"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/benchmarks/proxy.py",
+      "sha256": "d2ae8119920bbf4b21913170ef3b23cff8a10f937b289861a5c9cb9fd3ac5c75"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/benchmarks/runner.py",
+      "sha256": "c7cabde2fafb4ed32ecfab5653d467e3a56f8639ab6d763d1e712de207cdd387"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/benchmarks/worker.py",
+      "sha256": "5adb58fdc2bd92737fc4a8984262d1e783cc6af10a4867ce5a706d35da581ee6"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/cli.py",
+      "sha256": "9a579e26650adf534a0cde0e5f039eb45cd1f7db56c37f04249a34c882c37909"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/config.py",
+      "sha256": "361c385584a5d449eb6e3d3ebd309acf43c2d1108dedb86c56eeedd7dbe49c6a"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/integrations/__init__.py",
+      "sha256": "a3586c6e66ca287e49b7d76c11c516b7d2490468be206328eb89e37ebbd7279d"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/integrations/biodesignbench.py",
+      "sha256": "1f57ecad2ce9e133d61a503c96d7bc3ad252ac7d6c01c16c2a6cda561a6dfe7e"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/integrations/openbiomed.py",
+      "sha256": "32bcfbe4fc6aa600fcce46c446923b454c16e90a24a335221341051b083cf4d5"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/integrations/protein_native.py",
+      "sha256": "f3752b3ca57f1d4b5651cc70a0fd2b7e9594c1286cd3cb33f1657b4bbd2345d0"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/mcp/__init__.py",
+      "sha256": "740d34b243dd76d844dc5f742ada0ca58390eade58e127a0e011dcb3054541f0"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/mcp/application.py",
+      "sha256": "8eaf59c8686e5335d3b83874d1577e60170ce4da647d4aa7cabc835fc66ecf8d"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/mcp/client.py",
+      "sha256": "89585ed2a1d95d7bed4bf7d8e706709b22c5b9a6f4920dc89d370982282f93c7"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/mcp/common.py",
+      "sha256": "c045988af8f4c024c06962c66f19800d585b4de5d7a4d0ec08ee25e6113d4ba2"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/mcp/computational.py",
+      "sha256": "1a1760e77e6b266c3603eb7cd340e57c82af096812b063ace61c21f8b64933e8"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/mcp/dna.py",
+      "sha256": "448e0fc0996e99028ad5367ea4f9ee05e3ae64067fb06ca176545be8653c1fe4"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/mcp/evo2.py",
+      "sha256": "e3b5b525de2a2c89c496ee7f9008cbbe27cc726b64d5a97484663534f396e09c"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/mcp/model_config.py",
+      "sha256": "dbfcdc618c5945d1a93c7c428f619c5a220f239b4df794f02aaeda406ddb026f"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/mcp/nt.py",
+      "sha256": "d2a62cacdd85034d5a7e6c4e7b5830bd9f720aa0a509578490544c616db06548"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/mcp/rna.py",
+      "sha256": "ba075cdf01d15c8439545bd5650c037e17f6d703834992a22e752fec55674aa4"
+    },
+    {
+      "path": "runs/formal_release_v6_20261102/runtime/src/biosyn/mcp/rnafm.py",
+      "sha256": "33b69f6733a606f26a5175052d2b884599cae7cd0352fe252d2f027c52b986d6"
+    }
+  ],
+  "packages": {
+    "mcp": "1.30.0",
+    "numpy": "1.26.4",
+    "ViennaRNA": "2.7.0"
+  },
+  "status": "formal-v2 expanded budget; scientific inputs and evaluators retained"
+}

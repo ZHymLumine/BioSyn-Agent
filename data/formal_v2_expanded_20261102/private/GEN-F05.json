@@ -1,0 +1,399 @@
+{
+  "source_case_id": "GEN-0635bf0193",
+  "reference_id": "0x06",
+  "source_locator": {
+    "sequence_csv_row_1based": 42,
+    "netlist": "cello/0x06/0x06_A000_logic_circuit.txt",
+    "plasmid_label": "pAN3942"
+  },
+  "source_reference_path": "tasks/application_suite_v3/retrospective_v2_1/private/GEN-0635bf0193.json",
+  "source_reference_sha256": "68e0ff32b44299debaef361d7b3db9c286431eeb042e5a11d489fc3cc32c8f6c",
+  "reference_kind": "Reassembled original physical topology under declared UCF; not claimed identical to measured plasmid sequence",
+  "design": {
+    "gates": [
+      {
+        "id": "n2",
+        "part": "S1_SrpR",
+        "inputs": [
+          "input_pBAD"
+        ]
+      },
+      {
+        "id": "n6",
+        "part": "E1_BetI",
+        "inputs": [
+          "input_pTet",
+          "input_pTac"
+        ]
+      },
+      {
+        "id": "n4",
+        "part": "H1_HlyIIR",
+        "inputs": [
+          "input_pTet",
+          "n6"
+        ]
+      },
+      {
+        "id": "n5",
+        "part": "P2_PhlF",
+        "inputs": [
+          "input_pTac",
+          "n6"
+        ]
+      },
+      {
+        "id": "n3",
+        "part": "A1_AmtR",
+        "inputs": [
+          "n5",
+          "n4"
+        ]
+      },
+      {
+        "id": "n1",
+        "part": "B2_BM3R1",
+        "inputs": [
+          "n2",
+          "n3"
+        ]
+      }
+    ],
+    "output": "n1"
+  },
+  "artifact": {
+    "gates": [
+      {
+        "id": "n2",
+        "part": "S1_SrpR",
+        "inputs": [
+          "input_pBAD"
+        ]
+      },
+      {
+        "id": "n6",
+        "part": "E1_BetI",
+        "inputs": [
+          "input_pTet",
+          "input_pTac"
+        ]
+      },
+      {
+        "id": "n4",
+        "part": "H1_HlyIIR",
+        "inputs": [
+          "input_pTet",
+          "n6"
+        ]
+      },
+      {
+        "id": "n5",
+        "part": "P2_PhlF",
+        "inputs": [
+          "input_pTac",
+          "n6"
+        ]
+      },
+      {
+        "id": "n3",
+        "part": "A1_AmtR",
+        "inputs": [
+          "n5",
+          "n4"
+        ]
+      },
+      {
+        "id": "n1",
+        "part": "B2_BM3R1",
+        "inputs": [
+          "n2",
+          "n3"
+        ]
+      }
+    ],
+    "output": "n1",
+    "nodes": [
+      {
+        "id": "input_pBAD",
+        "name": "input_pBAD",
+        "type": "INPUT",
+        "inputs": []
+      },
+      {
+        "id": "input_pTac",
+        "name": "input_pTac",
+        "type": "INPUT",
+        "inputs": []
+      },
+      {
+        "id": "input_pTet",
+        "name": "input_pTet",
+        "type": "INPUT",
+        "inputs": []
+      },
+      {
+        "id": "n2",
+        "name": "S1_SrpR",
+        "type": "NOT",
+        "inputs": [
+          "input_pBAD"
+        ]
+      },
+      {
+        "id": "n6",
+        "name": "E1_BetI",
+        "type": "NOR",
+        "inputs": [
+          "input_pTet",
+          "input_pTac"
+        ]
+      },
+      {
+        "id": "n4",
+        "name": "H1_HlyIIR",
+        "type": "NOR",
+        "inputs": [
+          "input_pTet",
+          "n6"
+        ]
+      },
+      {
+        "id": "n5",
+        "name": "P2_PhlF",
+        "type": "NOR",
+        "inputs": [
+          "input_pTac",
+          "n6"
+        ]
+      },
+      {
+        "id": "n3",
+        "name": "A1_AmtR",
+        "type": "NOR",
+        "inputs": [
+          "n5",
+          "n4"
+        ]
+      },
+      {
+        "id": "n1",
+        "name": "B2_BM3R1",
+        "type": "NOR",
+        "inputs": [
+          "n2",
+          "n3"
+        ]
+      },
+      {
+        "id": "output_YFP",
+        "name": "output_YFP",
+        "type": "OUTPUT",
+        "inputs": [
+          "n1"
+        ]
+      }
+    ],
+    "assembly": [
+      {
+        "node_id": "n2",
+        "part_names": [
+          "pBAD",
+          "RiboJ10",
+          "S1",
+          "SrpR",
+          "ECK120019600"
+        ]
+      },
+      {
+        "node_id": "n6",
+        "part_names": [
+          "pTet",
+          "pTac",
+          "RiboJ57",
+          "E1",
+          "BetI",
+          "L3S3P11"
+        ]
+      },
+      {
+        "node_id": "n4",
+        "part_names": [
+          "pTet",
+          "pBetI",
+          "RiboJ51",
+          "H1",
+          "HlyIIR",
+          "ECK120033736"
+        ]
+      },
+      {
+        "node_id": "n5",
+        "part_names": [
+          "pTac",
+          "pBetI",
+          "RiboJ53",
+          "P2",
+          "PhlF",
+          "ECK120033737"
+        ]
+      },
+      {
+        "node_id": "n3",
+        "part_names": [
+          "pPhlF",
+          "pHlyIIR",
+          "BydvJ",
+          "A1",
+          "AmtR",
+          "L3S2P55"
+        ]
+      },
+      {
+        "node_id": "n1",
+        "part_names": [
+          "pSrpR",
+          "pAmtR",
+          "SarJ",
+          "B2",
+          "BM3R1",
+          "L3S2P11"
+        ]
+      },
+      {
+        "node_id": "output_YFP",
+        "part_names": [
+          "pBM3R1",
+          "YFP_cassette"
+        ]
+      }
+    ],
+    "dna_sequence": "ACTTTTCATACTCCCGCCATTCAGAGAAGAAACCAATTGTCCATATTGCATCAGACATTGCCGTCACTGCGTCTTTTACTGGCTCTTCTCGCTAACCAAACCGGTAACCCCGCTTATTAAAAGCATTCTGTAACAAAGCGGGACCAAAGCCATGACAAAAACGCGTAACAAAAGTGTCTATAATCACGGCAGAAAAGTCCACATTGATTATTTGCACGGCGTCACACTTTGCTATGCCATAGCATTTTTATCCATAAGATTAGCGGATCCTACCTGACGCTTTTTATCGCAACTCTCTACTGTTTCTCCATACCCGTTTTTTTGGGCTAGCCTGAAGCGCTCAACGGGTGTGCTTCCCGTTCTGATGAGTCCGTGAGGACGAAAGCGCCTCTACAAATAATTTTGTTTAAGAGTCTATGGACTATGTTTTCACAGAGGAGGTACCAGGATGGCACGTAAAACCGCAGCAGAAGCAGAAGAAACCCGTCAGCGTATTATTGATGCAGCACTGGAAGTTTTTGTTGCACAGGGTGTTAGTGATGCAACCCTGGATCAGATTGCACGTAAAGCCGGTGTTACCCGTGGTGCAGTTTATTGGCATTTTAATGGTAAACTGGAAGTTCTGCAGGCAGTTCTGGCAAGCCGTCAGCATCCGCTGGAACTGGATTTTACACCGGATCTGGGTATTGAACGTAGCTGGGAAGCAGTTGTTGTTGCAATGCTGGATGCAGTTCATAGTCCGCAGAGCAAACAGTTTAGCGAAATTCTGATTTATCAGGGTCTGGATGAAAGCGGTCTGATTCATAATCGTATGGTTCAGGCAAGCGATCGTTTTCTGCAGTATATTCATCAGGTTCTGCGTCATGCAGTTACCCAGGGTGAACTGCCGATTAATCTGGATCTGCAGACCAGCATTGGTGTTTTTAAAGGTCTGATTACCGGTCTGCTGTATGAAGGTCTGCGTAGCAAAGATCAGCAGGCACAGATTATCAAAGTTGCACTGGGTAGCTTTTGGGCACTGCTGCGTGAACCGCCTCGTTTTCTGCTGTGTGAAGAAGCACAGATTAAACAGGTGAAATCCTTCGAATAATTCAGCCAAAAAACTTAAGACCGCCGGTCTTGTCCACTACCTTGCAGTAATGCGGTGGACAGGATCGGCGGTTTTCTTTTCTCTTCTCAATACTCCACCGTTGGCTTTTTTCCCTATCAGTGATAGAGATTGACATCCCTATCAGTGATAGAGATAATGAGCACAACGATCGTTGGCTGTGTTGACAATTAATCATCGGCTCGTATAATGTGTGGAATTGTGAGCGCTCACAATTCTGAAGAAGTCAATTAATGTGCTTTTAATTCTGATGAGTCGGTGACGACGAAACTTCCTCTACAAATAATTTTGTTTAACCCCCCGAGGAGTAGCACATGCCGAAACTGGGTATGCAGAGCATTCGTCGTCGTCAGCTGATTGATGCAACCCTGGAAGCAATTAATGAAGTTGGTATGCATGATGCAACCATTGCACAGATTGCACGTCGTGCCGGTGTTAGCACCGGTATTATTAGCCATTATTTCCGCGATAAAAACGGTCTGCTGGAAGCAACCATGCGTGATATTACCAGCCAGCTGCGTGATGCAGTTCTGAATCGTCTGCATGCACTGCCGCAGGGTAGCGCAGAACAGCGTCTGCAGGCAATTGTTGGTGGTAATTTTGATGAAACCCAGGTTAGCAGCGCAGCAATGAAAGCATGGCTGGCATTTTGGGCAAGCAGCATGCATCAGCCGATGCTGTATCGTCTGCAGCAGGTTAGCAGTCGTCGTCTGCTGAGCAATCTGGTTAGCGAATTTCGTCGTGAACTGCCTCGTGAACAGGCACAAGAGGCAGGTTATGGTCTGGCAGCACTGATTGATGGTCTGTGGCTGCGTGCAGCACTGAGCGGTAAACCGCTGGATAAAACCCGTGCAAATAGCCTGACCCGTCATTTTATCACCCAGCATCTGCCGACCGATTAACCAATTATTGAACACCCTTCGGGGTGTTTTTTTGTTTCTGGTCTACCTACTCCACCGTTGGCTTTTTTCCCTATCAGTGATAGAGATTGACATCCCTATCAGTGATAGAGATAATGAGCACAGCGCGGGTGAGAGGGATTCGTTACCAATTGACAATTGATTGGACGTTCAATATAATGCTAGCCTGAAGTAGTCACCGGCTGTGCTTGCCGGTCTGATGAGCCTGTGAAGGCGAAACTACCTCTACAAATAATTTTGTTTAAACCCCCGAGATGAAATACATCCTGTTTGAGGTGTGCGAAATGGGTAAAAGCCGTGAACAGACCATGGAAAATATTCTGAAAGCAGCCAAAAAGAAATTCGGCGAACGTGGTTATGAAGGCACCAGCATTCAAGAAATTACCAAAGAAGCCAAAGTTAACGTTGCAATGGCCAGCTATTACTTTAATGGCAAAGAGAACCTGTACTACGAGGTGTTCAAAAAATACGGTCTGGCAAATGAACTGCCGAACTTTCTGGAAAAAAACCAGTTTAATCCGATTAATGCCCTGCGTGAATATCTGACCGTTTTTACCACCCACATTAAAGAAAATCCGGAAATTGGCACCCTGGCCTATGAAGAAATTATCAAAGAAAGCGCACGCCTGGAAAAAATCAAACCGTATTTTATCGGCAGCTTCGAACAGCTGAAAGAAATTCTGCAAGAGGGTGAAAAACAGGGTGTGTTTCACTTTTTTAGCATCAACCATACCATCCATTGGATTACCAGCATTGTTCTGTTTCCGAAATTCAAAAAATTCATCGATAGCCTGGGTCCGAATGAAACCAATGATACCAATCATGAATGGATGCCGGAAGATCTGGTTAGCCGTATTATTAGCGCACTGACCGATAAACCGAACATTTAAAACGCATGAGAAAGCCCCCGGAAGATCACCTTCCGGGGGCTTTTTTATTGCGCAACGATCGTTGGCTGTGTTGACAATTAATCATCGGCTCGTATAATGTGTGGAATTGTGAGCGCTCACAATTAGCGCGGGTGAGAGGGATTCGTTACCAATTGACAATTGATTGGACGTTCAATATAATGCTAGCCTGAAGCGGTCAACGCATGTGCTTTGCGTTCTGATGAGACAGTGATGTCGAAACCGCCTCTACAAATAATTTTGTTTAAGGAGCTATGGACTATGTTTGAAAGGCTGAAATACTAGATGGCACGTACCCCGAGCCGTAGCAGCATTGGTAGCCTGCGTAGTCCGCATACCCATAAAGCAATTCTGACCAGCACCATTGAAATCCTGAAAGAATGTGGTTATAGCGGTCTGAGCATTGAAAGCGTTGCACGTCGTGCCGGTGCAAGCAAACCGACCATTTATCGTTGGTGGACCAATAAAGCAGCACTGATTGCCGAAGTGTATGAAAATGAAAGCGAACAGGTGCGTAAATTTCCGGATCTGGGTAGCTTTAAAGCCGATCTGGATTTTCTGCTGCGTAATCTGTGGAAAGTTTGGCGTGAAACCATTTGTGGTGAAGCATTTCGTTGTGTTATTGCAGAAGCACAGCTGGACCCTGCAACCCTGACCCAGCTGAAAGATCAGTTTATGGAACGTCGTCGTGAGATGCCGAAAAAACTGGTTGAAAATGCCATTAGCAATGGTGAACTGCCGAAAGATACCAATCGTGAACTGCTGCTGGATATGATTTTTGGTTTTTGTTGGTATCGCCTGCTGACCGAACAGCTGACCGTTGAACAGGATATTGAAGAATTTACCTTCCTGCTGATTAATGGTGTTTGTCCGGGTACACAGCGTTAAGGAAACACAGAAAAAAGCCCGCACCTGACAGTGCGGGCTTTTTTTTTCGACCAAAGGCGACGTACGGTGGAATCTGATTCGTTACCAATTGACATGATACGAAACGTACCGTATCGTTAAGGTACCAGGAATCTGAACGATTCGTTACCAATTGACATATTTAAAATTCTTGTTTAAAATGCTAGCCTGAAGGGTGTCTCAAGGTGCGTACCTTGACTGATGAGTCCGAAAGGACGAAACACCCCTCTACAAATAATTTTGTTTAAAATGTTCCCTAATAATCAGCAAAGAGGTTACTAGATGGCAGGCGCAGTTGGTCGTCCGCGTCGTAGTGCACCGCGTCGTGCAGGTAAAAATCCGCGTGAAGAAATTCTGGATGCAAGCGCAGAACTGTTTACCCGTCAGGGTTTTGCAACCACCAGTACCCATCAGATTGCAGATGCAGTTGGTATTCGTCAGGCAAGCCTGTATTATCATTTTCCGAGCAAAACCGAAATCTTTCTGACCCTGCTGAAAAGCACCGTTGAACCGAGCACCGTTCTGGCAGAAGATCTGAGCACCCTGGATGCAGGTCCGGAAATGCGTCTGTGGGCAATTGTTGCAAGCGAAGTTCGTCTGCTGCTGAGCACCAAATGGAATGTTGGTCGTCTGTATCAGCTGCCGATTGTTGGTAGCGAAGAATTTGCAGAATATCATAGCCAGCGTGAAGCACTGACCAATGTTTTTCGTGATCTGGCAACCGAAATTGTTGGTGATGATCCGCGTGCAGAACTGCCGTTTCATATTACCATGAGCGTTATTGAAATGCGTCGCAATGATGGTAAAATTCCGAGTCCGCTGAGCGCAGATAGCCTGCCGGAAACCGCAATTATGCTGGCAGATGCAAGCCTGGCAGTTCTGGGTGCACCGCTGCCTGCAGATCGTGTTGAAAAAACCCTGGAACTGATTAAACAGGCAGATGCAAAATAACTCGGTACCAAAGACGAACAATAAGACGCTGAAAAGCGTCTTTTTTCGTTTTGGTCCTCTATGATTGGTCCAGATTCGTTACCAATTGACAGCTAGCTCAGTCCTAGGTATATACATACATGCTTGTTTGTTTGTAAACCTTGTCCAACCAAATGATTCGTTACCAATTGACAGTTTCTATCGATCTATAGATAATGCTAGCCTGAGACTGTCGCCGGATGTGTATCCGACCTGACGATGGCCCAAAAGGGCCGAAACAGTCCTCTACAAATAATTTTGTTTAACTATGGACTATGTTTTTCAAAGACGAAAAACTACTAGATGGAAAGCACCCCGACCAAACAGAAAGCAATTTTTAGCGCAAGCCTGCTGCTGTTTGCAGAACGTGGTTTTGATGCAACCACCATGCCGATGATTGCAGAAAATGCAAAAGTTGGTGCAGGCACCATTTATCGCTATTTCAAAAACAAAGAAAGCCTGGTGAACGAACTGTTTCAGCAGCATGTTAATGAATTTCTGCAGTGTATTGAAAGCGGTCTGGCAAATGAACGTGATGGTTATCGTGATGGCTTTCATCACATTTTTGAAGGTATGGTGACCTTTACCAAAAATCATCCGCGTGCACTGGGTTTTATCAAAACCCATAGCCAGGGCACCTTTCTGACCGAAGAAAGCCGTCTGGCATATCAGAAACTGGTTGAATTTGTGTGCACCTTTTTTCGTGAAGGTCAGAAACAGGGTGTGATTCGTAATCTGCCGGAAAATGCACTGATTGCAATTCTGTTTGGCAGCTTTATGGAAGTGTATGAAATGATCGAGAACGATTATCTGAGCCTGACCGATGAACTGCTGACCGGTGTTGAAGAAAGCCTGTGGGCAGCACTGAGCCGTCAGAGCTAACTCGGTACCAAATTCCAGAAAAGAGACGCTTTCGAGCGTCTTTTTTCGTTTTGGTCCAATCCGCGTGATAGGTCTGATTCGTTACCAATTGACGGAATGAACGTTCATTCCGATAATGCTAGCCTGAAGCTGTCACCGGATGTGCTTTCCGGTCTGATGAGTCCGTGAGGACGAAACAGCCTCTACAAATAATTTTGTTTAATACTAGAGAAAGAGGGGAAATACTAGATGGTGAGCAAGGGCGAGGAGCTGTTCACCGGGGTGGTGCCCATCCTGGTCGAGCTGGACGGCGACGTAAACGGCCACAAGTTCAGCGTGTCCGGCGAGGGCGAGGGCGATGCCACCTACGGCAAGCTGACCCTGAAGTTCATCTGCACCACAGGCAAGCTGCCCGTGCCCTGGCCCACCCTCGTGACCACCTTCGGCTACGGCCTGCAATGCTTCGCCCGCTACCCCGACCACATGAAGCTGCACGACTTCTTCAAGTCCGCCATGCCCGAAGGCTACGTCCAGGAGCGCACCATCTTCTTCAAGGACGACGGCAACTACAAGACCCGCGCCGAGGTGAAGTTCGAGGGCGACACCCTGGTGAACCGCATCGAGCTGAAGGGCATCGACTTCAAGGAGGACGGCAACATCCTGGGGCACAAGCTGGAGTACAACTACAACAGCCACAACGTCTATATCATGGCCGACAAGCAGAAGAACGGCATCAAGGTGAACTTCAAGATCCGCCACAACATCGAGGACGGCAGCGTGCAGCTCGCCGACCACTACCAGCAGAACACCCCAATCGGCGACGGCCCCGTGCTGCTGCCCGACAACCACTACCTTAGCTACCAGTCCGCCCTGAGCAAAGACCCCAACGAGAAGCGCGATCACATGGTCCTGCTGGAGTTCGTGACCGCCGCCGGGATCACTCTCGGCATGGACGAGCTGTACAAGTAACTCGGTACCAAATTCCAGAAAAGAGGCCTCCCGAAAGGGGGGCCTTTTTTCGTTTTGGTCC"
+  },
+  "evaluation": {
+    "valid": true,
+    "metrics": {
+      "truth_table_accuracy": 1.0,
+      "on_off_ratio": 55.94334787445307,
+      "log10_on_off_ratio": 1.747748452737952,
+      "minimum_on_rpu": 0.4320970145686347,
+      "maximum_off_rpu": 0.007723831893978496,
+      "gate_count": 6,
+      "dna_length": 6702
+    },
+    "model_function_satisfied": true,
+    "truth_table": [
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 0,
+          "input_pTet": 0
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.005164107551788093
+      },
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 0,
+          "input_pTet": 1
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.007723831893978496
+      },
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 1,
+          "input_pTet": 0
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.0076433974074799575
+      },
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 1,
+          "input_pTet": 1
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.005163064737489933
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 0,
+          "input_pTet": 0
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.005570290591156728
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 0,
+          "input_pTet": 1
+        },
+        "target": 1,
+        "boolean_output": 1,
+        "output_promoter_rpu": 0.4507901677275378
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 1,
+          "input_pTet": 0
+        },
+        "target": 1,
+        "boolean_output": 1,
+        "output_promoter_rpu": 0.4320970145686347
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 1,
+          "input_pTet": 1
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.0055647380968419325
+      }
+    ],
+    "scope": "Eco1C1G1T1 steady-state Hill response, additive tandem promoters; no dynamics.",
+    "sequence_matches_physical_graph": true,
+    "goal_met": true,
+    "goal_requirements": [
+      {
+        "metric": "truth_table_accuracy",
+        "value": 1.0,
+        "operator": "==",
+        "target": 1,
+        "absolute_tolerance": 0.0,
+        "met": true
+      },
+      {
+        "metric": "on_off_ratio",
+        "value": 55.94334787445307,
+        "operator": ">",
+        "target": 1,
+        "absolute_tolerance": 1e-06,
+        "met": true
+      },
+      {
+        "metric": "gate_count",
+        "value": 6,
+        "operator": "<=",
+        "target": 6,
+        "absolute_tolerance": 0.0,
+        "met": true
+      }
+    ],
+    "goal_evidence_type": "steady_state_model_prediction",
+    "goal_evaluation": "public_requirements",
+    "experimental_outcome": "not_measured"
+  }
+}

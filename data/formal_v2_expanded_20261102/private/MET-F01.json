@@ -1,0 +1,300 @@
+{
+  "design": {
+    "steps": [
+      "KIVD_KIC",
+      "ADH2_ISOAMYL"
+    ],
+    "gene_knockouts": []
+  },
+  "evaluation": {
+    "valid": true,
+    "feasible": true,
+    "metrics": {
+      "pathway_step_count": 2,
+      "heterologous_gene_count": 2,
+      "native_pathway_gene_count": 0,
+      "knockout_count": 0,
+      "wildtype_growth_per_hour": 0.9823718127183059,
+      "minimum_growth_per_hour": 0.19647436254366119,
+      "product_yield_mol_per_mol": 0.6343990114567015,
+      "carbon_yield_fraction": 0.5286658428805846,
+      "product_flux": 6.343990114567015,
+      "maximum_growth_per_hour": 0.9823718127269776,
+      "biomass_flux_at_product_optimum": 0.19647436254366119,
+      "zero_carbon_product_flux": 0.0,
+      "product_min_at_99pct_growth": 0.0,
+      "product_max_at_99pct_growth": 0.08458928571433812
+    },
+    "pathway": [
+      {
+        "option_id": "KIVD_KIC",
+        "reaction": "4mop_c + h_c --> bs_methylbutanal_c + co2_c",
+        "direction": 1,
+        "genes": [
+          "kivd"
+        ],
+        "organism": "Lactococcus lactis",
+        "uniprot": [
+          "Q684J7"
+        ],
+        "engineered_gene_ids": [
+          "Q684J7"
+        ],
+        "catalytic_support": [
+          "TPP",
+          "Mg2+"
+        ],
+        "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+        "sources": [
+          "https://www.rhea-db.org/rhea/54360",
+          "https://doi.org/10.1128/AEM.00468-08",
+          "https://www.uniprot.org/uniprotkb/Q684J7/entry"
+        ],
+        "operation": "add_enzyme",
+        "bounds_before": null,
+        "bounds_after": [
+          0,
+          1000
+        ],
+        "mass_charge_imbalance": {},
+        "directed_flux_at_product_optimum": 6.343983770576928
+      },
+      {
+        "option_id": "ADH2_ISOAMYL",
+        "reaction": "bs_methylbutanal_c + h_c + nadh_c --> bs_methylbutanol_c + nad_c",
+        "direction": 1,
+        "genes": [
+          "ADH2"
+        ],
+        "organism": "Saccharomyces cerevisiae",
+        "uniprot": [
+          "P00331"
+        ],
+        "engineered_gene_ids": [
+          "P00331"
+        ],
+        "catalytic_support": [
+          "Zn2+"
+        ],
+        "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+        "sources": [
+          "https://www.rhea-db.org/rhea/18529",
+          "https://doi.org/10.1128/AEM.00468-08",
+          "https://www.uniprot.org/uniprotkb/P00331/entry"
+        ],
+        "operation": "add_enzyme",
+        "bounds_before": null,
+        "bounds_after": [
+          0,
+          1000
+        ],
+        "mass_charge_imbalance": {},
+        "directed_flux_at_product_optimum": 6.343983770576926
+      }
+    ],
+    "exchange_fluxes_at_product_optimum": {
+      "EX_ca2_e": -0.0010226490570397562,
+      "EX_cl_e": -0.0010226490570397564,
+      "EX_co2_e": 20.21512567431933,
+      "EX_cobalt2_e": -4.91185906359153e-06,
+      "EX_cu2_e": -0.00013930032304345578,
+      "EX_fe2_e": -0.0031555747368137437,
+      "EX_glc__D_e": -10.0,
+      "EX_h_e": 1.80525202510334,
+      "EX_h2o_e": 19.05998345057077,
+      "EX_k_e": -0.038350420247984865,
+      "EX_meoh_e": 3.9294872509297003e-07,
+      "EX_mg2_e": -0.001704415095066261,
+      "EX_mn2_e": -0.00013576378451766986,
+      "EX_mobd_e": -2.5345192768132293e-05,
+      "EX_nh4_e": -2.122085010346224,
+      "EX_ni2_e": -6.346121910160256e-05,
+      "EX_o2_e": -3.935908426798888,
+      "EX_pi_e": -0.1895252608148238,
+      "EX_so4_e": -0.04955279897713649,
+      "EX_zn2_e": -6.699775762738847e-05
+    },
+    "scope": "iJO1366 K-12 steady-state stoichiometric upper bound in the explicitly declared medium. Product export is represented by a free cytosolic sink; transport, toxicity, enzyme kinetics and expression burden are not predicted. Gene count is an engineering-complexity proxy. Selected branch reactions are coupled to export to assess the proposed route, not an unspecified alternative.",
+    "experimental_outcome": "not_measured",
+    "goal_met": true,
+    "goal_requirements": [
+      {
+        "metric": "product_yield_mol_per_mol",
+        "value": 0.6343990114567015,
+        "operator": ">=",
+        "target": 0.6026790608838665,
+        "absolute_tolerance": 1e-07,
+        "met": true
+      },
+      {
+        "metric": "pathway_step_count",
+        "value": 2,
+        "operator": "<=",
+        "target": 2,
+        "absolute_tolerance": 0.0,
+        "met": true
+      },
+      {
+        "metric": "heterologous_gene_count",
+        "value": 2,
+        "operator": "<=",
+        "target": 2,
+        "absolute_tolerance": 0.0,
+        "met": true
+      }
+    ],
+    "goal_evidence_type": "genome_scale_stoichiometric_prediction",
+    "goal_evaluation": "public_requirements"
+  },
+  "all_curated_route_evaluations": [
+    {
+      "steps": [
+        "KIVD_KIC",
+        "ADH2_ISOAMYL"
+      ],
+      "evaluation": {
+        "valid": true,
+        "feasible": true,
+        "metrics": {
+          "pathway_step_count": 2,
+          "heterologous_gene_count": 2,
+          "native_pathway_gene_count": 0,
+          "knockout_count": 0,
+          "wildtype_growth_per_hour": 0.9823718127183059,
+          "minimum_growth_per_hour": 0.19647436254366119,
+          "product_yield_mol_per_mol": 0.6343990114567022,
+          "carbon_yield_fraction": 0.5286658428805852,
+          "product_flux": 6.343990114567022,
+          "maximum_growth_per_hour": 0.9823718127270024,
+          "biomass_flux_at_product_optimum": 0.19647436254366119,
+          "zero_carbon_product_flux": 0.0,
+          "product_min_at_99pct_growth": 0.0,
+          "product_max_at_99pct_growth": 0.08458928571408092
+        },
+        "pathway": [
+          {
+            "option_id": "KIVD_KIC",
+            "reaction": "4mop_c + h_c --> bs_methylbutanal_c + co2_c",
+            "direction": 1,
+            "genes": [
+              "kivd"
+            ],
+            "organism": "Lactococcus lactis",
+            "uniprot": [
+              "Q684J7"
+            ],
+            "engineered_gene_ids": [
+              "Q684J7"
+            ],
+            "catalytic_support": [
+              "TPP",
+              "Mg2+"
+            ],
+            "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+            "sources": [
+              "https://www.rhea-db.org/rhea/54360",
+              "https://doi.org/10.1128/AEM.00468-08",
+              "https://www.uniprot.org/uniprotkb/Q684J7/entry"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 6.343983770576847
+          },
+          {
+            "option_id": "ADH2_ISOAMYL",
+            "reaction": "bs_methylbutanal_c + h_c + nadh_c --> bs_methylbutanol_c + nad_c",
+            "direction": 1,
+            "genes": [
+              "ADH2"
+            ],
+            "organism": "Saccharomyces cerevisiae",
+            "uniprot": [
+              "P00331"
+            ],
+            "engineered_gene_ids": [
+              "P00331"
+            ],
+            "catalytic_support": [
+              "Zn2+"
+            ],
+            "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+            "sources": [
+              "https://www.rhea-db.org/rhea/18529",
+              "https://doi.org/10.1128/AEM.00468-08",
+              "https://www.uniprot.org/uniprotkb/P00331/entry"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 6.343983770576847
+          }
+        ],
+        "exchange_fluxes_at_product_optimum": {
+          "EX_ca2_e": -0.0010226490570397562,
+          "EX_cl_e": -0.0010226490570397564,
+          "EX_co2_e": 20.215125674319605,
+          "EX_cobalt2_e": -4.91185906359153e-06,
+          "EX_cu2_e": -0.00013930032304345578,
+          "EX_fe2_e": -0.0031555747368137437,
+          "EX_glc__D_e": -10.0,
+          "EX_h_e": 1.8052520251032071,
+          "EX_h2o_e": 19.059983450571252,
+          "EX_k_e": -0.038350420247984865,
+          "EX_meoh_e": 3.929487250873221e-07,
+          "EX_mg2_e": -0.001704415095066261,
+          "EX_mn2_e": -0.00013576378451766986,
+          "EX_mobd_e": -2.5345192768132293e-05,
+          "EX_nh4_e": -2.1220850103462694,
+          "EX_ni2_e": -6.346121910160256e-05,
+          "EX_o2_e": -3.935908426799385,
+          "EX_pi_e": -0.18952526081485385,
+          "EX_so4_e": -0.04955279897713689,
+          "EX_zn2_e": -6.699775762738847e-05
+        },
+        "scope": "iJO1366 K-12 steady-state stoichiometric upper bound in the explicitly declared medium. Product export is represented by a free cytosolic sink; transport, toxicity, enzyme kinetics and expression burden are not predicted. Gene count is an engineering-complexity proxy. Selected branch reactions are coupled to export to assess the proposed route, not an unspecified alternative.",
+        "experimental_outcome": "not_measured",
+        "goal_met": true,
+        "goal_requirements": [
+          {
+            "metric": "product_yield_mol_per_mol",
+            "value": 0.6343990114567022,
+            "operator": ">=",
+            "target": 0.6026790608838665,
+            "absolute_tolerance": 1e-07,
+            "met": true
+          },
+          {
+            "metric": "pathway_step_count",
+            "value": 2,
+            "operator": "<=",
+            "target": 2,
+            "absolute_tolerance": 0.0,
+            "met": true
+          },
+          {
+            "metric": "heterologous_gene_count",
+            "value": 2,
+            "operator": "<=",
+            "target": 2,
+            "absolute_tolerance": 0.0,
+            "met": true
+          }
+        ],
+        "goal_evidence_type": "genome_scale_stoichiometric_prediction",
+        "goal_evaluation": "public_requirements"
+      }
+    }
+  ],
+  "source": "https://doi.org/10.1128/AEM.00468-08",
+  "scope": "Original JCL strains and yeast-extract medium are not reconstructed; model supplies native KIC from glucose.",
+  "reference_method": "Canonical pathway chosen before formal LLM; no experimental output value used as a flux constraint."
+}

@@ -1,0 +1,729 @@
+{
+  "version": "formal-metabolic-alternative-audit-v2",
+  "allowed_knockouts": [],
+  "new_metabolites": {
+    "bs_methylbutanal_c": {
+      "name": "3-methylbutanal",
+      "formula": "C5H10O",
+      "charge": 0,
+      "source": "https://www.rhea-db.org/rhea/54360"
+    },
+    "bs_methylbutanol_c": {
+      "name": "3-methylbutan-1-ol",
+      "formula": "C5H12O",
+      "charge": 0,
+      "source": "https://www.rhea-db.org/rhea/18529"
+    },
+    "bs_salicylate_c": {
+      "name": "salicylate",
+      "formula": "C7H5O3",
+      "charge": -1,
+      "source": "https://www.rhea-db.org/rhea/11004"
+    },
+    "bs_catechol_c": {
+      "name": "catechol",
+      "formula": "C6H6O2",
+      "charge": 0,
+      "source": "https://www.rhea-db.org/rhea/23852"
+    },
+    "bs_muconate_c": {
+      "name": "cis,cis-muconate",
+      "formula": "C6H4O4",
+      "charge": -2,
+      "source": "https://www.rhea-db.org/rhea/23852"
+    },
+    "bs_coumarate_c": {
+      "name": "(E)-4-coumarate",
+      "formula": "C9H7O3",
+      "charge": -1,
+      "source": "https://www.rhea-db.org/rhea/19641"
+    },
+    "bs_coumaroylcoa_c": {
+      "name": "(E)-4-coumaroyl-CoA",
+      "formula": "C30H38N7O18P3S",
+      "charge": -4,
+      "source": "https://www.rhea-db.org/rhea/19641"
+    },
+    "bs_narchalcone_c": {
+      "name": "naringenin chalcone",
+      "formula": "C15H12O5",
+      "charge": 0,
+      "source": "https://www.rhea-db.org/rhea/11128"
+    },
+    "bs_naringenin_c": {
+      "name": "(2S)-naringenin",
+      "formula": "C15H12O5",
+      "charge": 0,
+      "source": "https://www.rhea-db.org/rhea/79891"
+    },
+    "bs_methylaspartate_c": {
+      "name": "(2S,3S)-3-methyl-L-aspartate",
+      "formula": "C5H8NO4",
+      "charge": -1,
+      "source": "https://www.rhea-db.org/rhea/12829"
+    },
+    "bs_mesaconate_c": {
+      "name": "mesaconate",
+      "formula": "C5H4O4",
+      "charge": -2,
+      "source": "https://www.rhea-db.org/rhea/12829"
+    },
+    "bs_pca_c": {
+      "name": "protocatechuate",
+      "formula": "C7H5O4",
+      "charge": -1,
+      "source": "https://www.rhea-db.org/rhea/24848"
+    },
+    "bs_pcaldehyde_c": {
+      "name": "protocatechualdehyde",
+      "formula": "C7H6O3",
+      "charge": 0,
+      "source": "https://pubchem.ncbi.nlm.nih.gov/compound/Protocatechualdehyde"
+    },
+    "bs_vanillate_c": {
+      "name": "vanillate",
+      "formula": "C8H7O4",
+      "charge": -1,
+      "source": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16632"
+    },
+    "bs_vanillin_c": {
+      "name": "vanillin",
+      "formula": "C8H8O3",
+      "charge": 0,
+      "source": "https://www.rhea-db.org/rhea/18727"
+    }
+  },
+  "reactions": {
+    "KIVD_KIC": {
+      "main_substrate": "4mop_c",
+      "main_product": "bs_methylbutanal_c",
+      "stoichiometry": {
+        "4mop_c": -1,
+        "h_c": -1,
+        "bs_methylbutanal_c": 1,
+        "co2_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "kivd"
+      ],
+      "organism": "Lactococcus lactis",
+      "uniprot": [
+        "Q684J7"
+      ],
+      "engineered_gene_ids": [
+        "Q684J7"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/54360",
+        "https://doi.org/10.1128/AEM.00468-08",
+        "https://www.uniprot.org/uniprotkb/Q684J7/entry"
+      ],
+      "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+      "catalytic_support": [
+        "TPP",
+        "Mg2+"
+      ]
+    },
+    "ADH2_ISOAMYL": {
+      "main_substrate": "bs_methylbutanal_c",
+      "main_product": "bs_methylbutanol_c",
+      "stoichiometry": {
+        "bs_methylbutanal_c": -1,
+        "nadh_c": -1,
+        "h_c": -1,
+        "bs_methylbutanol_c": 1,
+        "nad_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "ADH2"
+      ],
+      "organism": "Saccharomyces cerevisiae",
+      "uniprot": [
+        "P00331"
+      ],
+      "engineered_gene_ids": [
+        "P00331"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/18529",
+        "https://doi.org/10.1128/AEM.00468-08",
+        "https://www.uniprot.org/uniprotkb/P00331/entry"
+      ],
+      "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+      "catalytic_support": [
+        "Zn2+"
+      ]
+    },
+    "ENTC_NATIVE": {
+      "main_substrate": "chor_c",
+      "main_product": "ichor_c",
+      "stoichiometry": {
+        "chor_c": -1,
+        "ichor_c": 1
+      },
+      "operation": "native_reference",
+      "model_reaction": "ICHORS_copy2",
+      "model_direction": 1,
+      "genes": [
+        "b0593"
+      ],
+      "organism": "Escherichia coli K-12 MG1655",
+      "uniprot": [
+        "P0AEJ2"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/18985",
+        "https://doi.org/10.1016/j.ymben.2014.02.009"
+      ],
+      "catalytic_support": [
+        "Mg2+"
+      ]
+    },
+    "PCHB_SAL": {
+      "main_substrate": "ichor_c",
+      "main_product": "bs_salicylate_c",
+      "stoichiometry": {
+        "ichor_c": -1,
+        "bs_salicylate_c": 1,
+        "pyr_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "pchB"
+      ],
+      "organism": "Pseudomonas aeruginosa",
+      "uniprot": [
+        "Q51507"
+      ],
+      "engineered_gene_ids": [
+        "Q51507"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/27874",
+        "https://doi.org/10.1016/j.ymben.2014.02.009",
+        "https://www.uniprot.org/uniprotkb/Q51507/entry"
+      ],
+      "identity_scope": "P. aeruginosa reaction reference; original paper used P. fluorescens PchB. This is a new reaction design with a declared alternative reference enzyme.",
+      "catalytic_support": []
+    },
+    "NAHG_SAL": {
+      "main_substrate": "bs_salicylate_c",
+      "main_product": "bs_catechol_c",
+      "stoichiometry": {
+        "bs_salicylate_c": -1,
+        "nadh_c": -1,
+        "o2_c": -1,
+        "h_c": -2,
+        "bs_catechol_c": 1,
+        "co2_c": 1,
+        "nad_c": 1,
+        "h2o_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "nahG"
+      ],
+      "organism": "Pseudomonas putida",
+      "uniprot": [
+        "Q53552"
+      ],
+      "engineered_gene_ids": [
+        "Q53552"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/11004",
+        "https://doi.org/10.1016/j.ymben.2014.02.009",
+        "https://www.uniprot.org/uniprotkb/Q53552/entry"
+      ],
+      "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+      "catalytic_support": [
+        "FAD"
+      ]
+    },
+    "CATA_MUCONATE": {
+      "main_substrate": "bs_catechol_c",
+      "main_product": "bs_muconate_c",
+      "stoichiometry": {
+        "bs_catechol_c": -1,
+        "o2_c": -1,
+        "bs_muconate_c": 1,
+        "h_c": 2
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "catA1"
+      ],
+      "organism": "Pseudomonas putida KT2440",
+      "uniprot": [
+        "Q88GK8"
+      ],
+      "engineered_gene_ids": [
+        "Q88GK8"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/23852",
+        "https://doi.org/10.1016/j.ymben.2014.02.009",
+        "https://www.uniprot.org/uniprotkb/Q88GK8/entry"
+      ],
+      "identity_scope": "KT2440 catA1 reference; original CatA clone accession unresolved. Reaction annotation is not an exact clone match.",
+      "catalytic_support": [
+        "Fe3+"
+      ]
+    },
+    "TAL_COUMARATE": {
+      "main_substrate": "tyr__L_c",
+      "main_product": "bs_coumarate_c",
+      "stoichiometry": {
+        "tyr__L_c": -1,
+        "bs_coumarate_c": 1,
+        "nh4_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "hutH"
+      ],
+      "organism": "Cereibacter sphaeroides",
+      "uniprot": [
+        "Q3IWB0"
+      ],
+      "engineered_gene_ids": [
+        "Q3IWB0"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/24906",
+        "https://doi.org/10.1016/j.ymben.2011.02.002",
+        "https://www.uniprot.org/uniprotkb/Q3IWB0/entry"
+      ],
+      "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+      "catalytic_support": [
+        "MIO prosthetic group"
+      ]
+    },
+    "4CL_COUMAROYL": {
+      "main_substrate": "bs_coumarate_c",
+      "main_product": "bs_coumaroylcoa_c",
+      "stoichiometry": {
+        "bs_coumarate_c": -1,
+        "atp_c": -1,
+        "coa_c": -1,
+        "bs_coumaroylcoa_c": 1,
+        "amp_c": 1,
+        "ppi_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "4CL3"
+      ],
+      "organism": "Oryza sativa",
+      "uniprot": [
+        "Q6ETN3"
+      ],
+      "engineered_gene_ids": [
+        "Q6ETN3"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/19641",
+        "https://doi.org/10.1016/j.ymben.2011.02.002",
+        "https://www.uniprot.org/uniprotkb/Q6ETN3/entry"
+      ],
+      "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+      "catalytic_support": [
+        "Mg2+"
+      ]
+    },
+    "CHS_CHALCONE": {
+      "main_substrate": "bs_coumaroylcoa_c",
+      "main_product": "bs_narchalcone_c",
+      "stoichiometry": {
+        "bs_coumaroylcoa_c": -1,
+        "malcoa_c": -3,
+        "h_c": -3,
+        "bs_narchalcone_c": 1,
+        "co2_c": 3,
+        "coa_c": 4
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "CHS1"
+      ],
+      "organism": "Medicago sativa",
+      "uniprot": [
+        "P30073"
+      ],
+      "engineered_gene_ids": [
+        "P30073"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/11128",
+        "https://doi.org/10.1016/j.ymben.2011.02.002",
+        "https://www.uniprot.org/uniprotkb/P30073/entry"
+      ],
+      "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+      "catalytic_support": []
+    },
+    "CHI_NARINGENIN": {
+      "main_substrate": "bs_narchalcone_c",
+      "main_product": "bs_naringenin_c",
+      "stoichiometry": {
+        "bs_narchalcone_c": -1,
+        "bs_naringenin_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "CHI1"
+      ],
+      "organism": "Medicago sativa",
+      "uniprot": [
+        "P28012"
+      ],
+      "engineered_gene_ids": [
+        "P28012"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/79891",
+        "https://doi.org/10.1016/j.ymben.2011.02.002",
+        "https://www.uniprot.org/uniprotkb/P28012/entry"
+      ],
+      "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+      "catalytic_support": []
+    },
+    "GLUTAMATE_MUTASE": {
+      "main_substrate": "glu__L_c",
+      "main_product": "bs_methylaspartate_c",
+      "stoichiometry": {
+        "glu__L_c": -1,
+        "bs_methylaspartate_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "glmS (MutS)",
+        "glmE (MutE)",
+        "MutL support"
+      ],
+      "organism": "Clostridium tetanomorphum mutase; MutL support organism/sequence unresolved",
+      "uniprot": [
+        "Q05488",
+        "Q05509"
+      ],
+      "engineered_gene_ids": [
+        "Q05488",
+        "Q05509",
+        "MutL_support_identity_unresolved"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/12857",
+        "https://doi.org/10.1016/j.ymben.2015.06.001",
+        "https://www.uniprot.org/uniprotkb/Q05488/entry",
+        "https://www.uniprot.org/uniprotkb/Q05509/entry"
+      ],
+      "identity_scope": "MutS/MutE curated references; required support is counted as one role, not assigned an unverified organism or accession.",
+      "catalytic_support": [
+        "Active adenosylcobalamin-bound mutase",
+        "MutL reactivation; accession and exact optimized construct not assigned"
+      ]
+    },
+    "MAL_MESACONATE": {
+      "main_substrate": "bs_methylaspartate_c",
+      "main_product": "bs_mesaconate_c",
+      "stoichiometry": {
+        "bs_methylaspartate_c": -1,
+        "bs_mesaconate_c": 1,
+        "nh4_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "mal"
+      ],
+      "organism": "Clostridium tetanomorphum",
+      "uniprot": [
+        "Q05514"
+      ],
+      "engineered_gene_ids": [
+        "Q05514"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/12829",
+        "https://doi.org/10.1016/j.ymben.2015.06.001",
+        "https://www.uniprot.org/uniprotkb/Q05514/entry"
+      ],
+      "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+      "catalytic_support": [
+        "Mg2+",
+        "monovalent cation support"
+      ]
+    },
+    "ASBF_PCA": {
+      "main_substrate": "3dhsk_c",
+      "main_product": "bs_pca_c",
+      "stoichiometry": {
+        "3dhsk_c": -1,
+        "bs_pca_c": 1,
+        "h2o_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "asbF"
+      ],
+      "organism": "Bacillus thuringiensis",
+      "uniprot": [],
+      "engineered_gene_ids": [
+        "B_thuringiensis_asbF"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/24848",
+        "https://doi.org/10.1021/ja506664a"
+      ],
+      "identity_scope": "Original article and SI identify B. thuringiensis asbF and give the synthetic DNA; no unverified UniProt identity assigned.",
+      "catalytic_support": [
+        "divalent metal"
+      ]
+    },
+    "CAR_PCA": {
+      "main_substrate": "bs_pca_c",
+      "main_product": "bs_pcaldehyde_c",
+      "stoichiometry": {
+        "bs_pca_c": -1,
+        "atp_c": -1,
+        "nadph_c": -1,
+        "h_c": -1,
+        "bs_pcaldehyde_c": 1,
+        "amp_c": 1,
+        "ppi_c": 1,
+        "nadp_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "car",
+        "sfp activation"
+      ],
+      "organism": "Nocardia iowensis CAR; Bacillus subtilis Sfp",
+      "uniprot": [
+        "Q6RKB1"
+      ],
+      "engineered_gene_ids": [
+        "Q6RKB1",
+        "B_subtilis_sfp"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/50916",
+        "https://doi.org/10.1021/ja506664a",
+        "https://www.uniprot.org/uniprotkb/Q6RKB1/entry"
+      ],
+      "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+      "catalytic_support": [
+        "Phosphopantetheinylated CAR; Sfp activation included in gene burden"
+      ]
+    },
+    "CAR_VANILLATE": {
+      "main_substrate": "bs_vanillate_c",
+      "main_product": "bs_vanillin_c",
+      "stoichiometry": {
+        "bs_vanillate_c": -1,
+        "atp_c": -1,
+        "nadph_c": -1,
+        "h_c": -1,
+        "bs_vanillin_c": 1,
+        "amp_c": 1,
+        "ppi_c": 1,
+        "nadp_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "car",
+        "sfp activation"
+      ],
+      "organism": "Nocardia iowensis CAR; Bacillus subtilis Sfp",
+      "uniprot": [
+        "Q6RKB1"
+      ],
+      "engineered_gene_ids": [
+        "Q6RKB1",
+        "B_subtilis_sfp"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/50916",
+        "https://doi.org/10.1021/ja506664a",
+        "https://www.uniprot.org/uniprotkb/Q6RKB1/entry"
+      ],
+      "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+      "catalytic_support": [
+        "Phosphopantetheinylated CAR; Sfp activation included in gene burden"
+      ]
+    },
+    "COMT_PCA": {
+      "main_substrate": "bs_pca_c",
+      "main_product": "bs_vanillate_c",
+      "stoichiometry": {
+        "bs_pca_c": -1,
+        "amet_c": -1,
+        "bs_vanillate_c": 1,
+        "ahcys_c": 1,
+        "h_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "Hs-S-COMT"
+      ],
+      "organism": "Homo sapiens",
+      "uniprot": [],
+      "engineered_gene_ids": [
+        "H_sapiens_S_COMT"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/17877",
+        "https://doi.org/10.1021/ja506664a"
+      ],
+      "identity_scope": "Original soluble COMT isoform from source article/SI, not an arbitrary full membrane-bound COMT sequence.",
+      "catalytic_support": [
+        "Mg2+"
+      ]
+    },
+    "COMT_ALDEHYDE": {
+      "main_substrate": "bs_pcaldehyde_c",
+      "main_product": "bs_vanillin_c",
+      "stoichiometry": {
+        "bs_pcaldehyde_c": -1,
+        "amet_c": -1,
+        "bs_vanillin_c": 1,
+        "ahcys_c": 1,
+        "h_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "Hs-S-COMT"
+      ],
+      "organism": "Homo sapiens",
+      "uniprot": [],
+      "engineered_gene_ids": [
+        "H_sapiens_S_COMT"
+      ],
+      "sources": [
+        "https://www.rhea-db.org/rhea/17877",
+        "https://doi.org/10.1021/ja506664a"
+      ],
+      "identity_scope": "Original soluble COMT isoform from source article/SI, not an arbitrary full membrane-bound COMT sequence.",
+      "catalytic_support": [
+        "Mg2+"
+      ]
+    },
+    "AROZ_DHS": {
+      "main_substrate": "3dhsk_c",
+      "main_product": "bs_pca_c",
+      "stoichiometry": {
+        "3dhsk_c": -1,
+        "bs_pca_c": 1,
+        "h2o_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "aroZ"
+      ],
+      "organism": "Klebsiella pneumoniae",
+      "uniprot": [],
+      "engineered_gene_ids": [
+        "K_pneumoniae_aroZ"
+      ],
+      "sources": [
+        "https://doi.org/10.1021/bp010179x",
+        "https://patents.google.com/patent/US5487987A/en",
+        "https://www.rhea-db.org/rhea/24848"
+      ],
+      "catalytic_support": [
+        "Active DHS dehydratase; original clone-specific metal requirement unresolved"
+      ],
+      "identity_scope": "Published species/gene identity; exact historical synthesized sequence or UniProt accession not assigned. Reaction-level proposal only."
+    },
+    "AROY_PCA": {
+      "main_substrate": "bs_pca_c",
+      "main_product": "bs_catechol_c",
+      "stoichiometry": {
+        "bs_pca_c": -1,
+        "h_c": -1,
+        "bs_catechol_c": 1,
+        "co2_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "aroY"
+      ],
+      "organism": "Klebsiella pneumoniae",
+      "uniprot": [],
+      "engineered_gene_ids": [
+        "K_pneumoniae_aroY"
+      ],
+      "sources": [
+        "https://doi.org/10.1128/AEM.01386-15",
+        "https://doi.org/10.1002/anie.201708091",
+        "https://www.rhea-db.org/rhea/22416"
+      ],
+      "catalytic_support": [
+        "Mature prFMN, including oxidative maturation",
+        "Native E. coli UbiX support assumed available; no fixed per-product cofactor turnover assigned"
+      ],
+      "identity_scope": "2015 paper identifies aroY/AB479384; no exact synthesized-clone sequence match performed."
+    },
+    "UBIC_NATIVE": {
+      "main_substrate": "chor_c",
+      "main_product": "4hbz_c",
+      "stoichiometry": {
+        "chor_c": -1,
+        "4hbz_c": 1,
+        "pyr_c": 1
+      },
+      "operation": "native_reference",
+      "model_reaction": "CHRPL",
+      "model_direction": 1,
+      "genes": [
+        "b4039"
+      ],
+      "organism": "Escherichia coli K-12 MG1655",
+      "uniprot": [
+        "P26602"
+      ],
+      "sources": [
+        "https://doi.org/10.1128/AEM.01386-15",
+        "https://www.rhea-db.org/rhea/16505"
+      ],
+      "catalytic_support": []
+    },
+    "POBA_4HB": {
+      "main_substrate": "4hbz_c",
+      "main_product": "bs_pca_c",
+      "stoichiometry": {
+        "4hbz_c": -1,
+        "nadph_c": -1,
+        "o2_c": -1,
+        "h_c": -1,
+        "bs_pca_c": 1,
+        "nadp_c": 1,
+        "h2o_c": 1
+      },
+      "operation": "add_enzyme",
+      "genes": [
+        "pobA"
+      ],
+      "organism": "Pseudomonas putida KT2440",
+      "uniprot": [
+        "Q88H28"
+      ],
+      "engineered_gene_ids": [
+        "Q88H28"
+      ],
+      "sources": [
+        "https://doi.org/10.1128/AEM.01386-15",
+        "https://www.rhea-db.org/rhea/19477",
+        "https://www.uniprot.org/uniprotkb/Q88H28/entry"
+      ],
+      "catalytic_support": [
+        "FAD"
+      ],
+      "identity_scope": "KT2440 pobA/PP_3537 reaction reference; original synthesized construct not sequence-matched. NADPH specificity retained."
+    }
+  },
+  "scope": "Reaction/enzyme design on iJO1366, not exact reconstruction of a historical plasmid or production strain. Reference enzyme accessions can differ from original clones and are marked explicitly.",
+  "burden_definition": "Unique heterologous gene identities including required activation/support proteins; count is an engineering complexity proxy, not predicted expression burden.",
+  "catalytic_cofactor_policy": "Catalytic metals, prosthetic groups and active enzymes are assumed available where explicitly stated; no invented per-product cofactor consumption.",
+  "proposal_policy": "Branch reactions are selected explicitly; native central precursor synthesis is supplied by the host network, without extra carbon uptake."
+}

@@ -1,0 +1,26 @@
+{
+  "editable_region": "utr",
+  "fixed_context_file": "/public/task.json",
+  "baseline_utr": "TATGGCCGTATCCCTCTGTGGACCGTTTGTCGCTGTTCCAGGGCGCCTTA",
+  "alphabet": "ACGT",
+  "source_model": "Original Sample model; not the retrained model that includes designed-library sequences",
+  "calibration": {
+    "slope": 1.6442389394446841,
+    "intercept": 6.50378796044995,
+    "check_n": 10051,
+    "check_mae_mrl": 0.3320488385821322,
+    "check_rmse_mrl": 0.4739392663914206,
+    "check_spearman": 0.9505759720220551,
+    "scope": "Calibration of original main model in original random U50/eGFP/U/HEK293T assay; not unseen biological-background validation."
+  },
+  "endpoint": "predicted mean ribosome load, not protein mass or RNA half-life",
+  "baseline_metrics": {
+    "optimus_standardized_score": -0.8970296382904053,
+    "calibrated_predicted_mrl": 5.028856899336885,
+    "baseline_predicted_mrl": 5.028856899336885,
+    "predicted_mrl_change": 0.0,
+    "utr_substitution_count": 0,
+    "upstream_aug_count": 1,
+    "utr_gc_fraction": 0.58
+  }
+}

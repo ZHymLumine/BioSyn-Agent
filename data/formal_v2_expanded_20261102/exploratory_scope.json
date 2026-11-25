@@ -1,0 +1,7 @@
+{
+  "included_in_formal_matrix": false,
+  "scope": "Full CDS/mRNA expression and stability co-design",
+  "status": "Separate exploration; calibrated biological endpoint and broader backgrounds still required",
+  "existing_development_dataset": "tasks/application_suite_v3/comparison_development_v2",
+  "do_not_pool_with_primary_results": true
+}

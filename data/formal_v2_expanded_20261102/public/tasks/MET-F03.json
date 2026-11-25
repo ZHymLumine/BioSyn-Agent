@@ -1,0 +1,101 @@
+{
+  "case_id": "MET-F03",
+  "track": "metabolic_pathway",
+  "name": "(2S)-naringenin",
+  "design_difference": "(2S)-naringenin with product-specific cofactor and precursor accounting",
+  "request": "在 E. coli K-12 MG1655/iJO1366 中，从唯一碳源葡萄糖设计通向 (2S)-naringenin 的反应和酶组合。中心前体由宿主网络产生；输出连接至目标的有向反应选项和空基因敲除列表。在所给培养基、葡萄糖摄取10 mmol/gDW/h及野生型最大生长20%的下限下，理论摩尔产率至少为 0.26204636 mol/mol，支路不超过4步，异源基因总数（含所需支持蛋白）不超过4。完整保留辅因子与副产物，比较产率和工程复杂度。该目标是模型内路线设计，不是实测滴度预测。",
+  "inputs": {
+    "host": "Escherichia coli K-12 MG1655",
+    "substrate": "glucose",
+    "product": "(2S)-naringenin",
+    "product_metabolite": "bs_naringenin_c",
+    "central_precursors": [
+      "tyr__L_c"
+    ],
+    "max_knockouts": 0,
+    "computational_conditions": {
+      "model_id": "iJO1366",
+      "model_path": "metabolic/iJO1366.xml.gz",
+      "host": "Escherichia coli K-12 MG1655",
+      "medium": {
+        "EX_ca2_e": 1000.0,
+        "EX_cl_e": 1000.0,
+        "EX_cobalt2_e": 1000.0,
+        "EX_cu2_e": 1000.0,
+        "EX_fe2_e": 1000.0,
+        "EX_fe3_e": 1000.0,
+        "EX_h_e": 1000.0,
+        "EX_h2o_e": 1000.0,
+        "EX_k_e": 1000.0,
+        "EX_mg2_e": 1000.0,
+        "EX_mn2_e": 1000.0,
+        "EX_mobd_e": 1000.0,
+        "EX_na1_e": 1000.0,
+        "EX_nh4_e": 1000.0,
+        "EX_ni2_e": 1000.0,
+        "EX_o2_e": 20.0,
+        "EX_pi_e": 1000.0,
+        "EX_sel_e": 1000.0,
+        "EX_slnt_e": 1000.0,
+        "EX_so4_e": 1000.0,
+        "EX_tungs_e": 1000.0,
+        "EX_zn2_e": 1000.0,
+        "EX_glc__D_e": 10.0
+      },
+      "substrate_exchange": "EX_glc__D_e",
+      "substrate_uptake": 10.0,
+      "biomass_reaction": "BIOMASS_Ec_iJO1366_core_53p95M",
+      "minimum_growth_fraction_of_wildtype": 0.2,
+      "units": "Flux mmol/gDW/hour; growth 1/hour. Defined computational medium, not a reconstructed historical broth."
+    },
+    "catalytic_support_assumptions": [
+      "MIO prosthetic group",
+      "Mg2+"
+    ]
+  },
+  "expected_output": {
+    "artifact": "ordered reaction/enzyme option IDs and gene knockouts, expanded to balanced sourced reactions",
+    "required_fields": [
+      "steps",
+      "gene_knockouts"
+    ]
+  },
+  "schema_version": "formal-computational-design-1",
+  "dataset_version": "formal-draft-v2",
+  "provenance": {
+    "kind": "resource_anchored_computational_design",
+    "biochemical_source": "https://doi.org/10.1016/j.ymben.2011.02.002",
+    "host_model": "iJO1366 K-12",
+    "historical_strain_reproduction": false,
+    "new_measurements": false,
+    "case_scope": "Four-reaction pathway supported; reference enzymes independently curated, not the exact optimized original combination or cerulenin treatment.",
+    "catalog_version": "formal-metabolic-alternative-audit-v2"
+  },
+  "instructions": [
+    "根据自然语言目标自主设计，选择工具与迭代策略。",
+    "使用公开资源；不得搜索历史答案。输出完整设计，计算分数不等同于湿实验读出。",
+    "候选包含 id、parent_id、design、rationale。设计字段遵循 scientific-profile.json 的 decision_schema。"
+  ],
+  "evaluation_contract": {
+    "evidence_type": "genome_scale_stoichiometric_prediction",
+    "requirements": [
+      {
+        "metric": "product_yield_mol_per_mol",
+        "operator": ">=",
+        "value": 0.2620463620911641,
+        "absolute_tolerance": 1e-07
+      },
+      {
+        "metric": "pathway_step_count",
+        "operator": "<=",
+        "value": 4
+      },
+      {
+        "metric": "heterologous_gene_count",
+        "operator": "<=",
+        "value": 4
+      }
+    ],
+    "threshold_basis": "Before any formal LLM run: yield >=95% of canonical literature-route calculation under identical model conditions, branch and gene counts <= that reference. This is a benchmark-relative computational attainment target, not a published experimental threshold. No threshold chosen from LLM outcomes."
+  }
+}

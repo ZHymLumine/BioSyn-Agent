@@ -1,0 +1,460 @@
+[
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "BAC-F01",
+    "metric": "relative_activity_target_error",
+    "operator": "<=",
+    "value": 0.05,
+    "absolute_tolerance": 1e-10
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "BAC-F01",
+    "metric": "absolute_mfe_change_kcal_mol",
+    "operator": "<=",
+    "value": 1.0,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "BAC-F02",
+    "metric": "relative_activity_target_error",
+    "operator": "<=",
+    "value": 0.05,
+    "absolute_tolerance": 1e-10
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "BAC-F02",
+    "metric": "absolute_mfe_change_kcal_mol",
+    "operator": "<=",
+    "value": 1.0,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "BAC-F03",
+    "metric": "relative_activity_target_error",
+    "operator": "<=",
+    "value": 0.05,
+    "absolute_tolerance": 1e-10
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "BAC-F03",
+    "metric": "absolute_mfe_change_kcal_mol",
+    "operator": "<=",
+    "value": 1.0,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "BAC-F04",
+    "metric": "relative_activity_target_error",
+    "operator": "<=",
+    "value": 0.05,
+    "absolute_tolerance": 1e-10
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "BAC-F04",
+    "metric": "absolute_mfe_change_kcal_mol",
+    "operator": "<=",
+    "value": 1.0,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "BAC-F05",
+    "metric": "relative_activity_target_error",
+    "operator": "<=",
+    "value": 0.05,
+    "absolute_tolerance": 1e-10
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "BAC-F05",
+    "metric": "absolute_mfe_change_kcal_mol",
+    "operator": "<=",
+    "value": 1.0,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F01",
+    "metric": "truth_table_accuracy",
+    "operator": "==",
+    "value": 1
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F01",
+    "metric": "on_off_ratio",
+    "operator": ">",
+    "value": 1,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F01",
+    "metric": "gate_count",
+    "operator": "<=",
+    "value": 2
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F02",
+    "metric": "truth_table_accuracy",
+    "operator": "==",
+    "value": 1
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F02",
+    "metric": "on_off_ratio",
+    "operator": ">",
+    "value": 1,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F02",
+    "metric": "gate_count",
+    "operator": "<=",
+    "value": 3
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F03",
+    "metric": "truth_table_accuracy",
+    "operator": "==",
+    "value": 1
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F03",
+    "metric": "on_off_ratio",
+    "operator": ">",
+    "value": 1,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F03",
+    "metric": "gate_count",
+    "operator": "<=",
+    "value": 4
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F04",
+    "metric": "truth_table_accuracy",
+    "operator": "==",
+    "value": 1
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F04",
+    "metric": "on_off_ratio",
+    "operator": ">",
+    "value": 1,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F04",
+    "metric": "gate_count",
+    "operator": "<=",
+    "value": 5
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F05",
+    "metric": "truth_table_accuracy",
+    "operator": "==",
+    "value": 1
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F05",
+    "metric": "on_off_ratio",
+    "operator": ">",
+    "value": 1,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F05",
+    "metric": "gate_count",
+    "operator": "<=",
+    "value": 6
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F06",
+    "metric": "truth_table_accuracy",
+    "operator": "==",
+    "value": 1
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F06",
+    "metric": "on_off_ratio",
+    "operator": ">",
+    "value": 1,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "GEN-F06",
+    "metric": "gate_count",
+    "operator": "<=",
+    "value": 7
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F01",
+    "metric": "calibrated_predicted_mrl",
+    "operator": ">=",
+    "value": 6.41360815994,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F01",
+    "metric": "utr_substitution_count",
+    "operator": "<=",
+    "value": 4
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F01",
+    "metric": "predicted_mrl_change",
+    "operator": ">=",
+    "value": 0.5,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F02",
+    "metric": "calibrated_predicted_mrl",
+    "operator": ">=",
+    "value": 6.00010456076,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F02",
+    "metric": "utr_substitution_count",
+    "operator": "<=",
+    "value": 4
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F02",
+    "metric": "predicted_mrl_change",
+    "operator": ">=",
+    "value": 0.5,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F02",
+    "metric": "upstream_aug_count",
+    "operator": "==",
+    "value": 0
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F03",
+    "metric": "calibrated_predicted_mrl",
+    "operator": "<=",
+    "value": 4.95444117022,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F03",
+    "metric": "utr_substitution_count",
+    "operator": "<=",
+    "value": 4
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F03",
+    "metric": "predicted_mrl_change",
+    "operator": "<=",
+    "value": -0.5,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F04",
+    "metric": "calibrated_predicted_mrl",
+    "operator": "<=",
+    "value": 5.6155649623,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F04",
+    "metric": "utr_substitution_count",
+    "operator": "<=",
+    "value": 4
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F04",
+    "metric": "predicted_mrl_change",
+    "operator": "<=",
+    "value": -0.5,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F04",
+    "metric": "upstream_aug_count",
+    "operator": "==",
+    "value": 0
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F05",
+    "metric": "calibrated_predicted_mrl",
+    "operator": ">=",
+    "value": 6.0,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F05",
+    "metric": "utr_substitution_count",
+    "operator": "<=",
+    "value": 25
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F06",
+    "metric": "calibrated_predicted_mrl",
+    "operator": ">=",
+    "value": 6.0,
+    "absolute_tolerance": 1e-06
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MAM-F06",
+    "metric": "utr_substitution_count",
+    "operator": "<=",
+    "value": 100
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F01",
+    "metric": "product_yield_mol_per_mol",
+    "operator": ">=",
+    "value": 0.6026790608838665,
+    "absolute_tolerance": 1e-07
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F01",
+    "metric": "pathway_step_count",
+    "operator": "<=",
+    "value": 2
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F01",
+    "metric": "heterologous_gene_count",
+    "operator": "<=",
+    "value": 2
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F02",
+    "metric": "product_yield_mol_per_mol",
+    "operator": ">=",
+    "value": 0.6422042366328559,
+    "absolute_tolerance": 1e-07
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F02",
+    "metric": "pathway_step_count",
+    "operator": "<=",
+    "value": 4
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F02",
+    "metric": "heterologous_gene_count",
+    "operator": "<=",
+    "value": 3
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F03",
+    "metric": "product_yield_mol_per_mol",
+    "operator": ">=",
+    "value": 0.2620463620911641,
+    "absolute_tolerance": 1e-07
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F03",
+    "metric": "pathway_step_count",
+    "operator": "<=",
+    "value": 4
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F03",
+    "metric": "heterologous_gene_count",
+    "operator": "<=",
+    "value": 4
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F04",
+    "metric": "product_yield_mol_per_mol",
+    "operator": ">=",
+    "value": 0.9203891614954234,
+    "absolute_tolerance": 1e-07
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F04",
+    "metric": "pathway_step_count",
+    "operator": "<=",
+    "value": 2
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F04",
+    "metric": "heterologous_gene_count",
+    "operator": "<=",
+    "value": 4
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F05",
+    "metric": "product_yield_mol_per_mol",
+    "operator": ">=",
+    "value": 0.30050510743758,
+    "absolute_tolerance": 1e-07
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F05",
+    "metric": "pathway_step_count",
+    "operator": "<=",
+    "value": 3
+  },
+  {
+    "dataset": "formal_v2_expanded_20261102",
+    "case_id": "MET-F05",
+    "metric": "heterologous_gene_count",
+    "operator": "<=",
+    "value": 4
+  }
+]

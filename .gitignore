@@ -23,9 +23,10 @@ dist/
 /Biomni/
 /OpenBioMed/
 external/
-data/
+# Curated task data are versioned; the upstream Cello catalogue is fetched.
+/data/formal_v2_expanded_20261102/public/resources/cello_Eco1C1G1T1.json
 datasets/
-resources/
+/resources/
 models/
 checkpoints/
 *.pt

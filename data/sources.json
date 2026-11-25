@@ -1,0 +1,154 @@
+{
+  "sources": [
+    {
+      "id": "cello",
+      "title": "Genetic circuit design automation and Eco1C1G1T1 components",
+      "doi": "10.1126/science.aac7341",
+      "access": "https://github.com/CIDARLAB/Cello-UCF",
+      "revision": "222827d30a28730404f0601d64f63436354fee9d",
+      "used_in": [
+        "GEN-F01",
+        "GEN-F02",
+        "GEN-F03",
+        "GEN-F04",
+        "GEN-F05",
+        "GEN-F06"
+      ],
+      "content": "Gate sequences, device templates, sensor and output devices, response parameters and empirical cytometry arrays",
+      "route": "Pinned upstream downloads; task and reference records in the dataset",
+      "rights": "Upstream UCF repository terms apply. The catalogue is reconstructed locally from upstream files."
+    },
+    {
+      "id": "emopec",
+      "title": "Expression modulation with EMOPEC",
+      "doi": "10.1038/nmeth.3727",
+      "access": "https://github.com/micked/EMOPEC",
+      "revision": "f4c3665dfea6bb8655dac180b7913d280d4721a9",
+      "used_in": [
+        "BAC-F01",
+        "BAC-F02",
+        "BAC-F03",
+        "BAC-F04",
+        "BAC-F05"
+      ],
+      "content": "Empirical and predicted six-base SD activity tables and spacing correction",
+      "route": "Pinned upstream downloads",
+      "rights": "Upstream software terms apply; implementation and lookup tables are fetched separately."
+    },
+    {
+      "id": "ecoli-context",
+      "title": "Escherichia coli K-12 MG1655 reference genome",
+      "accession": "U00096.3",
+      "access": "https://www.ncbi.nlm.nih.gov/nuccore/U00096.3",
+      "used_in": [
+        "BAC-F01",
+        "BAC-F02",
+        "BAC-F03",
+        "BAC-F04",
+        "BAC-F05"
+      ],
+      "content": "Native gene CDS and upstream sequence windows",
+      "route": "Selected sequence contexts embedded in task inputs; reference accession at NCBI",
+      "rights": "NCBI source record and submission terms apply."
+    },
+    {
+      "id": "sample",
+      "title": "Human 5′UTR design and variant effect prediction from a massively parallel translation assay",
+      "doi": "10.1038/s41587-019-0164-5",
+      "accession": "GSE114002; GSM3130435; GSM3130443; GSM4084997",
+      "access": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE114002",
+      "software": "https://github.com/pjsample/human_5utr_modeling",
+      "revision": "d53df410c7fb3fcd4bc4541bd7e8c6dc52b66fbe",
+      "used_in": [
+        "MAM-F01",
+        "MAM-F02",
+        "MAM-F03",
+        "MAM-F04",
+        "MAM-F05",
+        "MAM-F06"
+      ],
+      "content": "Fixed reporter context, UTR anchors and historical witnesses, read-coverage membership, calibration mappings and predictor weights",
+      "route": "Task records and calibration mappings bundled; original tables and weights fetched from their sources",
+      "rights": "GEO records retain their source terms; the model repository is GPL-3.0."
+    },
+    {
+      "id": "ijo1366",
+      "title": "iJO1366 Escherichia coli metabolic reconstruction",
+      "doi": "10.1038/msb.2011.65",
+      "access": "https://github.com/opencobra/cobrapy/blob/a9c5ced29670bed5035fb19e87e7b0b588adb62d/src/cobra/data/iJO1366.xml.gz",
+      "revision": "a9c5ced29670bed5035fb19e87e7b0b588adb62d",
+      "used_in": [
+        "MET-F01",
+        "MET-F02",
+        "MET-F03",
+        "MET-F04",
+        "MET-F05"
+      ],
+      "content": "Host stoichiometric reconstruction; task files specify medium and growth constraints",
+      "route": "Pinned upstream SBML download",
+      "rights": "Original model attribution and upstream distribution terms apply."
+    },
+    {
+      "id": "metabolic-reactions",
+      "title": "Curated reaction and enzyme catalogue",
+      "access": "https://www.rhea-db.org/",
+      "additional_access": "https://www.uniprot.org/",
+      "used_in": [
+        "MET-F01",
+        "MET-F02",
+        "MET-F03",
+        "MET-F04",
+        "MET-F05"
+      ],
+      "content": "Reaction stoichiometry, enzyme choices, organism and accession annotations, support-gene requirements",
+      "route": "Catalogue bundled with record-level Rhea, UniProt and primary-paper URLs",
+      "rights": "Record-level upstream attribution is retained.",
+      "record_sources": [
+        "https://doi.org/10.1002/anie.201708091",
+        "https://doi.org/10.1016/j.ymben.2011.02.002",
+        "https://doi.org/10.1016/j.ymben.2014.02.009",
+        "https://doi.org/10.1016/j.ymben.2015.06.001",
+        "https://doi.org/10.1021/bp010179x",
+        "https://doi.org/10.1021/ja506664a",
+        "https://doi.org/10.1128/AEM.00468-08",
+        "https://doi.org/10.1128/AEM.01386-15",
+        "https://patents.google.com/patent/US5487987A/en",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Protocatechualdehyde",
+        "https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16632",
+        "https://www.rhea-db.org/rhea/11004",
+        "https://www.rhea-db.org/rhea/11128",
+        "https://www.rhea-db.org/rhea/12829",
+        "https://www.rhea-db.org/rhea/12857",
+        "https://www.rhea-db.org/rhea/16505",
+        "https://www.rhea-db.org/rhea/17877",
+        "https://www.rhea-db.org/rhea/18529",
+        "https://www.rhea-db.org/rhea/18727",
+        "https://www.rhea-db.org/rhea/18985",
+        "https://www.rhea-db.org/rhea/19477",
+        "https://www.rhea-db.org/rhea/19641",
+        "https://www.rhea-db.org/rhea/22416",
+        "https://www.rhea-db.org/rhea/23852",
+        "https://www.rhea-db.org/rhea/24848",
+        "https://www.rhea-db.org/rhea/24906",
+        "https://www.rhea-db.org/rhea/27874",
+        "https://www.rhea-db.org/rhea/50916",
+        "https://www.rhea-db.org/rhea/54360",
+        "https://www.rhea-db.org/rhea/79891",
+        "https://www.uniprot.org/uniprotkb/P00331/entry",
+        "https://www.uniprot.org/uniprotkb/P28012/entry",
+        "https://www.uniprot.org/uniprotkb/P30073/entry",
+        "https://www.uniprot.org/uniprotkb/Q05488/entry",
+        "https://www.uniprot.org/uniprotkb/Q05509/entry",
+        "https://www.uniprot.org/uniprotkb/Q05514/entry",
+        "https://www.uniprot.org/uniprotkb/Q3IWB0/entry",
+        "https://www.uniprot.org/uniprotkb/Q51507/entry",
+        "https://www.uniprot.org/uniprotkb/Q53552/entry",
+        "https://www.uniprot.org/uniprotkb/Q684J7/entry",
+        "https://www.uniprot.org/uniprotkb/Q6ETN3/entry",
+        "https://www.uniprot.org/uniprotkb/Q6RKB1/entry",
+        "https://www.uniprot.org/uniprotkb/Q88GK8/entry",
+        "https://www.uniprot.org/uniprotkb/Q88H28/entry"
+      ]
+    }
+  ]
+}

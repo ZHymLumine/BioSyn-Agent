@@ -1,0 +1,263 @@
+{
+  "gates": {
+    "A1_AmtR": {
+      "group": "AmtR",
+      "parameters": {
+        "ymax": 3.8,
+        "ymin": 0.06,
+        "K": 0.07,
+        "n": 1.6,
+        "alpha": 0.2747976308366057,
+        "beta": 1.0
+      }
+    },
+    "B1_BM3R1": {
+      "group": "BM3R1",
+      "parameters": {
+        "ymax": 0.5,
+        "ymin": 0.004,
+        "K": 0.04,
+        "n": 3.4,
+        "alpha": 0.6405592709674027,
+        "beta": 0.0534087894478268
+      }
+    },
+    "B2_BM3R1": {
+      "group": "BM3R1",
+      "parameters": {
+        "ymax": 0.5,
+        "ymin": 0.005,
+        "K": 0.15,
+        "n": 2.9,
+        "alpha": 0.7069227889248032,
+        "beta": 0.045991086746751626
+      }
+    },
+    "B3_BM3R1": {
+      "group": "BM3R1",
+      "parameters": {
+        "ymax": 0.8,
+        "ymin": 0.01,
+        "K": 0.26,
+        "n": 3.4,
+        "alpha": 0.7378112921568719,
+        "beta": 0.04519953510264872
+      }
+    },
+    "E1_BetI": {
+      "group": "BetI",
+      "parameters": {
+        "ymax": 3.8,
+        "ymin": 0.07,
+        "K": 0.41,
+        "n": 2.4,
+        "alpha": 0.6432002990749837,
+        "beta": 0.4581999467137076
+      }
+    },
+    "F1_AmeR": {
+      "group": "AmeR",
+      "parameters": {
+        "ymax": 3.8,
+        "ymin": 0.2,
+        "K": 0.09,
+        "n": 1.4,
+        "alpha": 0.09276381977393494,
+        "beta": 1.0
+      }
+    },
+    "H1_HlyIIR": {
+      "group": "HlyIIR",
+      "parameters": {
+        "ymax": 2.5,
+        "ymin": 0.07,
+        "K": 0.19,
+        "n": 2.6,
+        "alpha": 0.14804949666452663,
+        "beta": 1.0
+      }
+    },
+    "I1_IcaRA": {
+      "group": "IcaRA",
+      "parameters": {
+        "ymax": 2.2,
+        "ymin": 0.08,
+        "K": 0.1,
+        "n": 1.4,
+        "alpha": 0.3748404992150903,
+        "beta": 0.43564010137683185
+      }
+    },
+    "L1_LitR": {
+      "group": "LitR",
+      "parameters": {
+        "ymax": 4.3,
+        "ymin": 0.07,
+        "K": 0.05,
+        "n": 1.7,
+        "alpha": 0.3748404992150903,
+        "beta": 0.43564010137683185
+      }
+    },
+    "N1_LmrA": {
+      "group": "LmrA",
+      "parameters": {
+        "ymax": 2.2,
+        "ymin": 0.2,
+        "K": 0.18,
+        "n": 2.1,
+        "alpha": 0.2839901653137192,
+        "beta": 1.0
+      }
+    },
+    "P1_PhlF": {
+      "group": "PhlF",
+      "parameters": {
+        "ymax": 3.9,
+        "ymin": 0.01,
+        "K": 0.03,
+        "n": 4.0,
+        "alpha": 0.22220421323746709,
+        "beta": 0.06438800857775553
+      }
+    },
+    "P2_PhlF": {
+      "group": "PhlF",
+      "parameters": {
+        "ymax": 4.1,
+        "ymin": 0.02,
+        "K": 0.13,
+        "n": 3.9,
+        "alpha": 0.1463206009221345,
+        "beta": 0.11755699456950987
+      }
+    },
+    "P3_PhlF": {
+      "group": "PhlF",
+      "parameters": {
+        "ymax": 6.8,
+        "ymin": 0.02,
+        "K": 0.23,
+        "n": 4.2,
+        "alpha": 0.24070011453960044,
+        "beta": 0.061908386254441006
+      }
+    },
+    "Q1_QacR": {
+      "group": "QacR",
+      "parameters": {
+        "ymax": 2.4,
+        "ymin": 0.01,
+        "K": 0.05,
+        "n": 2.7,
+        "alpha": 0.3748404992150903,
+        "beta": 0.43564010137683185
+      }
+    },
+    "Q2_QacR": {
+      "group": "QacR",
+      "parameters": {
+        "ymax": 2.8,
+        "ymin": 0.03,
+        "K": 0.21,
+        "n": 2.4,
+        "alpha": 0.3748404992150903,
+        "beta": 0.43564010137683185
+      }
+    },
+    "R1_PsrA": {
+      "group": "PsrA",
+      "parameters": {
+        "ymax": 5.9,
+        "ymin": 0.2,
+        "K": 0.19,
+        "n": 1.8,
+        "alpha": 0.3748404992150903,
+        "beta": 0.43564010137683185
+      }
+    },
+    "S1_SrpR": {
+      "group": "SrpR",
+      "parameters": {
+        "ymax": 1.3,
+        "ymin": 0.003,
+        "K": 0.01,
+        "n": 2.9,
+        "alpha": 0.4969774844849547,
+        "beta": 0.05429615831701271
+      }
+    },
+    "S2_SrpR": {
+      "group": "SrpR",
+      "parameters": {
+        "ymax": 2.1,
+        "ymin": 0.003,
+        "K": 0.04,
+        "n": 2.6,
+        "alpha": 0.35162069790016137,
+        "beta": 0.08575127838151375
+      }
+    },
+    "S3_SrpR": {
+      "group": "SrpR",
+      "parameters": {
+        "ymax": 2.1,
+        "ymin": 0.004,
+        "K": 0.06,
+        "n": 2.8,
+        "alpha": 0.3337025658634261,
+        "beta": 0.09255808434135396
+      }
+    },
+    "S4_SrpR": {
+      "group": "SrpR",
+      "parameters": {
+        "ymax": 2.1,
+        "ymin": 0.007,
+        "K": 0.1,
+        "n": 2.8,
+        "alpha": 0.3781909455221124,
+        "beta": 0.0895092758664231
+      }
+    }
+  },
+  "sensors": {
+    "input_pTac": {
+      "promoter": "pTac",
+      "parameters": {
+        "ymax": 2.8,
+        "ymin": 0.0034,
+        "alpha": 0.73,
+        "beta": 0.04
+      }
+    },
+    "input_pTet": {
+      "promoter": "pTet",
+      "parameters": {
+        "ymax": 4.4,
+        "ymin": 0.0013,
+        "alpha": 0.69,
+        "beta": 1.0
+      }
+    },
+    "input_pBAD": {
+      "promoter": "pBAD",
+      "parameters": {
+        "ymax": 2.5,
+        "ymin": 0.0082,
+        "alpha": 0.01,
+        "beta": 0.99
+      }
+    },
+    "input_pLuxStar": {
+      "promoter": "pLuxStar",
+      "parameters": {
+        "ymax": 0.31,
+        "ymin": 0.025,
+        "alpha": 0.8,
+        "beta": 1.0
+      }
+    }
+  },
+  "model_scope": "Eco1C1G1T1 steady-state Hill response, additive tandem promoters; no dynamics."
+}

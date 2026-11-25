@@ -7,3 +7,4 @@ test:
 check:
 	$(PYTHON) -m compileall -q src examples scripts
 	$(PYTHON) scripts/check_release.py
+	$(PYTHON) scripts/check_data.py

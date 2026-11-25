@@ -1,0 +1,69 @@
+{
+  "version": "formal-1.0.0",
+  "budget": {
+    "llm_requests": 64,
+    "candidate_evaluations": 24,
+    "mcp_calls": 96,
+    "model_tokens": 1000000,
+    "max_output_tokens": 32768,
+    "wall_seconds": 14400,
+    "finalization_call_reserve": 6,
+    "finalization_token_reserve": 150000,
+    "finalization_wall_reserve": 3600,
+    "max_design_rounds": 64,
+    "recursion_limit": 200,
+    "llm_request_timeout": 2400
+  },
+  "evaluation_scope": "Computational predictions and constraint satisfaction; no new experimental measurements.",
+  "selection_rule": "Prefer designs meeting all public requirements, then equal mean percentile ranks across objectives; earliest candidate breaks ties. The Agent retains its own final choice.",
+  "comparison_rule": "Report raw per-case objective values, validity, feasibility, nondominance and actual costs. Internal search ranks are not comparable across methods.",
+  "replicates": [
+    101,
+    202,
+    303
+  ],
+  "objectives": [
+    {
+      "metric": "log10_on_off_ratio",
+      "direction": "maximize"
+    },
+    {
+      "metric": "gate_count",
+      "direction": "minimize"
+    }
+  ],
+  "hard_constraints": [
+    "valid acyclic physical graph",
+    "orthogonal regulator families",
+    "DNA matches selected original devices"
+  ],
+  "function_condition": "truth_table_accuracy == 1 and minimum_on_rpu > maximum_off_rpu",
+  "decision_schema": {
+    "gates": [
+      {
+        "id": "unique gate id",
+        "part": "public gate variant ID",
+        "inputs": [
+          "earlier input or gate id"
+        ]
+      }
+    ],
+    "output": "last physical signal; input names appear in task.inputs.input_signals"
+  },
+  "scope": "Steady-state Cello UCF model. Boolean accuracy and quantitative function are reported separately. Sensor-strain and plasmid backgrounds are not newly built.",
+  "submission_contract": {
+    "accepted_forms": [
+      "bare decision_schema object",
+      "exact id,parent_id,design,rationale envelope"
+    ],
+    "biological_repair": false
+  },
+  "timeout_seconds": {
+    "construction": 180,
+    "scientific_mcp": 300,
+    "worker_rpc": 360,
+    "biomni_code": 420,
+    "llm_proxy": 1200,
+    "llm_client": 1260
+  }
+}

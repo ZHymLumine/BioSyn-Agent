@@ -1,0 +1,11 @@
+{
+  "engine": "emopec_sd",
+  "software_path": "formal_v1_20261031/emopec/original-software",
+  "candidate_domain": "all 4096 SDs; original measured lookup takes precedence over original predicted lookup",
+  "folding_window": "35 nt before start plus first 35 coding nt",
+  "folding_settings": {
+    "temperature_c": 37,
+    "dangles": 2,
+    "library": "ViennaRNA in pinned evaluator environment"
+  }
+}

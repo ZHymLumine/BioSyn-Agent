@@ -1,0 +1,7 @@
+{
+  "engine": "optimus_utr",
+  "weights_path": "optimus/modeling/saved_models/main_MRL_model.hdf5",
+  "calibration_path": "formal_v1_20261031/sample/calibration-u50.json",
+  "model_input_length": 50,
+  "encoding": "ACGT channels; varying-length input left zero padded; fixed context not included in model input"
+}

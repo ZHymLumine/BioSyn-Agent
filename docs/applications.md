@@ -2,6 +2,11 @@
 
 Application episodes extend the sequence `TaskSpec` interface with a task-specific design schema, public resources and a host-side scientific evaluator.
 
+The repository includes the [22-case formal dataset](../data/README.md), with
+task inputs, reference designs, source metadata and evaluator calibration. Follow
+its preparation commands to obtain scientific assets and create a dataset copy
+bound to your checkout.
+
 ## Task and candidate interfaces
 
 An application task contains `case_id`, `track`, `request`, `inputs`, `decision_schema` and `evaluation_contract`. A submitted candidate contains `id`, `parent_id`, `design` and `rationale`. The design fields depend on the task:

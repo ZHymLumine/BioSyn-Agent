@@ -1,0 +1,315 @@
+{
+  "design": {
+    "steps": [
+      "GLUTAMATE_MUTASE",
+      "MAL_MESACONATE"
+    ],
+    "gene_knockouts": []
+  },
+  "evaluation": {
+    "valid": true,
+    "feasible": true,
+    "metrics": {
+      "pathway_step_count": 2,
+      "heterologous_gene_count": 4,
+      "native_pathway_gene_count": 0,
+      "knockout_count": 0,
+      "wildtype_growth_per_hour": 0.9823718127183059,
+      "minimum_growth_per_hour": 0.19647436254366119,
+      "product_yield_mol_per_mol": 0.9688306963109721,
+      "carbon_yield_fraction": 0.8073589135924768,
+      "product_flux": 9.68830696310972,
+      "maximum_growth_per_hour": 0.9823718127269555,
+      "biomass_flux_at_product_optimum": 0.19647436254366119,
+      "zero_carbon_product_flux": 0.0,
+      "product_min_at_99pct_growth": 0.0,
+      "product_max_at_99pct_growth": 0.12978082191823642
+    },
+    "pathway": [
+      {
+        "option_id": "GLUTAMATE_MUTASE",
+        "reaction": "glu__L_c --> bs_methylaspartate_c",
+        "direction": 1,
+        "genes": [
+          "glmS (MutS)",
+          "glmE (MutE)",
+          "MutL support"
+        ],
+        "organism": "Clostridium tetanomorphum mutase; MutL support organism/sequence unresolved",
+        "uniprot": [
+          "Q05488",
+          "Q05509"
+        ],
+        "engineered_gene_ids": [
+          "Q05488",
+          "Q05509",
+          "MutL_support_identity_unresolved"
+        ],
+        "catalytic_support": [
+          "Active adenosylcobalamin-bound mutase",
+          "MutL reactivation; accession and exact optimized construct not assigned"
+        ],
+        "identity_scope": "MutS/MutE curated references; required support is counted as one role, not assigned an unverified organism or accession.",
+        "sources": [
+          "https://www.rhea-db.org/rhea/12857",
+          "https://doi.org/10.1016/j.ymben.2015.06.001",
+          "https://www.uniprot.org/uniprotkb/Q05488/entry",
+          "https://www.uniprot.org/uniprotkb/Q05509/entry"
+        ],
+        "operation": "add_enzyme",
+        "bounds_before": null,
+        "bounds_after": [
+          0,
+          1000
+        ],
+        "mass_charge_imbalance": {},
+        "directed_flux_at_product_optimum": 9.688297274802826
+      },
+      {
+        "option_id": "MAL_MESACONATE",
+        "reaction": "bs_methylaspartate_c --> bs_mesaconate_c + nh4_c",
+        "direction": 1,
+        "genes": [
+          "mal"
+        ],
+        "organism": "Clostridium tetanomorphum",
+        "uniprot": [
+          "Q05514"
+        ],
+        "engineered_gene_ids": [
+          "Q05514"
+        ],
+        "catalytic_support": [
+          "Mg2+",
+          "monovalent cation support"
+        ],
+        "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+        "sources": [
+          "https://www.rhea-db.org/rhea/12829",
+          "https://doi.org/10.1016/j.ymben.2015.06.001",
+          "https://www.uniprot.org/uniprotkb/Q05514/entry"
+        ],
+        "operation": "add_enzyme",
+        "bounds_before": null,
+        "bounds_after": [
+          0,
+          1000
+        ],
+        "mass_charge_imbalance": {},
+        "directed_flux_at_product_optimum": 9.688297274802826
+      }
+    ],
+    "exchange_fluxes_at_product_optimum": {
+      "EX_ca2_e": -0.0010226490570397562,
+      "EX_cl_e": -0.0010226490570397564,
+      "EX_co2_e": 3.4935581531898694,
+      "EX_cobalt2_e": -4.91185906359153e-06,
+      "EX_cu2_e": -0.00013930032304345578,
+      "EX_fe2_e": -0.0031555747368137437,
+      "EX_glc__D_e": -10.0,
+      "EX_h_e": 21.18184657470892,
+      "EX_h2o_e": 28.0589942496239,
+      "EX_k_e": -0.038350420247984865,
+      "EX_meoh_e": 3.929487250936645e-07,
+      "EX_mg2_e": -0.001704415095066261,
+      "EX_mn2_e": -0.00013576378451766986,
+      "EX_mobd_e": -2.5345192768132293e-05,
+      "EX_nh4_e": -2.122085010346228,
+      "EX_ni2_e": -6.346121910160256e-05,
+      "EX_o2_e": -7.918448969513163,
+      "EX_pi_e": -0.18952526081482562,
+      "EX_so4_e": -0.04955279897713672,
+      "EX_zn2_e": -6.699775762738847e-05
+    },
+    "scope": "iJO1366 K-12 steady-state stoichiometric upper bound in the explicitly declared medium. Product export is represented by a free cytosolic sink; transport, toxicity, enzyme kinetics and expression burden are not predicted. Gene count is an engineering-complexity proxy. Selected branch reactions are coupled to export to assess the proposed route, not an unspecified alternative.",
+    "experimental_outcome": "not_measured",
+    "goal_met": true,
+    "goal_requirements": [
+      {
+        "metric": "product_yield_mol_per_mol",
+        "value": 0.9688306963109721,
+        "operator": ">=",
+        "target": 0.9203891614954234,
+        "absolute_tolerance": 1e-07,
+        "met": true
+      },
+      {
+        "metric": "pathway_step_count",
+        "value": 2,
+        "operator": "<=",
+        "target": 2,
+        "absolute_tolerance": 0.0,
+        "met": true
+      },
+      {
+        "metric": "heterologous_gene_count",
+        "value": 4,
+        "operator": "<=",
+        "target": 4,
+        "absolute_tolerance": 0.0,
+        "met": true
+      }
+    ],
+    "goal_evidence_type": "genome_scale_stoichiometric_prediction",
+    "goal_evaluation": "public_requirements"
+  },
+  "all_curated_route_evaluations": [
+    {
+      "steps": [
+        "GLUTAMATE_MUTASE",
+        "MAL_MESACONATE"
+      ],
+      "evaluation": {
+        "valid": true,
+        "feasible": true,
+        "metrics": {
+          "pathway_step_count": 2,
+          "heterologous_gene_count": 4,
+          "native_pathway_gene_count": 0,
+          "knockout_count": 0,
+          "wildtype_growth_per_hour": 0.9823718127183059,
+          "minimum_growth_per_hour": 0.19647436254366119,
+          "product_yield_mol_per_mol": 0.9688306963109753,
+          "carbon_yield_fraction": 0.8073589135924794,
+          "product_flux": 9.688306963109753,
+          "maximum_growth_per_hour": 0.9823718127269702,
+          "biomass_flux_at_product_optimum": 0.19647436254366119,
+          "zero_carbon_product_flux": 0.0,
+          "product_min_at_99pct_growth": 0.0,
+          "product_max_at_99pct_growth": 0.12978082191793588
+        },
+        "pathway": [
+          {
+            "option_id": "GLUTAMATE_MUTASE",
+            "reaction": "glu__L_c --> bs_methylaspartate_c",
+            "direction": 1,
+            "genes": [
+              "glmS (MutS)",
+              "glmE (MutE)",
+              "MutL support"
+            ],
+            "organism": "Clostridium tetanomorphum",
+            "uniprot": [
+              "Q05488",
+              "Q05509"
+            ],
+            "engineered_gene_ids": [
+              "Q05488",
+              "Q05509",
+              "C_tetanomorphum_MutL"
+            ],
+            "catalytic_support": [
+              "Active adenosylcobalamin-bound mutase",
+              "MutL reactivation; accession and exact optimized construct not assigned"
+            ],
+            "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+            "sources": [
+              "https://www.rhea-db.org/rhea/12857",
+              "https://doi.org/10.1016/j.ymben.2015.06.001",
+              "https://www.uniprot.org/uniprotkb/Q05488/entry",
+              "https://www.uniprot.org/uniprotkb/Q05509/entry"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 9.68829727480279
+          },
+          {
+            "option_id": "MAL_MESACONATE",
+            "reaction": "bs_methylaspartate_c --> bs_mesaconate_c + nh4_c",
+            "direction": 1,
+            "genes": [
+              "mal"
+            ],
+            "organism": "Clostridium tetanomorphum",
+            "uniprot": [
+              "Q05514"
+            ],
+            "engineered_gene_ids": [
+              "Q05514"
+            ],
+            "catalytic_support": [
+              "Mg2+",
+              "monovalent cation support"
+            ],
+            "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+            "sources": [
+              "https://www.rhea-db.org/rhea/12829",
+              "https://doi.org/10.1016/j.ymben.2015.06.001",
+              "https://www.uniprot.org/uniprotkb/Q05514/entry"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 9.68829727480279
+          }
+        ],
+        "exchange_fluxes_at_product_optimum": {
+          "EX_ca2_e": -0.0010226490570397562,
+          "EX_cl_e": -0.0010226490570397564,
+          "EX_co2_e": 3.493558153189588,
+          "EX_cobalt2_e": -4.91185906359153e-06,
+          "EX_cu2_e": -0.00013930032304345578,
+          "EX_fe2_e": -0.0031555747368137437,
+          "EX_glc__D_e": -10.0,
+          "EX_h_e": 21.181846574708945,
+          "EX_h2o_e": 28.058994249624124,
+          "EX_k_e": -0.038350420247984865,
+          "EX_meoh_e": 3.929487250873221e-07,
+          "EX_mg2_e": -0.001704415095066261,
+          "EX_mn2_e": -0.00013576378451766986,
+          "EX_mobd_e": -2.5345192768132293e-05,
+          "EX_nh4_e": -2.12208501034645,
+          "EX_ni2_e": -6.346121910160256e-05,
+          "EX_o2_e": -7.918448969512971,
+          "EX_pi_e": -0.1895252608149266,
+          "EX_so4_e": -0.04955279897713671,
+          "EX_zn2_e": -6.699775762738847e-05
+        },
+        "scope": "iJO1366 K-12 steady-state stoichiometric upper bound in the explicitly declared medium. Product export is represented by a free cytosolic sink; transport, toxicity, enzyme kinetics and expression burden are not predicted. Gene count is an engineering-complexity proxy. Selected branch reactions are coupled to export to assess the proposed route, not an unspecified alternative.",
+        "experimental_outcome": "not_measured",
+        "goal_met": true,
+        "goal_requirements": [
+          {
+            "metric": "product_yield_mol_per_mol",
+            "value": 0.9688306963109753,
+            "operator": ">=",
+            "target": 0.9203891614954234,
+            "absolute_tolerance": 1e-07,
+            "met": true
+          },
+          {
+            "metric": "pathway_step_count",
+            "value": 2,
+            "operator": "<=",
+            "target": 2,
+            "absolute_tolerance": 0.0,
+            "met": true
+          },
+          {
+            "metric": "heterologous_gene_count",
+            "value": 4,
+            "operator": "<=",
+            "target": 4,
+            "absolute_tolerance": 0.0,
+            "met": true
+          }
+        ],
+        "goal_evidence_type": "genome_scale_stoichiometric_prediction",
+        "goal_evaluation": "public_requirements"
+      }
+    }
+  ],
+  "source": "https://doi.org/10.1016/j.ymben.2015.06.001",
+  "scope": "Conditional on active AdoCbl-bound mutase and MutL support. Cofactor sufficiency and reactivation kinetics are not predicted.",
+  "reference_method": "Canonical pathway chosen before formal LLM; no experimental output value used as a flux constraint.",
+  "annotation_revision": "MutL retained as one required support role; unsupported organism assignment removed. Numerical reference metrics are checked again by actual MCP."
+}

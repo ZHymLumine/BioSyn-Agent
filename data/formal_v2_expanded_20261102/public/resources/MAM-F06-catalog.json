@@ -1,0 +1,7 @@
+{
+  "engine": "optimus_utr",
+  "weights_path": "formal_v1_20261031/sample/Varying_length_25to100_model.hdf5",
+  "calibration_path": "formal_v1_20261031/sample/calibration-length.json",
+  "model_input_length": 100,
+  "encoding": "ACGT channels; varying-length input left zero padded; fixed context not included in model input"
+}

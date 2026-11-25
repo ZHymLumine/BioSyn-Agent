@@ -1,0 +1,291 @@
+{
+  "source_case_id": "GEN-8b3a2ce09c",
+  "reference_id": "0x80",
+  "source_locator": {
+    "sequence_csv_row_1based": 10,
+    "netlist": "cello/0x80/0x80_A000_logic_circuit.txt",
+    "plasmid_label": "pAN3910"
+  },
+  "source_reference_path": "tasks/application_suite_v3/retrospective_v2_1/private/GEN-8b3a2ce09c.json",
+  "source_reference_sha256": "ca40a7ab81281ea3d3d15ac71d118a56f9e2349e8bea29ba9df5c74dc5280bb9",
+  "reference_kind": "Reassembled original physical topology under declared UCF; not claimed identical to measured plasmid sequence",
+  "design": {
+    "gates": [
+      {
+        "id": "n3",
+        "part": "S3_SrpR",
+        "inputs": [
+          "input_pTet",
+          "input_pBAD"
+        ]
+      },
+      {
+        "id": "n2",
+        "part": "A1_AmtR",
+        "inputs": [
+          "n3"
+        ]
+      },
+      {
+        "id": "n1",
+        "part": "P3_PhlF",
+        "inputs": [
+          "input_pTac",
+          "n2"
+        ]
+      }
+    ],
+    "output": "n1"
+  },
+  "artifact": {
+    "gates": [
+      {
+        "id": "n3",
+        "part": "S3_SrpR",
+        "inputs": [
+          "input_pTet",
+          "input_pBAD"
+        ]
+      },
+      {
+        "id": "n2",
+        "part": "A1_AmtR",
+        "inputs": [
+          "n3"
+        ]
+      },
+      {
+        "id": "n1",
+        "part": "P3_PhlF",
+        "inputs": [
+          "input_pTac",
+          "n2"
+        ]
+      }
+    ],
+    "output": "n1",
+    "nodes": [
+      {
+        "id": "input_pBAD",
+        "name": "input_pBAD",
+        "type": "INPUT",
+        "inputs": []
+      },
+      {
+        "id": "input_pTac",
+        "name": "input_pTac",
+        "type": "INPUT",
+        "inputs": []
+      },
+      {
+        "id": "input_pTet",
+        "name": "input_pTet",
+        "type": "INPUT",
+        "inputs": []
+      },
+      {
+        "id": "n3",
+        "name": "S3_SrpR",
+        "type": "NOR",
+        "inputs": [
+          "input_pTet",
+          "input_pBAD"
+        ]
+      },
+      {
+        "id": "n2",
+        "name": "A1_AmtR",
+        "type": "NOT",
+        "inputs": [
+          "n3"
+        ]
+      },
+      {
+        "id": "n1",
+        "name": "P3_PhlF",
+        "type": "NOR",
+        "inputs": [
+          "input_pTac",
+          "n2"
+        ]
+      },
+      {
+        "id": "output_YFP",
+        "name": "output_YFP",
+        "type": "OUTPUT",
+        "inputs": [
+          "n1"
+        ]
+      }
+    ],
+    "assembly": [
+      {
+        "node_id": "n3",
+        "part_names": [
+          "pTet",
+          "pBAD",
+          "RiboJ10",
+          "S3",
+          "SrpR",
+          "ECK120029600"
+        ]
+      },
+      {
+        "node_id": "n2",
+        "part_names": [
+          "pSrpR",
+          "BydvJ",
+          "A1",
+          "AmtR",
+          "L3S2P55"
+        ]
+      },
+      {
+        "node_id": "n1",
+        "part_names": [
+          "pTac",
+          "pAmtR",
+          "RiboJ53",
+          "P3",
+          "PhlF",
+          "ECK120033737"
+        ]
+      },
+      {
+        "node_id": "output_YFP",
+        "part_names": [
+          "pPhlF",
+          "YFP_cassette"
+        ]
+      }
+    ],
+    "dna_sequence": "TACTCCACCGTTGGCTTTTTTCCCTATCAGTGATAGAGATTGACATCCCTATCAGTGATAGAGATAATGAGCACACTTTTCATACTCCCGCCATTCAGAGAAGAAACCAATTGTCCATATTGCATCAGACATTGCCGTCACTGCGTCTTTTACTGGCTCTTCTCGCTAACCAAACCGGTAACCCCGCTTATTAAAAGCATTCTGTAACAAAGCGGGACCAAAGCCATGACAAAAACGCGTAACAAAAGTGTCTATAATCACGGCAGAAAAGTCCACATTGATTATTTGCACGGCGTCACACTTTGCTATGCCATAGCATTTTTATCCATAAGATTAGCGGATCCTACCTGACGCTTTTTATCGCAACTCTCTACTGTTTCTCCATACCCGTTTTTTTGGGCTAGCCTGAAGCGCTCAACGGGTGTGCTTCCCGTTCTGATGAGTCCGTGAGGACGAAAGCGCCTCTACAAATAATTTTGTTTAAGAGTCTATGGACTATGTTTTCACAAAGGAAGTACCAGGATGGCACGTAAAACCGCAGCAGAAGCAGAAGAAACCCGTCAGCGTATTATTGATGCAGCACTGGAAGTTTTTGTTGCACAGGGTGTTAGTGATGCAACCCTGGATCAGATTGCACGTAAAGCCGGTGTTACCCGTGGTGCAGTTTATTGGCATTTTAATGGTAAACTGGAAGTTCTGCAGGCAGTTCTGGCAAGCCGTCAGCATCCGCTGGAACTGGATTTTACACCGGATCTGGGTATTGAACGTAGCTGGGAAGCAGTTGTTGTTGCAATGCTGGATGCAGTTCATAGTCCGCAGAGCAAACAGTTTAGCGAAATTCTGATTTATCAGGGTCTGGATGAAAGCGGTCTGATTCATAATCGTATGGTTCAGGCAAGCGATCGTTTTCTGCAGTATATTCATCAGGTTCTGCGTCATGCAGTTACCCAGGGTGAACTGCCGATTAATCTGGATCTGCAGACCAGCATTGGTGTTTTTAAAGGTCTGATTACCGGTCTGCTGTATGAAGGTCTGCGTAGCAAAGATCAGCAGGCACAGATTATCAAAGTTGCACTGGGTAGCTTTTGGGCACTGCTGCGTGAACCGCCTCGTTTTCTGCTGTGTGAAGAAGCACAGATTAAACAGGTGAAATCCTTCGAATAATTCAGCCAAAAAACTTAAGACCGCCGGTCTTGTCCACTACCTTGCAGTAATGCGGTGGACAGGATCGGCGGTTTTCTTTTCTCTTCTCAATCTATGATTGGTCCAGATTCGTTACCAATTGACAGCTAGCTCAGTCCTAGGTATATACATACATGCTTGTTTGTTTGTAAACCTGAAGGGTGTCTCAAGGTGCGTACCTTGACTGATGAGTCCGAAAGGACGAAACACCCCTCTACAAATAATTTTGTTTAAAATGTTCCCTAATAATCAGCAAAGAGGTTACTAGATGGCAGGCGCAGTTGGTCGTCCGCGTCGTAGTGCACCGCGTCGTGCAGGTAAAAATCCGCGTGAAGAAATTCTGGATGCAAGCGCAGAACTGTTTACCCGTCAGGGTTTTGCAACCACCAGTACCCATCAGATTGCAGATGCAGTTGGTATTCGTCAGGCAAGCCTGTATTATCATTTTCCGAGCAAAACCGAAATCTTTCTGACCCTGCTGAAAAGCACCGTTGAACCGAGCACCGTTCTGGCAGAAGATCTGAGCACCCTGGATGCAGGTCCGGAAATGCGTCTGTGGGCAATTGTTGCAAGCGAAGTTCGTCTGCTGCTGAGCACCAAATGGAATGTTGGTCGTCTGTATCAGCTGCCGATTGTTGGTAGCGAAGAATTTGCAGAATATCATAGCCAGCGTGAAGCACTGACCAATGTTTTTCGTGATCTGGCAACCGAAATTGTTGGTGATGATCCGCGTGCAGAACTGCCGTTTCATATTACCATGAGCGTTATTGAAATGCGTCGCAATGATGGTAAAATTCCGAGTCCGCTGAGCGCAGATAGCCTGCCGGAAACCGCAATTATGCTGGCAGATGCAAGCCTGGCAGTTCTGGGTGCACCGCTGCCTGCAGATCGTGTTGAAAAAACCCTGGAACTGATTAAACAGGCAGATGCAAAATAACTCGGTACCAAAGACGAACAATAAGACGCTGAAAAGCGTCTTTTTTCGTTTTGGTCCAACGATCGTTGGCTGTGTTGACAATTAATCATCGGCTCGTATAATGTGTGGAATTGTGAGCGCTCACAATTCTTGTCCAACCAAATGATTCGTTACCAATTGACAGTTTCTATCGATCTATAGATAATGCTAGCCTGAAGCGGTCAACGCATGTGCTTTGCGTTCTGATGAGACAGTGATGTCGAAACCGCCTCTACAAATAATTTTGTTTAACTTTACGAGGGCGATCCTATGGCACGTACCCCGAGCCGTAGCAGCATTGGTAGCCTGCGTAGTCCGCATACCCATAAAGCAATTCTGACCAGCACCATTGAAATCCTGAAAGAATGTGGTTATAGCGGTCTGAGCATTGAAAGCGTTGCACGTCGTGCCGGTGCAAGCAAACCGACCATTTATCGTTGGTGGACCAATAAAGCAGCACTGATTGCCGAAGTGTATGAAAATGAAAGCGAACAGGTGCGTAAATTTCCGGATCTGGGTAGCTTTAAAGCCGATCTGGATTTTCTGCTGCGTAATCTGTGGAAAGTTTGGCGTGAAACCATTTGTGGTGAAGCATTTCGTTGTGTTATTGCAGAAGCACAGCTGGACCCTGCAACCCTGACCCAGCTGAAAGATCAGTTTATGGAACGTCGTCGTGAGATGCCGAAAAAACTGGTTGAAAATGCCATTAGCAATGGTGAACTGCCGAAAGATACCAATCGTGAACTGCTGCTGGATATGATTTTTGGTTTTTGTTGGTATCGCCTGCTGACCGAACAGCTGACCGTTGAACAGGATATTGAAGAATTTACCTTCCTGCTGATTAATGGTGTTTGTCCGGGTACACAGCGTTAAGGAAACACAGAAAAAAGCCCGCACCTGACAGTGCGGGCTTTTTTTTTCGACCAAAGGCGACGTACGGTGGAATCTGATTCGTTACCAATTGACATGATACGAAACGTACCGTATCGTTAAGGTCTGAAGCTGTCACCGGATGTGCTTTCCGGTCTGATGAGTCCGTGAGGACGAAACAGCCTCTACAAATAATTTTGTTTAATACTAGAGAAAGAGGGGAAATACTAGATGGTGAGCAAGGGCGAGGAGCTGTTCACCGGGGTGGTGCCCATCCTGGTCGAGCTGGACGGCGACGTAAACGGCCACAAGTTCAGCGTGTCCGGCGAGGGCGAGGGCGATGCCACCTACGGCAAGCTGACCCTGAAGTTCATCTGCACCACAGGCAAGCTGCCCGTGCCCTGGCCCACCCTCGTGACCACCTTCGGCTACGGCCTGCAATGCTTCGCCCGCTACCCCGACCACATGAAGCTGCACGACTTCTTCAAGTCCGCCATGCCCGAAGGCTACGTCCAGGAGCGCACCATCTTCTTCAAGGACGACGGCAACTACAAGACCCGCGCCGAGGTGAAGTTCGAGGGCGACACCCTGGTGAACCGCATCGAGCTGAAGGGCATCGACTTCAAGGAGGACGGCAACATCCTGGGGCACAAGCTGGAGTACAACTACAACAGCCACAACGTCTATATCATGGCCGACAAGCAGAAGAACGGCATCAAGGTGAACTTCAAGATCCGCCACAACATCGAGGACGGCAGCGTGCAGCTCGCCGACCACTACCAGCAGAACACCCCAATCGGCGACGGCCCCGTGCTGCTGCCCGACAACCACTACCTTAGCTACCAGTCCGCCCTGAGCAAAGACCCCAACGAGAAGCGCGATCACATGGTCCTGCTGGAGTTCGTGACCGCCGCCGGGATCACTCTCGGCATGGACGAGCTGTACAAGTAACTCGGTACCAAATTCCAGAAAAGAGGCCTCCCGAAAGGGGGGCCTTTTTTCGTTTTGGTCC"
+  },
+  "evaluation": {
+    "valid": true,
+    "metrics": {
+      "truth_table_accuracy": 1.0,
+      "on_off_ratio": 333.3087302401149,
+      "log10_on_off_ratio": 2.5228466891344348,
+      "minimum_on_rpu": 6.721923226658525,
+      "maximum_off_rpu": 0.020167258210776733,
+      "gate_count": 3,
+      "dna_length": 4019
+    },
+    "model_function_satisfied": true,
+    "truth_table": [
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 0,
+          "input_pTet": 0
+        },
+        "target": 1,
+        "boolean_output": 1,
+        "output_promoter_rpu": 6.721923226658525
+      },
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 0,
+          "input_pTet": 1
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.02005397078520448
+      },
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 1,
+          "input_pTet": 0
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.020167258210776733
+      },
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 1,
+          "input_pTet": 1
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.020005235779359885
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 0,
+          "input_pTet": 0
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.020054014962936493
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 0,
+          "input_pTet": 1
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.02005396269920867
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 1,
+          "input_pTet": 0
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.02000523823803937
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 1,
+          "input_pTet": 1
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.02000523532922472
+      }
+    ],
+    "scope": "Eco1C1G1T1 steady-state Hill response, additive tandem promoters; no dynamics.",
+    "sequence_matches_physical_graph": true,
+    "goal_met": true,
+    "goal_requirements": [
+      {
+        "metric": "truth_table_accuracy",
+        "value": 1.0,
+        "operator": "==",
+        "target": 1,
+        "absolute_tolerance": 0.0,
+        "met": true
+      },
+      {
+        "metric": "on_off_ratio",
+        "value": 333.3087302401149,
+        "operator": ">",
+        "target": 1,
+        "absolute_tolerance": 1e-06,
+        "met": true
+      },
+      {
+        "metric": "gate_count",
+        "value": 3,
+        "operator": "<=",
+        "target": 3,
+        "absolute_tolerance": 0.0,
+        "met": true
+      }
+    ],
+    "goal_evidence_type": "steady_state_model_prediction",
+    "goal_evaluation": "public_requirements",
+    "experimental_outcome": "not_measured"
+  }
+}

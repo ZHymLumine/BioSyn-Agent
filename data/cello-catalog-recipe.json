@@ -1,0 +1,487 @@
+{
+  "path": "data/formal_v2_expanded_20261102/public/resources/cello_Eco1C1G1T1.json",
+  "sha256": "a81f0dba78d81c568797ef46c006b711800f54483aac258565fd67792736ad04",
+  "template": {
+    "resource_id": "Cello-Eco1C1G1T1",
+    "sources": [
+      {
+        "section": "ucf",
+        "commit": "222827d30a28730404f0601d64f63436354fee9d",
+        "sha256": "7c4e52d85970f1ad8dffd795dd0ecf0115835cc47483dcf07a47388fa7d06335",
+        "url": "https://raw.githubusercontent.com/CIDARLAB/Cello-UCF/222827d30a28730404f0601d64f63436354fee9d/files/v2/ucf/Eco/Eco1C1G1T1.UCF.json"
+      },
+      {
+        "section": "input",
+        "commit": "222827d30a28730404f0601d64f63436354fee9d",
+        "sha256": "56c3614cf9b6fb93b8a3db558b2bea53400b194b9989237a296c55fc73d6d867",
+        "url": "https://raw.githubusercontent.com/CIDARLAB/Cello-UCF/222827d30a28730404f0601d64f63436354fee9d/files/v2/input/Eco/Eco1C1G1T1.input.json"
+      },
+      {
+        "section": "output",
+        "commit": "222827d30a28730404f0601d64f63436354fee9d",
+        "sha256": "56e1d2c4148a213eb176f61a76d9c65d9ffc12004048c533d61dd63c3d18040f",
+        "url": "https://raw.githubusercontent.com/CIDARLAB/Cello-UCF/222827d30a28730404f0601d64f63436354fee9d/files/v2/output/Eco/Eco1C1G1T1.output.json"
+      }
+    ],
+    "scope": "Generic part sequences, device templates, characterization models and UCF constraints. No reference circuits or truth-table-to-design motif library. Parameters describe the source characterization context, not new experimental measurements.",
+    "usage": "Load JSON with Python. sections contains original UCF/input/output records. Select parts by name and concatenate dnasequence values in code; do not print the entire catalog. Structure components beginning with # are input-promoter placeholders. Other component names may refer to a nested device template or a part. Gate variants in the same group share a regulator; account for cross-talk. The output is a circuit insert, not a complete sensor strain or plasmid.",
+    "part_index": [
+      {
+        "name": "A1",
+        "type": "rbs",
+        "length": 34
+      },
+      {
+        "name": "A_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "AmeR",
+        "type": "cds",
+        "length": 660
+      },
+      {
+        "name": "AmtR",
+        "type": "cds",
+        "length": 669
+      },
+      {
+        "name": "B1",
+        "type": "rbs",
+        "length": 25
+      },
+      {
+        "name": "B2",
+        "type": "rbs",
+        "length": 37
+      },
+      {
+        "name": "B3",
+        "type": "rbs",
+        "length": 18
+      },
+      {
+        "name": "BM3R1",
+        "type": "cds",
+        "length": 579
+      },
+      {
+        "name": "B_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "BetI",
+        "type": "cds",
+        "length": 588
+      },
+      {
+        "name": "BydvJ",
+        "type": "ribozyme",
+        "length": 80
+      },
+      {
+        "name": "C_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "D_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "E1",
+        "type": "rbs",
+        "length": 18
+      },
+      {
+        "name": "ECK120010818",
+        "type": "terminator",
+        "length": 54
+      },
+      {
+        "name": "ECK120010876",
+        "type": "terminator",
+        "length": 55
+      },
+      {
+        "name": "ECK120015440",
+        "type": "terminator",
+        "length": 49
+      },
+      {
+        "name": "ECK120016170",
+        "type": "terminator",
+        "length": 47
+      },
+      {
+        "name": "ECK120019600",
+        "type": "terminator",
+        "length": 90
+      },
+      {
+        "name": "ECK120029600",
+        "type": "terminator",
+        "length": 90
+      },
+      {
+        "name": "ECK120033736",
+        "type": "terminator",
+        "length": 53
+      },
+      {
+        "name": "ECK120033737",
+        "type": "terminator",
+        "length": 57
+      },
+      {
+        "name": "E_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "ElvJ",
+        "type": "ribozyme",
+        "length": 82
+      },
+      {
+        "name": "F1",
+        "type": "rbs",
+        "length": 35
+      },
+      {
+        "name": "F_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "G_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "H1",
+        "type": "rbs",
+        "length": 9
+      },
+      {
+        "name": "HlyIIR",
+        "type": "cds",
+        "length": 636
+      },
+      {
+        "name": "I1",
+        "type": "rbs",
+        "length": 36
+      },
+      {
+        "name": "IcaRA",
+        "type": "cds",
+        "length": 561
+      },
+      {
+        "name": "L1",
+        "type": "rbs",
+        "length": 34
+      },
+      {
+        "name": "L3S2P11",
+        "type": "terminator",
+        "length": 57
+      },
+      {
+        "name": "L3S2P24",
+        "type": "terminator",
+        "length": 55
+      },
+      {
+        "name": "L3S2P55",
+        "type": "terminator",
+        "length": 57
+      },
+      {
+        "name": "L3S3P11",
+        "type": "terminator",
+        "length": 47
+      },
+      {
+        "name": "L3S3P31",
+        "type": "terminator",
+        "length": 47
+      },
+      {
+        "name": "LitR",
+        "type": "cds",
+        "length": 606
+      },
+      {
+        "name": "LmrA",
+        "type": "cds",
+        "length": 567
+      },
+      {
+        "name": "N1",
+        "type": "rbs",
+        "length": 57
+      },
+      {
+        "name": "O_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "P1",
+        "type": "rbs",
+        "length": 33
+      },
+      {
+        "name": "P2",
+        "type": "rbs",
+        "length": 37
+      },
+      {
+        "name": "P3",
+        "type": "rbs",
+        "length": 18
+      },
+      {
+        "name": "P_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "PhlF",
+        "type": "cds",
+        "length": 603
+      },
+      {
+        "name": "PlmJ",
+        "type": "ribozyme",
+        "length": 85
+      },
+      {
+        "name": "PsrA",
+        "type": "cds",
+        "length": 714
+      },
+      {
+        "name": "Q1",
+        "type": "rbs",
+        "length": 41
+      },
+      {
+        "name": "Q2",
+        "type": "rbs",
+        "length": 37
+      },
+      {
+        "name": "Q_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "QacR",
+        "type": "cds",
+        "length": 567
+      },
+      {
+        "name": "R1",
+        "type": "rbs",
+        "length": 34
+      },
+      {
+        "name": "R_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "RiboJ10",
+        "type": "ribozyme",
+        "length": 79
+      },
+      {
+        "name": "RiboJ51",
+        "type": "ribozyme",
+        "length": 79
+      },
+      {
+        "name": "RiboJ53",
+        "type": "ribozyme",
+        "length": 79
+      },
+      {
+        "name": "RiboJ54",
+        "type": "ribozyme",
+        "length": 79
+      },
+      {
+        "name": "RiboJ57",
+        "type": "ribozyme",
+        "length": 79
+      },
+      {
+        "name": "RiboJ60",
+        "type": "ribozyme",
+        "length": 79
+      },
+      {
+        "name": "RiboJ64",
+        "type": "ribozyme",
+        "length": 75
+      },
+      {
+        "name": "S1",
+        "type": "rbs",
+        "length": 38
+      },
+      {
+        "name": "S2",
+        "type": "rbs",
+        "length": 38
+      },
+      {
+        "name": "S3",
+        "type": "rbs",
+        "length": 38
+      },
+      {
+        "name": "S4",
+        "type": "rbs",
+        "length": 34
+      },
+      {
+        "name": "SarJ",
+        "type": "ribozyme",
+        "length": 82
+      },
+      {
+        "name": "ScmJ",
+        "type": "ribozyme",
+        "length": 79
+      },
+      {
+        "name": "SrpR",
+        "type": "cds",
+        "length": 642
+      },
+      {
+        "name": "U_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "V_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "X_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "YFP_cassette",
+        "type": "cassette",
+        "length": 886
+      },
+      {
+        "name": "Y_scar",
+        "type": "scar",
+        "length": 4
+      },
+      {
+        "name": "pAmeR",
+        "type": "promoter",
+        "length": 63
+      },
+      {
+        "name": "pAmtR",
+        "type": "promoter",
+        "length": 63
+      },
+      {
+        "name": "pBAD",
+        "type": "promoter",
+        "length": 331
+      },
+      {
+        "name": "pBM3R1",
+        "type": "promoter",
+        "length": 66
+      },
+      {
+        "name": "pBetI",
+        "type": "promoter",
+        "length": 63
+      },
+      {
+        "name": "pHlyIIR",
+        "type": "promoter",
+        "length": 63
+      },
+      {
+        "name": "pIcaRA",
+        "type": "promoter",
+        "length": 67
+      },
+      {
+        "name": "pLitR",
+        "type": "promoter",
+        "length": 63
+      },
+      {
+        "name": "pLmrA",
+        "type": "promoter",
+        "length": 78
+      },
+      {
+        "name": "pLuxStar",
+        "type": "promoter",
+        "length": 70
+      },
+      {
+        "name": "pPhlF",
+        "type": "promoter",
+        "length": 66
+      },
+      {
+        "name": "pPsrA",
+        "type": "promoter",
+        "length": 66
+      },
+      {
+        "name": "pQacR",
+        "type": "promoter",
+        "length": 77
+      },
+      {
+        "name": "pSrpR",
+        "type": "promoter",
+        "length": 82
+      },
+      {
+        "name": "pTac",
+        "type": "promoter",
+        "length": 71
+      },
+      {
+        "name": "pTet",
+        "type": "promoter",
+        "length": 74
+      }
+    ],
+    "sections": {
+      "ucf": null,
+      "input": null,
+      "output": null
+    }
+  },
+  "excluded_collections": {
+    "ucf": [
+      "motif_library"
+    ]
+  },
+  "transformation": "Keep component characterization and device records; omit the 255 precomputed truth-table motif records, matching the original agent-visible catalogue."
+}

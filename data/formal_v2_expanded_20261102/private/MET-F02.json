@@ -1,0 +1,967 @@
+{
+  "design": {
+    "steps": [
+      "AROZ_DHS",
+      "AROY_PCA",
+      "CATA_MUCONATE"
+    ],
+    "gene_knockouts": []
+  },
+  "evaluation": {
+    "valid": true,
+    "feasible": true,
+    "metrics": {
+      "pathway_step_count": 3,
+      "heterologous_gene_count": 3,
+      "native_pathway_gene_count": 0,
+      "knockout_count": 0,
+      "wildtype_growth_per_hour": 0.9823718127183059,
+      "minimum_growth_per_hour": 0.19647436254366119,
+      "product_yield_mol_per_mol": 0.6760044596135325,
+      "carbon_yield_fraction": 0.6760044596135325,
+      "product_flux": 6.760044596135325,
+      "maximum_growth_per_hour": 0.9823718127269807,
+      "biomass_flux_at_product_optimum": 0.19647436254366119,
+      "zero_carbon_product_flux": 0.0,
+      "product_min_at_99pct_growth": 0.0,
+      "product_max_at_99pct_growth": 0.0853513513513767
+    },
+    "pathway": [
+      {
+        "option_id": "AROZ_DHS",
+        "reaction": "3dhsk_c --> bs_pca_c + h2o_c",
+        "direction": 1,
+        "genes": [
+          "aroZ"
+        ],
+        "organism": "Klebsiella pneumoniae",
+        "uniprot": [],
+        "engineered_gene_ids": [
+          "K_pneumoniae_aroZ"
+        ],
+        "catalytic_support": [
+          "Active DHS dehydratase; original clone-specific metal requirement unresolved"
+        ],
+        "identity_scope": "Published species/gene identity; exact historical synthesized sequence or UniProt accession not assigned. Reaction-level proposal only.",
+        "sources": [
+          "https://doi.org/10.1021/bp010179x",
+          "https://patents.google.com/patent/US5487987A/en",
+          "https://www.rhea-db.org/rhea/24848"
+        ],
+        "operation": "add_enzyme",
+        "bounds_before": null,
+        "bounds_after": [
+          0,
+          1000
+        ],
+        "mass_charge_imbalance": {},
+        "directed_flux_at_product_optimum": 6.760037836090759
+      },
+      {
+        "option_id": "AROY_PCA",
+        "reaction": "bs_pca_c + h_c --> bs_catechol_c + co2_c",
+        "direction": 1,
+        "genes": [
+          "aroY"
+        ],
+        "organism": "Klebsiella pneumoniae",
+        "uniprot": [],
+        "engineered_gene_ids": [
+          "K_pneumoniae_aroY"
+        ],
+        "catalytic_support": [
+          "Mature prFMN, including oxidative maturation",
+          "Native E. coli UbiX support assumed available; no fixed per-product cofactor turnover assigned"
+        ],
+        "identity_scope": "2015 paper identifies aroY/AB479384; no exact synthesized-clone sequence match performed.",
+        "sources": [
+          "https://doi.org/10.1128/AEM.01386-15",
+          "https://doi.org/10.1002/anie.201708091",
+          "https://www.rhea-db.org/rhea/22416"
+        ],
+        "operation": "add_enzyme",
+        "bounds_before": null,
+        "bounds_after": [
+          0,
+          1000
+        ],
+        "mass_charge_imbalance": {},
+        "directed_flux_at_product_optimum": 6.760037836090759
+      },
+      {
+        "option_id": "CATA_MUCONATE",
+        "reaction": "bs_catechol_c + o2_c --> bs_muconate_c + 2 h_c",
+        "direction": 1,
+        "genes": [
+          "catA1"
+        ],
+        "organism": "Pseudomonas putida KT2440",
+        "uniprot": [
+          "Q88GK8"
+        ],
+        "engineered_gene_ids": [
+          "Q88GK8"
+        ],
+        "catalytic_support": [
+          "Fe3+"
+        ],
+        "identity_scope": "KT2440 catA1 reference; original CatA clone accession unresolved. Reaction annotation is not an exact clone match.",
+        "sources": [
+          "https://www.rhea-db.org/rhea/23852",
+          "https://doi.org/10.1016/j.ymben.2014.02.009",
+          "https://www.uniprot.org/uniprotkb/Q88GK8/entry"
+        ],
+        "operation": "add_enzyme",
+        "bounds_before": null,
+        "bounds_after": [
+          0,
+          1000
+        ],
+        "mass_charge_imbalance": {},
+        "directed_flux_at_product_optimum": 6.760037836090758
+      }
+    ],
+    "exchange_fluxes_at_product_optimum": {
+      "EX_ca2_e": -0.0010226490570397562,
+      "EX_cl_e": -0.0010226490570397564,
+      "EX_co2_e": 11.374817510659385,
+      "EX_cobalt2_e": -4.91185906359153e-06,
+      "EX_cu2_e": -0.00013930032304345578,
+      "EX_fe2_e": -0.0031555747368137437,
+      "EX_glc__D_e": -10.0,
+      "EX_h_e": 15.325327697284747,
+      "EX_h2o_e": 36.84377256576011,
+      "EX_k_e": -0.038350420247984865,
+      "EX_meoh_e": 3.929487250936644e-07,
+      "EX_mg2_e": -0.001704415095066261,
+      "EX_mn2_e": -0.00013576378451766986,
+      "EX_mobd_e": -2.5345192768132293e-05,
+      "EX_nh4_e": -2.122085010346243,
+      "EX_ni2_e": -6.346121910160256e-05,
+      "EX_o2_e": -14.335578607626655,
+      "EX_pi_e": -0.18952526081482826,
+      "EX_so4_e": -0.04955279897713635,
+      "EX_zn2_e": -6.699775762738847e-05
+    },
+    "scope": "iJO1366 K-12 steady-state stoichiometric upper bound in the explicitly declared medium. Product export is represented by a free cytosolic sink; transport, toxicity, enzyme kinetics and expression burden are not predicted. Gene count is an engineering-complexity proxy. Selected branch reactions are coupled to export to assess the proposed route, not an unspecified alternative.",
+    "experimental_outcome": "not_measured",
+    "goal_met": true,
+    "goal_requirements": [
+      {
+        "metric": "product_yield_mol_per_mol",
+        "value": 0.6760044596135325,
+        "operator": ">=",
+        "target": 0.6422042366328559,
+        "absolute_tolerance": 1e-07,
+        "met": true
+      },
+      {
+        "metric": "pathway_step_count",
+        "value": 3,
+        "operator": "<=",
+        "target": 4,
+        "absolute_tolerance": 0.0,
+        "met": true
+      },
+      {
+        "metric": "heterologous_gene_count",
+        "value": 3,
+        "operator": "<=",
+        "target": 3,
+        "absolute_tolerance": 0.0,
+        "met": true
+      }
+    ],
+    "goal_evidence_type": "genome_scale_stoichiometric_prediction",
+    "goal_evaluation": "public_requirements"
+  },
+  "all_curated_route_evaluations": [
+    {
+      "steps": [
+        "AROZ_DHS",
+        "AROY_PCA",
+        "CATA_MUCONATE"
+      ],
+      "evaluation": {
+        "valid": true,
+        "feasible": true,
+        "metrics": {
+          "pathway_step_count": 3,
+          "heterologous_gene_count": 3,
+          "native_pathway_gene_count": 0,
+          "knockout_count": 0,
+          "wildtype_growth_per_hour": 0.9823718127183059,
+          "minimum_growth_per_hour": 0.19647436254366119,
+          "product_yield_mol_per_mol": 0.6760044596135325,
+          "carbon_yield_fraction": 0.6760044596135325,
+          "product_flux": 6.760044596135325,
+          "maximum_growth_per_hour": 0.9823718127269807,
+          "biomass_flux_at_product_optimum": 0.19647436254366119,
+          "zero_carbon_product_flux": 0.0,
+          "product_min_at_99pct_growth": 0.0,
+          "product_max_at_99pct_growth": 0.0853513513513767
+        },
+        "pathway": [
+          {
+            "option_id": "AROZ_DHS",
+            "reaction": "3dhsk_c --> bs_pca_c + h2o_c",
+            "direction": 1,
+            "genes": [
+              "aroZ"
+            ],
+            "organism": "Klebsiella pneumoniae",
+            "uniprot": [],
+            "engineered_gene_ids": [
+              "K_pneumoniae_aroZ"
+            ],
+            "catalytic_support": [
+              "Active DHS dehydratase; original clone-specific metal requirement unresolved"
+            ],
+            "identity_scope": "Published species/gene identity; exact historical synthesized sequence or UniProt accession not assigned. Reaction-level proposal only.",
+            "sources": [
+              "https://doi.org/10.1021/bp010179x",
+              "https://patents.google.com/patent/US5487987A/en",
+              "https://www.rhea-db.org/rhea/24848"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 6.760037836090759
+          },
+          {
+            "option_id": "AROY_PCA",
+            "reaction": "bs_pca_c + h_c --> bs_catechol_c + co2_c",
+            "direction": 1,
+            "genes": [
+              "aroY"
+            ],
+            "organism": "Klebsiella pneumoniae",
+            "uniprot": [],
+            "engineered_gene_ids": [
+              "K_pneumoniae_aroY"
+            ],
+            "catalytic_support": [
+              "Mature prFMN, including oxidative maturation",
+              "Native E. coli UbiX support assumed available; no fixed per-product cofactor turnover assigned"
+            ],
+            "identity_scope": "2015 paper identifies aroY/AB479384; no exact synthesized-clone sequence match performed.",
+            "sources": [
+              "https://doi.org/10.1128/AEM.01386-15",
+              "https://doi.org/10.1002/anie.201708091",
+              "https://www.rhea-db.org/rhea/22416"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 6.760037836090759
+          },
+          {
+            "option_id": "CATA_MUCONATE",
+            "reaction": "bs_catechol_c + o2_c --> bs_muconate_c + 2 h_c",
+            "direction": 1,
+            "genes": [
+              "catA1"
+            ],
+            "organism": "Pseudomonas putida KT2440",
+            "uniprot": [
+              "Q88GK8"
+            ],
+            "engineered_gene_ids": [
+              "Q88GK8"
+            ],
+            "catalytic_support": [
+              "Fe3+"
+            ],
+            "identity_scope": "KT2440 catA1 reference; original CatA clone accession unresolved. Reaction annotation is not an exact clone match.",
+            "sources": [
+              "https://www.rhea-db.org/rhea/23852",
+              "https://doi.org/10.1016/j.ymben.2014.02.009",
+              "https://www.uniprot.org/uniprotkb/Q88GK8/entry"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 6.760037836090758
+          }
+        ],
+        "exchange_fluxes_at_product_optimum": {
+          "EX_ca2_e": -0.0010226490570397562,
+          "EX_cl_e": -0.0010226490570397564,
+          "EX_co2_e": 11.374817510659385,
+          "EX_cobalt2_e": -4.91185906359153e-06,
+          "EX_cu2_e": -0.00013930032304345578,
+          "EX_fe2_e": -0.0031555747368137437,
+          "EX_glc__D_e": -10.0,
+          "EX_h_e": 15.325327697284747,
+          "EX_h2o_e": 36.84377256576011,
+          "EX_k_e": -0.038350420247984865,
+          "EX_meoh_e": 3.929487250936644e-07,
+          "EX_mg2_e": -0.001704415095066261,
+          "EX_mn2_e": -0.00013576378451766986,
+          "EX_mobd_e": -2.5345192768132293e-05,
+          "EX_nh4_e": -2.122085010346243,
+          "EX_ni2_e": -6.346121910160256e-05,
+          "EX_o2_e": -14.335578607626655,
+          "EX_pi_e": -0.18952526081482826,
+          "EX_so4_e": -0.04955279897713635,
+          "EX_zn2_e": -6.699775762738847e-05
+        },
+        "scope": "iJO1366 K-12 steady-state stoichiometric upper bound in the explicitly declared medium. Product export is represented by a free cytosolic sink; transport, toxicity, enzyme kinetics and expression burden are not predicted. Gene count is an engineering-complexity proxy. Selected branch reactions are coupled to export to assess the proposed route, not an unspecified alternative.",
+        "experimental_outcome": "not_measured",
+        "goal_met": true,
+        "goal_requirements": [
+          {
+            "metric": "product_yield_mol_per_mol",
+            "value": 0.6760044596135325,
+            "operator": ">=",
+            "target": 0.6422042366328559,
+            "absolute_tolerance": 1e-07,
+            "met": true
+          },
+          {
+            "metric": "pathway_step_count",
+            "value": 3,
+            "operator": "<=",
+            "target": 4,
+            "absolute_tolerance": 0.0,
+            "met": true
+          },
+          {
+            "metric": "heterologous_gene_count",
+            "value": 3,
+            "operator": "<=",
+            "target": 3,
+            "absolute_tolerance": 0.0,
+            "met": true
+          }
+        ],
+        "goal_evidence_type": "genome_scale_stoichiometric_prediction",
+        "goal_evaluation": "public_requirements"
+      }
+    },
+    {
+      "steps": [
+        "ASBF_PCA",
+        "AROY_PCA",
+        "CATA_MUCONATE"
+      ],
+      "evaluation": {
+        "valid": true,
+        "feasible": true,
+        "metrics": {
+          "pathway_step_count": 3,
+          "heterologous_gene_count": 3,
+          "native_pathway_gene_count": 0,
+          "knockout_count": 0,
+          "wildtype_growth_per_hour": 0.9823718127183059,
+          "minimum_growth_per_hour": 0.19647436254366119,
+          "product_yield_mol_per_mol": 0.6760044596135323,
+          "carbon_yield_fraction": 0.6760044596135323,
+          "product_flux": 6.760044596135323,
+          "maximum_growth_per_hour": 0.9823718127269814,
+          "biomass_flux_at_product_optimum": 0.19647436254366119,
+          "zero_carbon_product_flux": 0.0,
+          "product_min_at_99pct_growth": 0.0,
+          "product_max_at_99pct_growth": 0.08535135135139409
+        },
+        "pathway": [
+          {
+            "option_id": "ASBF_PCA",
+            "reaction": "3dhsk_c --> bs_pca_c + h2o_c",
+            "direction": 1,
+            "genes": [
+              "asbF"
+            ],
+            "organism": "Bacillus thuringiensis",
+            "uniprot": [],
+            "engineered_gene_ids": [
+              "B_thuringiensis_asbF"
+            ],
+            "catalytic_support": [
+              "divalent metal"
+            ],
+            "identity_scope": "Original article and SI identify B. thuringiensis asbF and give the synthetic DNA; no unverified UniProt identity assigned.",
+            "sources": [
+              "https://www.rhea-db.org/rhea/24848",
+              "https://doi.org/10.1021/ja506664a"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 6.760037836090756
+          },
+          {
+            "option_id": "AROY_PCA",
+            "reaction": "bs_pca_c + h_c --> bs_catechol_c + co2_c",
+            "direction": 1,
+            "genes": [
+              "aroY"
+            ],
+            "organism": "Klebsiella pneumoniae",
+            "uniprot": [],
+            "engineered_gene_ids": [
+              "K_pneumoniae_aroY"
+            ],
+            "catalytic_support": [
+              "Mature prFMN, including oxidative maturation",
+              "Native E. coli UbiX support assumed available; no fixed per-product cofactor turnover assigned"
+            ],
+            "identity_scope": "2015 paper identifies aroY/AB479384; no exact synthesized-clone sequence match performed.",
+            "sources": [
+              "https://doi.org/10.1128/AEM.01386-15",
+              "https://doi.org/10.1002/anie.201708091",
+              "https://www.rhea-db.org/rhea/22416"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 6.760037836090755
+          },
+          {
+            "option_id": "CATA_MUCONATE",
+            "reaction": "bs_catechol_c + o2_c --> bs_muconate_c + 2 h_c",
+            "direction": 1,
+            "genes": [
+              "catA1"
+            ],
+            "organism": "Pseudomonas putida KT2440",
+            "uniprot": [
+              "Q88GK8"
+            ],
+            "engineered_gene_ids": [
+              "Q88GK8"
+            ],
+            "catalytic_support": [
+              "Fe3+"
+            ],
+            "identity_scope": "KT2440 catA1 reference; original CatA clone accession unresolved. Reaction annotation is not an exact clone match.",
+            "sources": [
+              "https://www.rhea-db.org/rhea/23852",
+              "https://doi.org/10.1016/j.ymben.2014.02.009",
+              "https://www.uniprot.org/uniprotkb/Q88GK8/entry"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 6.7600378360907545
+          }
+        ],
+        "exchange_fluxes_at_product_optimum": {
+          "EX_ca2_e": -0.0010226490570397562,
+          "EX_cl_e": -0.0010226490570397564,
+          "EX_co2_e": 11.374817510659438,
+          "EX_cobalt2_e": -4.91185906359153e-06,
+          "EX_cu2_e": -0.00013930032304345578,
+          "EX_fe2_e": -0.0031555747368137437,
+          "EX_glc__D_e": -10.0,
+          "EX_h_e": 15.325327697284711,
+          "EX_h2o_e": 36.84377256576008,
+          "EX_k_e": -0.038350420247984865,
+          "EX_meoh_e": 3.929487250873221e-07,
+          "EX_mg2_e": -0.001704415095066261,
+          "EX_mn2_e": -0.00013576378451766986,
+          "EX_mobd_e": -2.5345192768132293e-05,
+          "EX_nh4_e": -2.122085010346208,
+          "EX_ni2_e": -6.346121910160256e-05,
+          "EX_o2_e": -14.335578607626687,
+          "EX_pi_e": -0.1895252608148301,
+          "EX_so4_e": -0.049552798977136665,
+          "EX_zn2_e": -6.699775762738847e-05
+        },
+        "scope": "iJO1366 K-12 steady-state stoichiometric upper bound in the explicitly declared medium. Product export is represented by a free cytosolic sink; transport, toxicity, enzyme kinetics and expression burden are not predicted. Gene count is an engineering-complexity proxy. Selected branch reactions are coupled to export to assess the proposed route, not an unspecified alternative.",
+        "experimental_outcome": "not_measured",
+        "goal_met": true,
+        "goal_requirements": [
+          {
+            "metric": "product_yield_mol_per_mol",
+            "value": 0.6760044596135323,
+            "operator": ">=",
+            "target": 0.6422042366328559,
+            "absolute_tolerance": 1e-07,
+            "met": true
+          },
+          {
+            "metric": "pathway_step_count",
+            "value": 3,
+            "operator": "<=",
+            "target": 4,
+            "absolute_tolerance": 0.0,
+            "met": true
+          },
+          {
+            "metric": "heterologous_gene_count",
+            "value": 3,
+            "operator": "<=",
+            "target": 3,
+            "absolute_tolerance": 0.0,
+            "met": true
+          }
+        ],
+        "goal_evidence_type": "genome_scale_stoichiometric_prediction",
+        "goal_evaluation": "public_requirements"
+      }
+    },
+    {
+      "steps": [
+        "ENTC_NATIVE",
+        "PCHB_SAL",
+        "NAHG_SAL",
+        "CATA_MUCONATE"
+      ],
+      "evaluation": {
+        "valid": true,
+        "feasible": true,
+        "metrics": {
+          "pathway_step_count": 4,
+          "heterologous_gene_count": 3,
+          "native_pathway_gene_count": 1,
+          "knockout_count": 0,
+          "wildtype_growth_per_hour": 0.9823718127183059,
+          "minimum_growth_per_hour": 0.19647436254366119,
+          "product_yield_mol_per_mol": 0.5403096364413309,
+          "carbon_yield_fraction": 0.5403096364413309,
+          "product_flux": 5.403096364413309,
+          "maximum_growth_per_hour": 0.9823718127269752,
+          "biomass_flux_at_product_optimum": 0.19647436254366119,
+          "zero_carbon_product_flux": 0.0,
+          "product_min_at_99pct_growth": 0.0,
+          "product_max_at_99pct_growth": 0.07070149253741688
+        },
+        "pathway": [
+          {
+            "option_id": "ENTC_NATIVE",
+            "reaction": "chor_c --> ichor_c",
+            "direction": 1,
+            "genes": [
+              "b0593"
+            ],
+            "organism": "Escherichia coli K-12 MG1655",
+            "uniprot": [
+              "P0AEJ2"
+            ],
+            "engineered_gene_ids": [
+              "P0AEJ2"
+            ],
+            "catalytic_support": [
+              "Mg2+"
+            ],
+            "identity_scope": "original catalog annotation",
+            "sources": [
+              "https://www.rhea-db.org/rhea/18985",
+              "https://doi.org/10.1016/j.ymben.2014.02.009"
+            ],
+            "operation": "native_reference",
+            "bounds_before": [
+              0.0,
+              1000.0
+            ],
+            "bounds_after": [
+              0.0,
+              1000.0
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 5.403090961317011
+          },
+          {
+            "option_id": "PCHB_SAL",
+            "reaction": "ichor_c --> bs_salicylate_c + pyr_c",
+            "direction": 1,
+            "genes": [
+              "pchB"
+            ],
+            "organism": "Pseudomonas aeruginosa",
+            "uniprot": [
+              "Q51507"
+            ],
+            "engineered_gene_ids": [
+              "Q51507"
+            ],
+            "catalytic_support": [],
+            "identity_scope": "P. aeruginosa reaction reference; original paper used P. fluorescens PchB. This is a new reaction design with a declared alternative reference enzyme.",
+            "sources": [
+              "https://www.rhea-db.org/rhea/27874",
+              "https://doi.org/10.1016/j.ymben.2014.02.009",
+              "https://www.uniprot.org/uniprotkb/Q51507/entry"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 5.403090961317012
+          },
+          {
+            "option_id": "NAHG_SAL",
+            "reaction": "bs_salicylate_c + 2 h_c + nadh_c + o2_c --> bs_catechol_c + co2_c + h2o_c + nad_c",
+            "direction": 1,
+            "genes": [
+              "nahG"
+            ],
+            "organism": "Pseudomonas putida",
+            "uniprot": [
+              "Q53552"
+            ],
+            "engineered_gene_ids": [
+              "Q53552"
+            ],
+            "catalytic_support": [
+              "FAD"
+            ],
+            "identity_scope": "Curated reference enzyme for this chemistry, not asserted identical to the historical clone.",
+            "sources": [
+              "https://www.rhea-db.org/rhea/11004",
+              "https://doi.org/10.1016/j.ymben.2014.02.009",
+              "https://www.uniprot.org/uniprotkb/Q53552/entry"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 5.4030909613170115
+          },
+          {
+            "option_id": "CATA_MUCONATE",
+            "reaction": "bs_catechol_c + o2_c --> bs_muconate_c + 2 h_c",
+            "direction": 1,
+            "genes": [
+              "catA1"
+            ],
+            "organism": "Pseudomonas putida KT2440",
+            "uniprot": [
+              "Q88GK8"
+            ],
+            "engineered_gene_ids": [
+              "Q88GK8"
+            ],
+            "catalytic_support": [
+              "Fe3+"
+            ],
+            "identity_scope": "KT2440 catA1 reference; original CatA clone accession unresolved. Reaction annotation is not an exact clone match.",
+            "sources": [
+              "https://www.rhea-db.org/rhea/23852",
+              "https://doi.org/10.1016/j.ymben.2014.02.009",
+              "https://www.uniprot.org/uniprotkb/Q88GK8/entry"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 5.4030909613170115
+          }
+        ],
+        "exchange_fluxes_at_product_optimum": {
+          "EX_ac_e": 0.8992014504631944,
+          "EX_ca2_e": -0.0010226490570397562,
+          "EX_cl_e": -0.0010226490570397564,
+          "EX_co2_e": 17.71809585837525,
+          "EX_cobalt2_e": -4.91185906359153e-06,
+          "EX_cu2_e": -0.00013930032304345578,
+          "EX_fe2_e": -0.0016215029140728362,
+          "EX_fe3_e": -0.001534071822740907,
+          "EX_glc__D_e": -10.0,
+          "EX_h_e": 13.51216947002321,
+          "EX_h2o_e": 39.11544325324361,
+          "EX_k_e": -0.038350420247984865,
+          "EX_meoh_e": 3.929487250873221e-07,
+          "EX_mg2_e": -0.001704415095066261,
+          "EX_mn2_e": -0.00013576378451766986,
+          "EX_mobd_e": -2.5345192768132293e-05,
+          "EX_nh4_e": -2.122085010346321,
+          "EX_ni2_e": -6.346121910160256e-05,
+          "EX_o2_e": -20.0,
+          "EX_pi_e": -0.18952526081486973,
+          "EX_so4_e": -0.049552798977136894,
+          "EX_zn2_e": -6.699775762738847e-05
+        },
+        "scope": "iJO1366 K-12 steady-state stoichiometric upper bound in the explicitly declared medium. Product export is represented by a free cytosolic sink; transport, toxicity, enzyme kinetics and expression burden are not predicted. Gene count is an engineering-complexity proxy. Selected branch reactions are coupled to export to assess the proposed route, not an unspecified alternative.",
+        "experimental_outcome": "not_measured",
+        "goal_met": false,
+        "goal_requirements": [
+          {
+            "metric": "product_yield_mol_per_mol",
+            "value": 0.5403096364413309,
+            "operator": ">=",
+            "target": 0.6422042366328559,
+            "absolute_tolerance": 1e-07,
+            "met": false
+          },
+          {
+            "metric": "pathway_step_count",
+            "value": 4,
+            "operator": "<=",
+            "target": 4,
+            "absolute_tolerance": 0.0,
+            "met": true
+          },
+          {
+            "metric": "heterologous_gene_count",
+            "value": 3,
+            "operator": "<=",
+            "target": 3,
+            "absolute_tolerance": 0.0,
+            "met": true
+          }
+        ],
+        "goal_evidence_type": "genome_scale_stoichiometric_prediction",
+        "goal_evaluation": "public_requirements"
+      }
+    },
+    {
+      "steps": [
+        "UBIC_NATIVE",
+        "POBA_4HB",
+        "AROY_PCA",
+        "CATA_MUCONATE"
+      ],
+      "evaluation": {
+        "valid": true,
+        "feasible": true,
+        "metrics": {
+          "pathway_step_count": 4,
+          "heterologous_gene_count": 3,
+          "native_pathway_gene_count": 1,
+          "knockout_count": 0,
+          "wildtype_growth_per_hour": 0.9823718127183059,
+          "minimum_growth_per_hour": 0.19647436254366119,
+          "product_yield_mol_per_mol": 0.5280326354153579,
+          "carbon_yield_fraction": 0.5280326354153579,
+          "product_flux": 5.28032635415358,
+          "maximum_growth_per_hour": 0.9823718127269686,
+          "biomass_flux_at_product_optimum": 0.19647436254366119,
+          "zero_carbon_product_flux": 0.0,
+          "product_min_at_99pct_growth": 0.0,
+          "product_max_at_99pct_growth": 0.07017777777786446
+        },
+        "pathway": [
+          {
+            "option_id": "UBIC_NATIVE",
+            "reaction": "chor_c --> 4hbz_c + pyr_c",
+            "direction": 1,
+            "genes": [
+              "b4039"
+            ],
+            "organism": "Escherichia coli K-12 MG1655",
+            "uniprot": [
+              "P26602"
+            ],
+            "engineered_gene_ids": [
+              "P26602"
+            ],
+            "catalytic_support": [],
+            "identity_scope": "original catalog annotation",
+            "sources": [
+              "https://doi.org/10.1128/AEM.01386-15",
+              "https://www.rhea-db.org/rhea/16505"
+            ],
+            "operation": "native_reference",
+            "bounds_before": [
+              0.0,
+              1000.0
+            ],
+            "bounds_after": [
+              0.0,
+              1000.0
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 5.280364887610153
+          },
+          {
+            "option_id": "POBA_4HB",
+            "reaction": "4hbz_c + h_c + nadph_c + o2_c --> bs_pca_c + h2o_c + nadp_c",
+            "direction": 1,
+            "genes": [
+              "pobA"
+            ],
+            "organism": "Pseudomonas putida KT2440",
+            "uniprot": [
+              "Q88H28"
+            ],
+            "engineered_gene_ids": [
+              "Q88H28"
+            ],
+            "catalytic_support": [
+              "FAD"
+            ],
+            "identity_scope": "KT2440 pobA/PP_3537 reaction reference; original synthesized construct not sequence-matched. NADPH specificity retained.",
+            "sources": [
+              "https://doi.org/10.1128/AEM.01386-15",
+              "https://www.rhea-db.org/rhea/19477",
+              "https://www.uniprot.org/uniprotkb/Q88H28/entry"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 5.280321073827307
+          },
+          {
+            "option_id": "AROY_PCA",
+            "reaction": "bs_pca_c + h_c --> bs_catechol_c + co2_c",
+            "direction": 1,
+            "genes": [
+              "aroY"
+            ],
+            "organism": "Klebsiella pneumoniae",
+            "uniprot": [],
+            "engineered_gene_ids": [
+              "K_pneumoniae_aroY"
+            ],
+            "catalytic_support": [
+              "Mature prFMN, including oxidative maturation",
+              "Native E. coli UbiX support assumed available; no fixed per-product cofactor turnover assigned"
+            ],
+            "identity_scope": "2015 paper identifies aroY/AB479384; no exact synthesized-clone sequence match performed.",
+            "sources": [
+              "https://doi.org/10.1128/AEM.01386-15",
+              "https://doi.org/10.1002/anie.201708091",
+              "https://www.rhea-db.org/rhea/22416"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 5.280321073827308
+          },
+          {
+            "option_id": "CATA_MUCONATE",
+            "reaction": "bs_catechol_c + o2_c --> bs_muconate_c + 2 h_c",
+            "direction": 1,
+            "genes": [
+              "catA1"
+            ],
+            "organism": "Pseudomonas putida KT2440",
+            "uniprot": [
+              "Q88GK8"
+            ],
+            "engineered_gene_ids": [
+              "Q88GK8"
+            ],
+            "catalytic_support": [
+              "Fe3+"
+            ],
+            "identity_scope": "KT2440 catA1 reference; original CatA clone accession unresolved. Reaction annotation is not an exact clone match.",
+            "sources": [
+              "https://www.rhea-db.org/rhea/23852",
+              "https://doi.org/10.1016/j.ymben.2014.02.009",
+              "https://www.uniprot.org/uniprotkb/Q88GK8/entry"
+            ],
+            "operation": "add_enzyme",
+            "bounds_before": null,
+            "bounds_after": [
+              0,
+              1000
+            ],
+            "mass_charge_imbalance": {},
+            "directed_flux_at_product_optimum": 5.280321073827308
+          }
+        ],
+        "exchange_fluxes_at_product_optimum": {
+          "EX_ac_e": 1.2368465054845057,
+          "EX_ca2_e": -0.0010226490570397562,
+          "EX_cl_e": -0.0010226490570397564,
+          "EX_co2_e": 17.77942507327122,
+          "EX_cobalt2_e": -4.91185906359153e-06,
+          "EX_cu2_e": -0.00013930032304345578,
+          "EX_fe2_e": -0.0018444183096153056,
+          "EX_fe3_e": -0.0013111564271984376,
+          "EX_glc__D_e": -10.0,
+          "EX_h_e": 13.604051834669544,
+          "EX_h2o_e": 38.80857426336801,
+          "EX_k_e": -0.038350420247984865,
+          "EX_meoh_e": 3.929487250873221e-07,
+          "EX_mg2_e": -0.001704415095066261,
+          "EX_mn2_e": -0.00013576378451766986,
+          "EX_mobd_e": -2.5345192768132293e-05,
+          "EX_nh4_e": -2.122085010346245,
+          "EX_ni2_e": -6.346121910160256e-05,
+          "EX_o2_e": -20.0,
+          "EX_pi_e": -0.18952526081489013,
+          "EX_so4_e": -0.04955279897713676,
+          "EX_zn2_e": -6.699775762738847e-05
+        },
+        "scope": "iJO1366 K-12 steady-state stoichiometric upper bound in the explicitly declared medium. Product export is represented by a free cytosolic sink; transport, toxicity, enzyme kinetics and expression burden are not predicted. Gene count is an engineering-complexity proxy. Selected branch reactions are coupled to export to assess the proposed route, not an unspecified alternative.",
+        "experimental_outcome": "not_measured",
+        "goal_met": false,
+        "goal_requirements": [
+          {
+            "metric": "product_yield_mol_per_mol",
+            "value": 0.5280326354153579,
+            "operator": ">=",
+            "target": 0.6422042366328559,
+            "absolute_tolerance": 1e-07,
+            "met": false
+          },
+          {
+            "metric": "pathway_step_count",
+            "value": 4,
+            "operator": "<=",
+            "target": 4,
+            "absolute_tolerance": 0.0,
+            "met": true
+          },
+          {
+            "metric": "heterologous_gene_count",
+            "value": 3,
+            "operator": "<=",
+            "target": 3,
+            "absolute_tolerance": 0.0,
+            "met": true
+          }
+        ],
+        "goal_evidence_type": "genome_scale_stoichiometric_prediction",
+        "goal_evaluation": "public_requirements"
+      }
+    }
+  ],
+  "reference_method": "Exhaustive pre-formal-LLM library enumeration under fixed original engineering caps.",
+  "historical_strain_reproduction": false,
+  "sources": [
+    "https://doi.org/10.1002/anie.201708091",
+    "https://doi.org/10.1016/j.ymben.2014.02.009",
+    "https://doi.org/10.1021/bp010179x",
+    "https://doi.org/10.1128/AEM.01386-15",
+    "https://patents.google.com/patent/US5487987A/en",
+    "https://www.rhea-db.org/rhea/22416",
+    "https://www.rhea-db.org/rhea/23852",
+    "https://www.rhea-db.org/rhea/24848",
+    "https://www.uniprot.org/uniprotkb/Q88GK8/entry"
+  ]
+}

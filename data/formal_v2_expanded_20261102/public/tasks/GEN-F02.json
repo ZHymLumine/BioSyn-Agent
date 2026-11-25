@@ -1,0 +1,142 @@
+{
+  "schema_version": "formal-computational-design-1",
+  "case_id": "GEN-F02",
+  "track": "genetic_circuit",
+  "request": "为大肠杆菌设计一个感受L-arabinose、IPTG、aTc的遗传回路，使报告基因在给定输入真值表下产生要求的开关响应。选择调控元件、连接关系和回路 DNA，优先使 ON/OFF 状态易区分并减少不必要的元件。输入中的真值表定义功能，结构由你设计。 采用公开 Eco1C1G1T1 库；所有状态布尔输出须正确，稳态模型中最小ON必须大于最大OFF；调控门不超过3个。输出真实器件连接与可确定组装的DNA插入片段。",
+  "inputs": {
+    "host": "Escherichia coli",
+    "input_signals": {
+      "input_pBAD": "L-arabinose",
+      "input_pTac": "IPTG",
+      "input_pTet": "aTc"
+    },
+    "truth_table": [
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 0,
+          "input_pTet": 0
+        },
+        "outputs": {
+          "output_YFP": 1
+        }
+      },
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 0,
+          "input_pTet": 1
+        },
+        "outputs": {
+          "output_YFP": 0
+        }
+      },
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 1,
+          "input_pTet": 0
+        },
+        "outputs": {
+          "output_YFP": 0
+        }
+      },
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 1,
+          "input_pTet": 1
+        },
+        "outputs": {
+          "output_YFP": 0
+        }
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 0,
+          "input_pTet": 0
+        },
+        "outputs": {
+          "output_YFP": 0
+        }
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 0,
+          "input_pTet": 1
+        },
+        "outputs": {
+          "output_YFP": 0
+        }
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 1,
+          "input_pTet": 0
+        },
+        "outputs": {
+          "output_YFP": 0
+        }
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 1,
+          "input_pTet": 1
+        },
+        "outputs": {
+          "output_YFP": 0
+        }
+      }
+    ],
+    "reporters": [
+      "output_YFP"
+    ],
+    "signal_semantics": "0/1 are absent/present inducer states; no numerical concentration is invented.",
+    "public_resources": [
+      {
+        "path": "resources/cello_Eco1C1G1T1.json",
+        "sha256": "a81f0dba78d81c568797ef46c006b711800f54483aac258565fd67792736ad04",
+        "description": "Cello Eco1C1G1T1: 89 parts, 20 NOR-gate variants, sensor/reporter templates, response parameters and assembly constraints. JSON keys: part_index, sections (ucf/input/output). Load with Python and print only selected records; full file includes large cytometry arrays. Read at /public/resources/cello_Eco1C1G1T1.json"
+      }
+    ],
+    "host_background": "Cello Eco1C1G1T1 NEB 10-beta sensor/plasmid context; the exported artifact is the regulatory insert, with sensors supplied by the declared background."
+  },
+  "expected_output": {
+    "artifact": "physical gate graph and deterministically assembled regulatory DNA insert",
+    "required_fields": [
+      "gates",
+      "output"
+    ]
+  },
+  "instructions": [
+    "提交你设计的产物及理由；可以提出多个候选。",
+    "自行选择工具与迭代策略；不要用参考答案检索代替设计。",
+    "公开 Cello 资源提供真实元件序列、器件模板、模型参数及原始表征条件。用代码按名称读取并组装序列，勿凭记忆编造已知元件的 DNA；自行设计逻辑及元件分配。请在 design 的 assembly 字段记录有序的 {node_id, part_names} 列表，使 DNA 可追溯到元件；assembly 是补充记录，原评分器和必需输出字段保持不变。说明传感器宿主背景等实现前提。"
+  ],
+  "evaluation_contract": {
+    "evidence_type": "steady_state_model_prediction",
+    "requirements": [
+      {
+        "metric": "truth_table_accuracy",
+        "operator": "==",
+        "value": 1
+      },
+      {
+        "metric": "on_off_ratio",
+        "operator": ">",
+        "value": 1,
+        "absolute_tolerance": 1e-06
+      },
+      {
+        "metric": "gate_count",
+        "operator": "<=",
+        "value": 3
+      }
+    ],
+    "threshold_basis": "Exact Boolean function and positive worst-state ON/OFF separation. Gate budget equals a source topology with a verified reconstructed witness; no experimental precision claim."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "version": "formal-1.0.0",
+  "budget": {
+    "llm_requests": 64,
+    "candidate_evaluations": 24,
+    "mcp_calls": 96,
+    "model_tokens": 1000000,
+    "max_output_tokens": 32768,
+    "wall_seconds": 14400,
+    "finalization_call_reserve": 6,
+    "finalization_token_reserve": 150000,
+    "finalization_wall_reserve": 3600,
+    "max_design_rounds": 64,
+    "recursion_limit": 200,
+    "llm_request_timeout": 2400
+  },
+  "evaluation_scope": "EMOPEC SD activity and RNAfold local structure; not measured protein yield or RNA half-life.",
+  "selection_rule": "Prefer designs meeting all requirements; equal mean percentile rank across declared objectives; earliest candidate breaks ties for independent sampling. Agent chooses its own final.",
+  "comparison_rule": "Report raw per-case objective values, validity, feasibility, nondominance and actual costs. Internal search ranks are not comparable across methods.",
+  "replicates": [
+    101,
+    202,
+    303
+  ],
+  "objectives": [
+    {
+      "metric": "relative_activity_target_error",
+      "direction": "minimize"
+    },
+    {
+      "metric": "absolute_mfe_change_kcal_mol",
+      "direction": "minimize"
+    },
+    {
+      "metric": "sd_edit_distance",
+      "direction": "minimize"
+    }
+  ],
+  "decision_schema": {
+    "sd": "exactly six uppercase ACGT bases"
+  },
+  "hard_constraints": [
+    "Fixed gene context and full CDS unchanged",
+    "Only the specified six SD bases editable"
+  ],
+  "scope": "Original empirical SD model with declared RNAfold version and local window; no absolute enzyme-activity or protein-yield prediction.",
+  "submission_contract": {
+    "accepted_forms": [
+      "bare decision_schema object",
+      "exact id,parent_id,design,rationale envelope"
+    ],
+    "biological_repair": false
+  },
+  "timeout_seconds": {
+    "construction": 180,
+    "scientific_mcp": 300,
+    "worker_rpc": 360,
+    "biomni_code": 420,
+    "llm_proxy": 1200,
+    "llm_client": 1260
+  }
+}

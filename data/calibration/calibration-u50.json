@@ -1,0 +1,18 @@
+{
+  "version": "sample-frozen-affine-v1",
+  "slope": 1.6442389394446841,
+  "intercept": 6.50378796044995,
+  "basis": "Fit on a fixed half of high-coverage random-library rows excluded from the author training slice. Remaining half used only for checking.",
+  "source_sha256": "23bbd468ff6c6905f11e7dfdd7509601730e0f99c8ad2a78f37f3dfe99c31719",
+  "weights_sha256": "94b4d0badc08fb9456134492d0ceb258aa9802fefd27d334254a264b3594edf5",
+  "coverage_boundary": 2497.0,
+  "strict_boundary": true,
+  "calibration_n": 9935,
+  "check_n": 10051,
+  "check_mae_mrl": 0.3320488385821322,
+  "check_rmse_mrl": 0.4739392663914206,
+  "check_spearman": 0.9505759720220551,
+  "check_absolute_error_q90_mrl": 0.6965492995071942,
+  "scope": "Calibration of original main model in original random U50/eGFP/U/HEK293T assay; not unseen biological-background validation.",
+  "formal_design_labels_used": false
+}

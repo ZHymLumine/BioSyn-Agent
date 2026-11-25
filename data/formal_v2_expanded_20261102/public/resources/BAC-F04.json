@@ -1,0 +1,13 @@
+{
+  "sd_alphabet": "ACGT",
+  "editable_sd_length": 6,
+  "baseline_sd": "GGTCGT",
+  "spacing_nt": 8,
+  "fixed_context_file": "/public/task.json",
+  "model_scope": "Original EMOPEC lookup+spacing model; 4096 possible SDs. Normalized expression ranking is shared across genes; RNAfold context and requested target differ.",
+  "units": {
+    "emopec_relative_activity": "activity divided by same-spacing AGGAGA activity",
+    "absolute_mfe_change_kcal_mol": "absolute change in 70nt window MFE"
+  },
+  "calibrated_absolute_protein_yield": false
+}

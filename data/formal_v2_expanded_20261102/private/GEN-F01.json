@@ -1,0 +1,259 @@
+{
+  "source_case_id": "GEN-41ee692e5e",
+  "reference_id": "0x70",
+  "source_locator": {
+    "sequence_csv_row_1based": 2,
+    "netlist": "cello/0x70/0x70_A000_logic_circuit.txt",
+    "plasmid_label": "pAN3902"
+  },
+  "source_reference_path": "tasks/application_suite_v3/retrospective_v2_1/private/GEN-41ee692e5e.json",
+  "source_reference_sha256": "cef02cf19e7b49f18350994c9e1e7e9f2d1e52f147a8bb77d75d4476c091d532",
+  "reference_kind": "Reassembled original physical topology under declared UCF; not claimed identical to measured plasmid sequence",
+  "design": {
+    "gates": [
+      {
+        "id": "n2",
+        "part": "H1_HlyIIR",
+        "inputs": [
+          "input_pTac",
+          "input_pTet"
+        ]
+      },
+      {
+        "id": "n1",
+        "part": "B2_BM3R1",
+        "inputs": [
+          "input_pBAD",
+          "n2"
+        ]
+      }
+    ],
+    "output": "n1"
+  },
+  "artifact": {
+    "gates": [
+      {
+        "id": "n2",
+        "part": "H1_HlyIIR",
+        "inputs": [
+          "input_pTac",
+          "input_pTet"
+        ]
+      },
+      {
+        "id": "n1",
+        "part": "B2_BM3R1",
+        "inputs": [
+          "input_pBAD",
+          "n2"
+        ]
+      }
+    ],
+    "output": "n1",
+    "nodes": [
+      {
+        "id": "input_pBAD",
+        "name": "input_pBAD",
+        "type": "INPUT",
+        "inputs": []
+      },
+      {
+        "id": "input_pTac",
+        "name": "input_pTac",
+        "type": "INPUT",
+        "inputs": []
+      },
+      {
+        "id": "input_pTet",
+        "name": "input_pTet",
+        "type": "INPUT",
+        "inputs": []
+      },
+      {
+        "id": "n2",
+        "name": "H1_HlyIIR",
+        "type": "NOR",
+        "inputs": [
+          "input_pTac",
+          "input_pTet"
+        ]
+      },
+      {
+        "id": "n1",
+        "name": "B2_BM3R1",
+        "type": "NOR",
+        "inputs": [
+          "input_pBAD",
+          "n2"
+        ]
+      },
+      {
+        "id": "output_YFP",
+        "name": "output_YFP",
+        "type": "OUTPUT",
+        "inputs": [
+          "n1"
+        ]
+      }
+    ],
+    "assembly": [
+      {
+        "node_id": "n2",
+        "part_names": [
+          "pTac",
+          "pTet",
+          "RiboJ51",
+          "H1",
+          "HlyIIR",
+          "ECK120033736"
+        ]
+      },
+      {
+        "node_id": "n1",
+        "part_names": [
+          "pBAD",
+          "pHlyIIR",
+          "SarJ",
+          "B2",
+          "BM3R1",
+          "L3S2P11"
+        ]
+      },
+      {
+        "node_id": "output_YFP",
+        "part_names": [
+          "pBM3R1",
+          "YFP_cassette"
+        ]
+      }
+    ],
+    "dna_sequence": "AACGATCGTTGGCTGTGTTGACAATTAATCATCGGCTCGTATAATGTGTGGAATTGTGAGCGCTCACAATTTACTCCACCGTTGGCTTTTTTCCCTATCAGTGATAGAGATTGACATCCCTATCAGTGATAGAGATAATGAGCACCTGAAGTAGTCACCGGCTGTGCTTGCCGGTCTGATGAGCCTGTGAAGGCGAAACTACCTCTACAAATAATTTTGTTTAAACCCCCGAGATGAAATACATCCTGTTTGAGGTGTGCGAAATGGGTAAAAGCCGTGAACAGACCATGGAAAATATTCTGAAAGCAGCCAAAAAGAAATTCGGCGAACGTGGTTATGAAGGCACCAGCATTCAAGAAATTACCAAAGAAGCCAAAGTTAACGTTGCAATGGCCAGCTATTACTTTAATGGCAAAGAGAACCTGTACTACGAGGTGTTCAAAAAATACGGTCTGGCAAATGAACTGCCGAACTTTCTGGAAAAAAACCAGTTTAATCCGATTAATGCCCTGCGTGAATATCTGACCGTTTTTACCACCCACATTAAAGAAAATCCGGAAATTGGCACCCTGGCCTATGAAGAAATTATCAAAGAAAGCGCACGCCTGGAAAAAATCAAACCGTATTTTATCGGCAGCTTCGAACAGCTGAAAGAAATTCTGCAAGAGGGTGAAAAACAGGGTGTGTTTCACTTTTTTAGCATCAACCATACCATCCATTGGATTACCAGCATTGTTCTGTTTCCGAAATTCAAAAAATTCATCGATAGCCTGGGTCCGAATGAAACCAATGATACCAATCATGAATGGATGCCGGAAGATCTGGTTAGCCGTATTATTAGCGCACTGACCGATAAACCGAACATTTAAAACGCATGAGAAAGCCCCCGGAAGATCACCTTCCGGGGGCTTTTTTATTGCGCACTTTTCATACTCCCGCCATTCAGAGAAGAAACCAATTGTCCATATTGCATCAGACATTGCCGTCACTGCGTCTTTTACTGGCTCTTCTCGCTAACCAAACCGGTAACCCCGCTTATTAAAAGCATTCTGTAACAAAGCGGGACCAAAGCCATGACAAAAACGCGTAACAAAAGTGTCTATAATCACGGCAGAAAAGTCCACATTGATTATTTGCACGGCGTCACACTTTGCTATGCCATAGCATTTTTATCCATAAGATTAGCGGATCCTACCTGACGCTTTTTATCGCAACTCTCTACTGTTTCTCCATACCCGTTTTTTTGGGCTAGCACCAGGAATCTGAACGATTCGTTACCAATTGACATATTTAAAATTCTTGTTTAAAATGCTAGCCTGAGACTGTCGCCGGATGTGTATCCGACCTGACGATGGCCCAAAAGGGCCGAAACAGTCCTCTACAAATAATTTTGTTTAACTATGGACTATGTTTTTCAAAGACGAAAAACTACTAGATGGAAAGCACCCCGACCAAACAGAAAGCAATTTTTAGCGCAAGCCTGCTGCTGTTTGCAGAACGTGGTTTTGATGCAACCACCATGCCGATGATTGCAGAAAATGCAAAAGTTGGTGCAGGCACCATTTATCGCTATTTCAAAAACAAAGAAAGCCTGGTGAACGAACTGTTTCAGCAGCATGTTAATGAATTTCTGCAGTGTATTGAAAGCGGTCTGGCAAATGAACGTGATGGTTATCGTGATGGCTTTCATCACATTTTTGAAGGTATGGTGACCTTTACCAAAAATCATCCGCGTGCACTGGGTTTTATCAAAACCCATAGCCAGGGCACCTTTCTGACCGAAGAAAGCCGTCTGGCATATCAGAAACTGGTTGAATTTGTGTGCACCTTTTTTCGTGAAGGTCAGAAACAGGGTGTGATTCGTAATCTGCCGGAAAATGCACTGATTGCAATTCTGTTTGGCAGCTTTATGGAAGTGTATGAAATGATCGAGAACGATTATCTGAGCCTGACCGATGAACTGCTGACCGGTGTTGAAGAAAGCCTGTGGGCAGCACTGAGCCGTCAGAGCTAACTCGGTACCAAATTCCAGAAAAGAGACGCTTTCGAGCGTCTTTTTTCGTTTTGGTCCAATCCGCGTGATAGGTCTGATTCGTTACCAATTGACGGAATGAACGTTCATTCCGATAATGCTAGCCTGAAGCTGTCACCGGATGTGCTTTCCGGTCTGATGAGTCCGTGAGGACGAAACAGCCTCTACAAATAATTTTGTTTAATACTAGAGAAAGAGGGGAAATACTAGATGGTGAGCAAGGGCGAGGAGCTGTTCACCGGGGTGGTGCCCATCCTGGTCGAGCTGGACGGCGACGTAAACGGCCACAAGTTCAGCGTGTCCGGCGAGGGCGAGGGCGATGCCACCTACGGCAAGCTGACCCTGAAGTTCATCTGCACCACAGGCAAGCTGCCCGTGCCCTGGCCCACCCTCGTGACCACCTTCGGCTACGGCCTGCAATGCTTCGCCCGCTACCCCGACCACATGAAGCTGCACGACTTCTTCAAGTCCGCCATGCCCGAAGGCTACGTCCAGGAGCGCACCATCTTCTTCAAGGACGACGGCAACTACAAGACCCGCGCCGAGGTGAAGTTCGAGGGCGACACCCTGGTGAACCGCATCGAGCTGAAGGGCATCGACTTCAAGGAGGACGGCAACATCCTGGGGCACAAGCTGGAGTACAACTACAACAGCCACAACGTCTATATCATGGCCGACAAGCAGAAGAACGGCATCAAGGTGAACTTCAAGATCCGCCACAACATCGAGGACGGCAGCGTGCAGCTCGCCGACCACTACCAGCAGAACACCCCAATCGGCGACGGCCCCGTGCTGCTGCCCGACAACCACTACCTTAGCTACCAGTCCGCCCTGAGCAAAGACCCCAACGAGAAGCGCGATCACATGGTCCTGCTGGAGTTCGTGACCGCCGCCGGGATCACTCTCGGCATGGACGAGCTGTACAAGTAACTCGGTACCAAATTCCAGAAAAGAGGCCTCCCGAAAGGGGGGCCTTTTTTCGTTTTGGTCC"
+  },
+  "evaluation": {
+    "valid": true,
+    "metrics": {
+      "truth_table_accuracy": 1.0,
+      "on_off_ratio": 83.70043775543604,
+      "log10_on_off_ratio": 1.9227277293704779,
+      "minimum_on_rpu": 0.43024589840205335,
+      "maximum_off_rpu": 0.005140306430166913,
+      "gate_count": 2,
+      "dna_length": 3023
+    },
+    "model_function_satisfied": true,
+    "truth_table": [
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 0,
+          "input_pTet": 0
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.005140306430166913
+      },
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 0,
+          "input_pTet": 1
+        },
+        "target": 1,
+        "boolean_output": 1,
+        "output_promoter_rpu": 0.433530997527527
+      },
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 1,
+          "input_pTet": 0
+        },
+        "target": 1,
+        "boolean_output": 1,
+        "output_promoter_rpu": 0.43024589840205335
+      },
+      {
+        "inputs": {
+          "input_pBAD": 0,
+          "input_pTac": 1,
+          "input_pTet": 1
+        },
+        "target": 1,
+        "boolean_output": 1,
+        "output_promoter_rpu": 0.4345744429751826
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 0,
+          "input_pTet": 0
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.005018979329949452
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 0,
+          "input_pTet": 1
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.005130620994270196
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 1,
+          "input_pTet": 0
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.00513039493065118
+      },
+      {
+        "inputs": {
+          "input_pBAD": 1,
+          "input_pTac": 1,
+          "input_pTet": 1
+        },
+        "target": 0,
+        "boolean_output": 0,
+        "output_promoter_rpu": 0.005130693943717388
+      }
+    ],
+    "scope": "Eco1C1G1T1 steady-state Hill response, additive tandem promoters; no dynamics.",
+    "sequence_matches_physical_graph": true,
+    "goal_met": true,
+    "goal_requirements": [
+      {
+        "metric": "truth_table_accuracy",
+        "value": 1.0,
+        "operator": "==",
+        "target": 1,
+        "absolute_tolerance": 0.0,
+        "met": true
+      },
+      {
+        "metric": "on_off_ratio",
+        "value": 83.70043775543604,
+        "operator": ">",
+        "target": 1,
+        "absolute_tolerance": 1e-06,
+        "met": true
+      },
+      {
+        "metric": "gate_count",
+        "value": 2,
+        "operator": "<=",
+        "target": 2,
+        "absolute_tolerance": 0.0,
+        "met": true
+      }
+    ],
+    "goal_evidence_type": "steady_state_model_prediction",
+    "goal_evaluation": "public_requirements",
+    "experimental_outcome": "not_measured"
+  }
+}

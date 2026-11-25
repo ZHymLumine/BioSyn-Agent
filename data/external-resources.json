@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "id": "cello-ucf",
+      "group": "catalog",
+      "destination": "resources/application_suite_v3/cello/ucf.json",
+      "url": "https://raw.githubusercontent.com/CIDARLAB/Cello-UCF/222827d30a28730404f0601d64f63436354fee9d/files/v2/ucf/Eco/Eco1C1G1T1.UCF.json",
+      "sha256": "7c4e52d85970f1ad8dffd795dd0ecf0115835cc47483dcf07a47388fa7d06335",
+      "commit": "222827d30a28730404f0601d64f63436354fee9d"
+    },
+    {
+      "id": "cello-input",
+      "group": "catalog",
+      "destination": "resources/application_suite_v3/cello/input.json",
+      "url": "https://raw.githubusercontent.com/CIDARLAB/Cello-UCF/222827d30a28730404f0601d64f63436354fee9d/files/v2/input/Eco/Eco1C1G1T1.input.json",
+      "sha256": "56c3614cf9b6fb93b8a3db558b2bea53400b194b9989237a296c55fc73d6d867",
+      "commit": "222827d30a28730404f0601d64f63436354fee9d"
+    },
+    {
+      "id": "cello-output",
+      "group": "catalog",
+      "destination": "resources/application_suite_v3/cello/output.json",
+      "url": "https://raw.githubusercontent.com/CIDARLAB/Cello-UCF/222827d30a28730404f0601d64f63436354fee9d/files/v2/output/Eco/Eco1C1G1T1.output.json",
+      "sha256": "56e1d2c4148a213eb176f61a76d9c65d9ffc12004048c533d61dd63c3d18040f",
+      "commit": "222827d30a28730404f0601d64f63436354fee9d"
+    },
+    {
+      "id": "main_MRL_model.hdf5",
+      "group": "evaluation",
+      "destination": "resources/application_suite_v3/optimus/modeling/saved_models/main_MRL_model.hdf5",
+      "url": "https://raw.githubusercontent.com/pjsample/human_5utr_modeling/d53df410c7fb3fcd4bc4541bd7e8c6dc52b66fbe/modeling/saved_models/main_MRL_model.hdf5",
+      "sha256": "94b4d0badc08fb9456134492d0ceb258aa9802fefd27d334254a264b3594edf5"
+    },
+    {
+      "id": "LICENSE",
+      "group": "evaluation",
+      "destination": "resources/application_suite_v3/optimus/LICENSE",
+      "url": "https://raw.githubusercontent.com/pjsample/human_5utr_modeling/d53df410c7fb3fcd4bc4541bd7e8c6dc52b66fbe/LICENSE",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "id": "iJO1366.xml.gz",
+      "group": "evaluation",
+      "destination": "resources/application_suite_v3/metabolic/iJO1366.xml.gz",
+      "url": "https://raw.githubusercontent.com/opencobra/cobrapy/a9c5ced29670bed5035fb19e87e7b0b588adb62d/src/cobra/data/iJO1366.xml.gz",
+      "sha256": "e100c6a9fdc30f6b880d390f8af9941422202b8714c7786629f19c98b076d208"
+    },
+    {
+      "id": "optimus-length",
+      "group": "evaluation",
+      "destination": "resources/application_suite_v3/formal_v1_20261031/sample/Varying_length_25to100_model.hdf5",
+      "url": "https://raw.githubusercontent.com/pjsample/human_5utr_modeling/d53df410c7fb3fcd4bc4541bd7e8c6dc52b66fbe/modeling/saved_models/Varying_length_25to100_model.hdf5",
+      "sha256": "1aa38b2373a3671b0da4f14ed1473b2b2404367930c6ba2b013a621c11b5dee9",
+      "commit": "d53df410c7fb3fcd4bc4541bd7e8c6dc52b66fbe"
+    },
+    {
+      "id": "emopec-emopec/__init__.py",
+      "group": "evaluation",
+      "destination": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/emopec/__init__.py",
+      "url": "https://raw.githubusercontent.com/micked/EMOPEC/f4c3665dfea6bb8655dac180b7913d280d4721a9/emopec/__init__.py",
+      "sha256": "71dc29836afe320cac08fde95aecc55cd4975b869742dd788b8218bcdc296a0a",
+      "commit": "f4c3665dfea6bb8655dac180b7913d280d4721a9",
+      "download_sha256": "07f68c7db9b5f9507bed370119504d8876b9e0b81995737a5d07b5c95b54859b",
+      "transform": "remove_leading_utf8_encoding_cookie",
+      "transform_reason": "Reconstruct the exact experimental file bytes; the removed line declares UTF-8 and does not change the functions or lookup values."
+    },
+    {
+      "id": "emopec-emopec/_emopec.py",
+      "group": "evaluation",
+      "destination": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/emopec/_emopec.py",
+      "url": "https://raw.githubusercontent.com/micked/EMOPEC/f4c3665dfea6bb8655dac180b7913d280d4721a9/emopec/_emopec.py",
+      "sha256": "9b6567624ba29595c13b7bcc123375f830445a565400c920e086a78ae2fdc9c4",
+      "commit": "f4c3665dfea6bb8655dac180b7913d280d4721a9",
+      "download_sha256": "43782bf06d4dd962d7d8d6c216377ba79dc20259d433fa7c53bab706d76dd529",
+      "transform": "remove_leading_utf8_encoding_cookie",
+      "transform_reason": "Reconstruct the exact experimental file bytes; the removed line declares UTF-8 and does not change the functions or lookup values."
+    },
+    {
+      "id": "emopec-emopec/_predicted_sequences.py",
+      "group": "evaluation",
+      "destination": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/emopec/_predicted_sequences.py",
+      "url": "https://raw.githubusercontent.com/micked/EMOPEC/f4c3665dfea6bb8655dac180b7913d280d4721a9/emopec/_predicted_sequences.py",
+      "sha256": "ade71a1d20050dd5d79eeafae3dd692014a65bc819f57bbe7357bfe3dc86109d",
+      "commit": "f4c3665dfea6bb8655dac180b7913d280d4721a9",
+      "download_sha256": "16ad9607912e664dd4c1c7aab07dc5ea5030db9f8038e9b5d0f98f4e457914dc",
+      "transform": "remove_leading_utf8_encoding_cookie",
+      "transform_reason": "Reconstruct the exact experimental file bytes; the removed line declares UTF-8 and does not change the functions or lookup values."
+    },
+    {
+      "id": "emopec-emopec/_sequences.py",
+      "group": "evaluation",
+      "destination": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/emopec/_sequences.py",
+      "url": "https://raw.githubusercontent.com/micked/EMOPEC/f4c3665dfea6bb8655dac180b7913d280d4721a9/emopec/_sequences.py",
+      "sha256": "def229e9001dee8e6cb4787cc85cab3a81a25c443266e8db07dbacfd0ca0db6f",
+      "commit": "f4c3665dfea6bb8655dac180b7913d280d4721a9",
+      "download_sha256": "ee130e82fd048985eefd04c0e5d2747533dae752db3a17a597bd4b090b7f66a8",
+      "transform": "remove_leading_utf8_encoding_cookie",
+      "transform_reason": "Reconstruct the exact experimental file bytes; the removed line declares UTF-8 and does not change the functions or lookup values."
+    },
+    {
+      "id": "emopec-emopec/viennarna.py",
+      "group": "evaluation",
+      "destination": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/emopec/viennarna.py",
+      "url": "https://raw.githubusercontent.com/micked/EMOPEC/f4c3665dfea6bb8655dac180b7913d280d4721a9/emopec/viennarna.py",
+      "sha256": "d5eef59495427319fac79cc323630714e39337751cb7db751458533de060b11d",
+      "commit": "f4c3665dfea6bb8655dac180b7913d280d4721a9"
+    },
+    {
+      "id": "emopec-emopec/web.py",
+      "group": "evaluation",
+      "destination": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/emopec/web.py",
+      "url": "https://raw.githubusercontent.com/micked/EMOPEC/f4c3665dfea6bb8655dac180b7913d280d4721a9/emopec/web.py",
+      "sha256": "181b9a3485265ff80a15ae2af42fc6a651e16a0811b1aa7855fc5fa65f8072b6",
+      "commit": "f4c3665dfea6bb8655dac180b7913d280d4721a9"
+    },
+    {
+      "id": "emopec-setup.py",
+      "group": "evaluation",
+      "destination": "resources/application_suite_v3/formal_v1_20261031/emopec/original-software/setup.py",
+      "url": "https://raw.githubusercontent.com/micked/EMOPEC/f4c3665dfea6bb8655dac180b7913d280d4721a9/setup.py",
+      "sha256": "7afbe9c2b49bc16289b1027bec62b7d63d1c98bcc9144becfb9ae04ba383d3a1",
+      "commit": "f4c3665dfea6bb8655dac180b7913d280d4721a9"
+    },
+    {
+      "id": "GSM3130435",
+      "group": "source-tables",
+      "destination": "resources/application_suite_v3/source_tables/GSM3130435_egfp_unmod_1.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3130nnn/GSM3130435/suppl/GSM3130435_egfp_unmod_1.csv.gz",
+      "sha256": "23bbd468ff6c6905f11e7dfdd7509601730e0f99c8ad2a78f37f3dfe99c31719",
+      "bytes": 63726742
+    },
+    {
+      "id": "GSM3130443",
+      "group": "source-tables",
+      "destination": "resources/application_suite_v3/source_tables/GSM3130443_designed_library.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3130nnn/GSM3130443/suppl/GSM3130443_designed_library.csv.gz",
+      "sha256": "b72ac298cb0f4d21f911d330c0def06f8d94f15d9f8cc22f3a50ae87a7ef7ee5",
+      "bytes": 17332142
+    },
+    {
+      "id": "GSM4084997",
+      "group": "source-tables",
+      "destination": "resources/application_suite_v3/source_tables/GSM4084997_varying_length_25to100.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4084nnn/GSM4084997/suppl/GSM4084997_varying_length_25to100.csv.gz",
+      "sha256": "067dafb970278953cad66c5e5caa0cd97e235cef04f5aff36b2d32bfffa1e36c",
+      "bytes": 15437518
+    },
+    {
+      "id": "cello-sequences.csv",
+      "group": "source-tables",
+      "destination": "resources/application_suite_v3/source_tables/cello-sequences.csv",
+      "url": "https://raw.githubusercontent.com/CIDARLAB/cello/df279b73ee7542578da8fe83f1898dbe78edb899/resources/tested_circuits/circuit_DNA_sequences_v2.csv",
+      "sha256": "d8605574f50e36e4eb740af963068da32c1d8d92aa5836e816bdd446b777579a",
+      "bytes": 344937
+    },
+    {
+      "id": "cello/0x04/0x04_A000_logic_circuit.txt",
+      "group": "source-tables",
+      "destination": "resources/application_suite_v3/source_tables/cello/0x04/0x04_A000_logic_circuit.txt",
+      "url": "https://raw.githubusercontent.com/CIDARLAB/cello/df279b73ee7542578da8fe83f1898dbe78edb899/resources/tested_circuits/0x04/0x04_A000_logic_circuit.txt",
+      "sha256": "0c0293d72cfb9eacbeb96afd959804ca0aaa1718fdac91ba959ca7fefd55e863",
+      "bytes": 6659
+    },
+    {
+      "id": "cello/0x06/0x06_A000_logic_circuit.txt",
+      "group": "source-tables",
+      "destination": "resources/application_suite_v3/source_tables/cello/0x06/0x06_A000_logic_circuit.txt",
+      "url": "https://raw.githubusercontent.com/CIDARLAB/cello/df279b73ee7542578da8fe83f1898dbe78edb899/resources/tested_circuits/0x06/0x06_A000_logic_circuit.txt",
+      "sha256": "e1f57d23585223c57644e360173470397dc7bdc22aac27c9ddc96bff9125b38e",
+      "bytes": 7456
+    },
+    {
+      "id": "cello/0x0B/0x0B_A000_logic_circuit.txt",
+      "group": "source-tables",
+      "destination": "resources/application_suite_v3/source_tables/cello/0x0B/0x0B_A000_logic_circuit.txt",
+      "url": "https://raw.githubusercontent.com/CIDARLAB/cello/df279b73ee7542578da8fe83f1898dbe78edb899/resources/tested_circuits/0x0B/0x0B_A000_logic_circuit.txt",
+      "sha256": "abd8503f92f0d9b1ac2536743867e7ae7b05bead1aa229050dd1f718096ef13e",
+      "bytes": 5865
+    },
+    {
+      "id": "cello/0x41/0x41_A000_logic_circuit.txt",
+      "group": "source-tables",
+      "destination": "resources/application_suite_v3/source_tables/cello/0x41/0x41_A000_logic_circuit.txt",
+      "url": "https://raw.githubusercontent.com/CIDARLAB/cello/df279b73ee7542578da8fe83f1898dbe78edb899/resources/tested_circuits/0x41/0x41_A000_logic_circuit.txt",
+      "sha256": "fa931f6e84266f30db68ab4ca0b76d4c2bd749ab126b3e29911941da12e1f919",
+      "bytes": 8250
+    },
+    {
+      "id": "cello/0x70/0x70_A000_logic_circuit.txt",
+      "group": "source-tables",
+      "destination": "resources/application_suite_v3/source_tables/cello/0x70/0x70_A000_logic_circuit.txt",
+      "url": "https://raw.githubusercontent.com/CIDARLAB/cello/df279b73ee7542578da8fe83f1898dbe78edb899/resources/tested_circuits/0x70/0x70_A000_logic_circuit.txt",
+      "sha256": "29467669b0a8e915f0320a48bbcf01cba6e6773e0b03941e17383d84cd98e3ad",
+      "bytes": 4277
+    },
+    {
+      "id": "cello/0x80/0x80_A000_logic_circuit.txt",
+      "group": "source-tables",
+      "destination": "resources/application_suite_v3/source_tables/cello/0x80/0x80_A000_logic_circuit.txt",
+      "url": "https://raw.githubusercontent.com/CIDARLAB/cello/df279b73ee7542578da8fe83f1898dbe78edb899/resources/tested_circuits/0x80/0x80_A000_logic_circuit.txt",
+      "sha256": "5cc1ecff671f5830e9b06e226ed3d55af976ce8fc5e10751accd7e7f18c36a7e",
+      "bytes": 5068
+    }
+  ],
+  "local_copies": [
+    {
+      "source": "data/calibration/calibration-u50.json",
+      "destination": "resources/application_suite_v3/formal_v1_20261031/sample/calibration-u50.json",
+      "sha256": "8528ff1e34febd58aae7422356857d8e16bf9057a07b3978fd76e8a752859796"
+    },
+    {
+      "source": "data/calibration/calibration-length.json",
+      "destination": "resources/application_suite_v3/formal_v1_20261031/sample/calibration-length.json",
+      "sha256": "55fed5219deb9c341342d559dfb9882cd8563c697acf20b2cb87c2e35c2aa173"
+    }
+  ]
+}

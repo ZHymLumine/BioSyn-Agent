@@ -1,0 +1,70 @@
+{
+  "version": "formal-1.0.0",
+  "budget": {
+    "llm_requests": 64,
+    "candidate_evaluations": 24,
+    "mcp_calls": 96,
+    "model_tokens": 1000000,
+    "max_output_tokens": 32768,
+    "wall_seconds": 14400,
+    "finalization_call_reserve": 6,
+    "finalization_token_reserve": 150000,
+    "finalization_wall_reserve": 3600,
+    "max_design_rounds": 64,
+    "recursion_limit": 200,
+    "llm_request_timeout": 2400
+  },
+  "evaluation_scope": "Computational predictions and constraint satisfaction; no new experimental measurements.",
+  "selection_rule": "Satisfy hard constraints first; inspect declared objective tradeoffs. Final choice belongs to the method.",
+  "comparison_rule": "Report raw per-case objective values, validity, feasibility, nondominance and actual costs. Internal search ranks are not comparable across methods.",
+  "replicates": [
+    101,
+    202,
+    303
+  ],
+  "objectives": [
+    {
+      "metric": "product_yield_mol_per_mol",
+      "direction": "maximize"
+    },
+    {
+      "metric": "pathway_step_count",
+      "direction": "minimize"
+    },
+    {
+      "metric": "heterologous_gene_count",
+      "direction": "minimize"
+    }
+  ],
+  "decision_schema": {
+    "steps": [
+      "ordered public reaction-option IDs"
+    ],
+    "gene_knockouts": [
+      "empty list: no host gene knockout in this route-design task"
+    ]
+  },
+  "hard_constraints": [
+    "connected route to the target",
+    "curated enzyme and cofactor identity",
+    "mass and charge balance",
+    "growth floor",
+    "no carbon-free product"
+  ],
+  "scope": "Stoichiometric upper bound and engineering-complexity proxies. No enzyme kinetics, transport penalty, toxicity, or measured burden.",
+  "submission_contract": {
+    "accepted_forms": [
+      "bare decision_schema object",
+      "exact id,parent_id,design,rationale envelope"
+    ],
+    "biological_repair": false
+  },
+  "timeout_seconds": {
+    "construction": 180,
+    "scientific_mcp": 300,
+    "worker_rpc": 360,
+    "biomni_code": 420,
+    "llm_proxy": 1200,
+    "llm_client": 1260
+  }
+}

@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 GENERATED = {
-    ".git", "Biomni", "OpenBioMed", "external", "data", "datasets", "resources",
+    ".git", "Biomni", "OpenBioMed", "external", "datasets", "resources",
     "models", "checkpoints", "runs", "results", "experiments", "artifacts", "logs",
     "reports", "build", "dist", "__pycache__", ".pytest_cache", ".ruff_cache", ".secrets",
 }
@@ -14,7 +14,8 @@ WEIGHTS = {".pt", ".pth", ".ckpt", ".safetensors", ".h5", ".hdf5", ".onnx"}
 
 
 def generated(path):
-    return any(p in GENERATED or p.startswith(".venv") or p.endswith(".egg-info")
+    excluded = GENERATED - {"resources"} if path.parts[:1] == ("data",) else GENERATED
+    return any(p in excluded or p.startswith(".venv") or p.endswith(".egg-info")
                for p in path.parts)
 
 
