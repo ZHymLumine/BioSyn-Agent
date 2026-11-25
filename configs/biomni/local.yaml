@@ -1,0 +1,17 @@
+servers:
+  dna:
+    command: ["{python}", "-m", "biosyn.mcp.dna"]
+  rna:
+    command: ["{python}", "-m", "biosyn.mcp.rna"]
+llm:
+  model: glm-5.3-flash
+  base_url: http://127.0.0.1:8000/v1
+  api_key_env: BIOSYN_LLM_API_KEY
+  temperature: 0.2
+  max_tokens: 8192
+  timeout: null
+biomni_tool_modules: []
+use_tool_retriever: true
+recursion_limit: 40
+code_timeout: 180
+skills: ["examples/skills/sequence_design.md"]

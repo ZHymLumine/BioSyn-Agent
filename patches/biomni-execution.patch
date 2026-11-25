@@ -1,0 +1,31 @@
+diff --git a/biomni/agent/a1.py b/biomni/agent/a1.py
+index 7a62e59..a2a38d1 100644
+--- a/biomni/agent/a1.py
++++ b/biomni/agent/a1.py
+@@ -1410,6 +1410,17 @@ Each library is listed with its description to help you understand its functiona
+                 # Fallback to string conversion for legacy content
+                 msg = str(content)
+ 
++            # A token-limited response is incomplete, even when part of its code
++            # happens to parse. Never repair its tags and execute partial actions.
++            if response.response_metadata.get("finish_reason") == "length":
++                state["messages"].append(AIMessage(content=msg.strip(), response_metadata=response.response_metadata))
++                state["messages"].append(HumanMessage(content=(
++                    "The previous response reached the output token limit. No code or final answer from it was executed. "
++                    "Split the work into shorter executable steps. Load supplied sequences from files and construct "
++                    "long artifacts in Python rather than emitting nucleotide literals.")))
++                state["next_step"] = "generate"
++                return state
++
+             # Enhanced parsing for better OpenAI compatibility
+             # Check for incomplete tags and fix them
+             if "<execute>" in msg and "</execute>" not in msg:
+@@ -1476,7 +1487,7 @@ Each library is listed with its description to help you understand its functiona
+ 
+             execute_match = re.search(r"<execute>(.*?)</execute>", last_message, re.DOTALL)
+             if execute_match:
+-                code = execute_match.group(1)
++                code = execute_match.group(1).strip()
+ 
+                 # Set timeout duration (10 minutes = 600 seconds)
+                 timeout = self.timeout_seconds

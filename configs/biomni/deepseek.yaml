@@ -1,0 +1,20 @@
+servers:
+  dna:
+    command: ["{python}", "-m", "biosyn.mcp.dna"]
+  rna:
+    command: ["{python}", "-m", "biosyn.mcp.rna"]
+llm:
+  model: deepseek-v4-flash
+  base_url: https://api.deepseek.com
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.2
+  max_tokens: 4096
+  timeout: 180
+  extra_body:
+    thinking:
+      type: disabled
+biomni_tool_modules: []
+use_tool_retriever: true
+recursion_limit: 32
+code_timeout: 180
+skills: ["examples/skills/sequence_design.md"]

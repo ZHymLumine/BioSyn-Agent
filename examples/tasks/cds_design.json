@@ -1,0 +1,68 @@
+{
+  "id": "cds_design",
+  "request": "Design a complete coding-strand DNA sequence for the peptide MAKELV. Include its exact RNA transcript and translated protein. Target a DNA GC fraction between 0.40 and 0.65, a six-residue protein, and an RNAfold minimum free energy between -20 and 0 kcal/mol at 37 °C. Use the configured tools to evaluate candidates and submit the final design.",
+  "objectives": [
+    {
+      "metric": "gc_fraction",
+      "direction": "maximize",
+      "lower": 0,
+      "upper": 1,
+      "minimum": 0.4,
+      "maximum": 0.65
+    },
+    {
+      "metric": "protein_length",
+      "direction": "maximize",
+      "lower": 0,
+      "upper": 10,
+      "minimum": 6,
+      "maximum": 6
+    },
+    {
+      "metric": "rna_mfe",
+      "direction": "minimize",
+      "lower": -20,
+      "upper": 0,
+      "minimum": -20,
+      "maximum": 0
+    }
+  ],
+  "evaluators": [
+    {
+      "name": "dna_statistics",
+      "tool": "dna.sequence_analyze",
+      "inputs": {
+        "dna": "dna"
+      },
+      "metrics": {
+        "gc_fraction": "gc_fraction"
+      }
+    },
+    {
+      "name": "cds_translation",
+      "tool": "dna.translate_cds",
+      "inputs": {
+        "dna": "dna"
+      },
+      "metrics": {
+        "protein_length": "length"
+      }
+    },
+    {
+      "name": "rna_structure",
+      "tool": "rna.rnafold",
+      "inputs": {
+        "rna": "rna"
+      },
+      "metrics": {
+        "rna_mfe": "mfe_kcal_mol"
+      }
+    }
+  ],
+  "require_transcription_match": true,
+  "require_translation_match": true,
+  "required_protein": "MAKELV",
+  "max_rounds": 2,
+  "max_tool_calls": 20,
+  "max_candidates": 4
+}

@@ -1,0 +1,7 @@
+servers:
+  dna:
+    command: ["{python}", "-m", "biosyn.mcp.dna"]
+  rna:
+    command: ["{python}", "-m", "biosyn.mcp.rna"]
+biomni_tool_modules: []
+use_tool_retriever: true

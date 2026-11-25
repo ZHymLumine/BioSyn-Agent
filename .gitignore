@@ -1,0 +1,52 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+.secrets/
+*.local.yaml
+*.local.json
+
+# Python environments and build products
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+build/
+dist/
+
+# Upstream software, downloaded resources and model weights
+/Biomni/
+/OpenBioMed/
+external/
+data/
+datasets/
+resources/
+models/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.h5
+*.hdf5
+*.onnx
+
+# Generated designs, experiment records and reports
+runs/
+results/
+experiments/
+artifacts/
+logs/
+reports/
+*.log
+*.jsonl
+*.o[0-9]*
+*.e[0-9]*
+*.zip
+*.tar.gz
+.DS_Store

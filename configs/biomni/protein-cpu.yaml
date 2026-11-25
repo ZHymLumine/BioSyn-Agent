@@ -1,0 +1,7 @@
+servers:
+  protein:
+    command: ["{python}", "-m", "protein_design_mcp.server", "--transport", "stdio"]
+    env:
+      DEVICE: cpu
+    timeout: 120
+biomni_tool_modules: []

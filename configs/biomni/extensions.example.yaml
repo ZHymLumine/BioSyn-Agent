@@ -1,0 +1,39 @@
+# Enable only after installing the specified worker environments and checkpoints.
+# Copy into a deployment config; paths below are explicit deployment inputs.
+servers:
+  dna:
+    command: ["{python}", "-m", "biosyn.mcp.dna"]
+  rna:
+    command: ["{python}", "-m", "biosyn.mcp.rna"]
+  protein:
+    enabled: false
+    command: ["{python}", "-m", "protein_design_mcp.server", "--transport", "stdio"]
+    env:
+      DEVICE: cpu
+    timeout: 1800
+  evo2:
+    enabled: false
+    command: ["${BIOSYN_EVO2_PYTHON}", "-m", "biosyn.mcp.evo2"]
+    env:
+      BIOSYN_MODEL_CONFIG: "${BIOSYN_EVO2_CONFIG}"
+      CUDA_VISIBLE_DEVICES: "${CUDA_VISIBLE_DEVICES}"
+    timeout: 600
+  nt:
+    enabled: false
+    command: ["${BIOSYN_NT_PYTHON}", "-m", "biosyn.mcp.nt"]
+    env:
+      BIOSYN_MODEL_CONFIG: "${BIOSYN_NT_CONFIG}"
+    timeout: 300
+  rnafm:
+    enabled: false
+    command: ["${BIOSYN_RNAFM_PYTHON}", "-m", "biosyn.mcp.rnafm"]
+    env:
+      BIOSYN_MODEL_CONFIG: "${BIOSYN_RNAFM_CONFIG}"
+    timeout: 300
+  openbiomed:
+    enabled: false
+    command: ["${BIOSYN_OPENBIOMED_PYTHON}", "-m", "biosyn.integrations.openbiomed"]
+    env:
+      BIOSYN_OPENBIOMED_WORKFLOWS: "${BIOSYN_OPENBIOMED_WORKFLOWS}"
+    timeout: 1800
+biomni_tool_modules: []
