@@ -179,6 +179,10 @@ Tests cover sequence consistency, scoring, MCP transports, candidate submission,
 
 To add a tool, expose a typed function through an MCP server and register the server in a configuration. To use its output as an objective, map the returned field in a task's `evaluators` section. The [task guide](docs/tasks.md) walks through this interface.
 
+## License
+
+BioSyn-Agent is licensed under [Apache-2.0](LICENSE).
+
 ## Acknowledgements
 
 BioSyn-Agent builds on [Biomni](https://github.com/snap-stanford/biomni) and integrates [OpenBioMed](https://github.com/PharMolix/OpenBioMed), [protein-design-mcp](https://github.com/jasonkim8652/protein-design-mcp) and [BioDesignBench](https://github.com/RomeroLab/BioDesignBench). Scientific tools and model resources retain their upstream attribution and licenses.
